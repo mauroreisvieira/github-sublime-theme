@@ -1,0 +1,29 @@
+/* CSS File Example */
+@import url('reset.css');
+
+:root {
+    --font-size: 14px;
+}
+
+body {
+    margin: 25px;
+    background-color: rgb(240,240,240);
+    font-family: arial, sans-serif;
+    font-size: var(--font-size);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.someclass { color: red; }
+
+#someid { color: green; }

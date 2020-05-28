@@ -1,0 +1,72 @@
+$addon-store-border-color: #d95468 !default;
+$addon-store-color: #333 !default;
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .addons-nav {
+    .selected {
+      border-bottom-color: $addon-store-border-color !default;
+      color: $addon-store-color;
+      font-weight: bold;
+      padding: my-calculation-function(10px, 5px);
+
+      @include border-radius(5px, true, true, true);
+
+      &::after {
+        display: block;
+        content: '/';
+      }
+    }
+  }
+
+  a {
+    color: $addon-store-color;
+
+    &:hover {
+      color: darken($addon-store-color, 30%);
+    }
+
+    &:focus {
+      color: lighten($addon-store-color, 30%);
+    }
+  }
+}
+
+.row {
+  @include grid(true);
+}
+
+/* Mixins */
+@mixin flex {
+  display: flex;
+}
+
+@mixin grid($flex) {
+  @if ($flex) {
+    @include flex;
+  } @else {
+    display: block;
+  }
+}
+
+/* Functions */
+@function my-calculation-function($some-number, $another-number) {
+  @return $some-number + $another-number;
+}
+
+@mixin border-radius($radius: 5px, $moz: true, $webkit: true, $ms: true) {
+  @if $moz {
+    -moz-border-radius: $radius;
+  }
+  @if $webkit {
+    -webkit-border-radius: $radius;
+  }
+  @if $ms {
+    -ms-border-radius: $radius;
+  }
+  border-radius: $radius;
+}
