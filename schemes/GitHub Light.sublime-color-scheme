@@ -14,12 +14,7 @@
         "yellow": "#735C0F",
         "orange": "#E36209",
         "red": "#D73A49",
-        "purple": "#6F42C1",
-        "deprecated": "#b31d28",
-        "invalid": "#b31d28",
-        "diffAdded": "#addb67",
-        "diffModified": "#e2b93d",
-        "diffDeleted": "#ef5350"
+        "purple": "#6F42C1"
     },
     "globals": {
         "active_guide": "var(cyan)",
