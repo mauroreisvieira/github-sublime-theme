@@ -25,12 +25,6 @@ export const rules: Array<IRules> = [
         },
     },
     {
-        scope: ['variable.parameter.function'],
-        settings: {
-            foreground: 'var(gray)',
-        },
-    },
-    {
         scope: ['entity.name.tag'],
         settings: {
             foreground: 'var(green)',
@@ -40,6 +34,12 @@ export const rules: Array<IRules> = [
         scope: ['keyword'],
         settings: {
             foreground: 'var(red)',
+        },
+    },
+    {
+        scope: ['meta.function meta.function-call.method variable.function'],
+        settings: {
+            foreground: 'var(purple)',
         },
     },
     {
@@ -81,7 +81,7 @@ export const rules: Array<IRules> = [
         },
     },
     {
-        scope: ['variable'],
+        scope: ['variable', 'variable.parameter.function'],
         settings: {
             foreground: 'var(orange)',
         },
@@ -89,7 +89,7 @@ export const rules: Array<IRules> = [
     {
         scope: ['variable.other'],
         settings: {
-            foreground: 'var(orange)',
+            foreground: 'var(gray)',
         },
     },
     {

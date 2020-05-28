@@ -70,16 +70,16 @@
             "foreground": "var(purple)"
         },
         {
-            "scope": "variable.parameter.function",
-            "foreground": "var(gray)"
-        },
-        {
             "scope": "entity.name.tag",
             "foreground": "var(green)"
         },
         {
             "scope": "keyword",
             "foreground": "var(red)"
+        },
+        {
+            "scope": "meta.function meta.function-call.method variable.function",
+            "foreground": "var(purple)"
         },
         {
             "scope": "storage,storage.type",
@@ -102,12 +102,12 @@
             "foreground": "var(blue)"
         },
         {
-            "scope": "variable",
+            "scope": "variable,variable.parameter.function",
             "foreground": "var(orange)"
         },
         {
             "scope": "variable.other",
-            "foreground": "var(orange)"
+            "foreground": "var(gray)"
         },
         {
             "scope": "invalid.broken",

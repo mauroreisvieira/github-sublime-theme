@@ -2,13 +2,13 @@
     "name": "GitHub Dark",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "cursor": "#044289",
+        "cursor": "#c8e1ff",
         "foreground": "#fafbfc",
         "background": "#1f2428",
         "comments": "#637777",
         "black": "#1b1f23",
         "white": "#fff",
-        "gray": "#586069",
+        "gray": "#fafbfc",
         "blue": "#79b8ff",
         "green": "#85E89D",
         "yellow": "#FFFDEF",
@@ -70,16 +70,16 @@
             "foreground": "var(purple)"
         },
         {
-            "scope": "variable.parameter.function",
-            "foreground": "var(gray)"
-        },
-        {
             "scope": "entity.name.tag",
             "foreground": "var(green)"
         },
         {
             "scope": "keyword",
             "foreground": "var(red)"
+        },
+        {
+            "scope": "meta.function meta.function-call.method variable.function",
+            "foreground": "var(purple)"
         },
         {
             "scope": "storage,storage.type",
@@ -102,12 +102,12 @@
             "foreground": "var(blue)"
         },
         {
-            "scope": "variable",
+            "scope": "variable,variable.parameter.function",
             "foreground": "var(orange)"
         },
         {
             "scope": "variable.other",
-            "foreground": "var(orange)"
+            "foreground": "var(gray)"
         },
         {
             "scope": "invalid.broken",
