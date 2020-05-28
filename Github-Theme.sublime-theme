@@ -1,0 +1,99 @@
+{
+    "extends": "Adaptive.sublime-theme",
+    "variables": {
+        "titleBarColor": ["foreground", 1],
+        "sidebarContainerBg": ["background", 1],
+        "tabBackground": ["background", 1],
+        "tabBorderColor": ["foreground", 0.1],
+        "tabBorderSize": [0, 0, 0, 1],
+        "tabSelectedBorderColor": "#e36209",
+        "tabSelectedBorderSize": [0, 2, 0, 0],
+        "tabHeight": 45,
+        "tabWidth": 90,
+        "tabMargin": 0,
+        "statusbarBackground": ["background", 1],
+        "titleBarBackground": ["background", 1],
+        "statusbarMargin": [10, 4, 0, 4],
+        "buttonBackground": ["background", 0.5],
+        "buttonBackgroundHover": "color(var(colorAccent) a(0.2))",
+        "buttonMinSize": [80, 28]
+    },
+    "rules": [
+        {
+            "class": "title_bar",
+            "bg": "var(titleBarBackground)",
+            "fg": "var(titleBarColor)"
+        },
+        {
+            "class": "tabset_control",
+            "layer0.tint": "var(tabBackground)",
+            "layer3.inner_margin": "var(tabBorderSize)",
+            "layer3.draw_center": false,
+            "layer3.tint": "var(tabBorderColor)",
+            "layer3.opacity": 1
+        },
+        {
+            "class": "tabset_control",
+            "layer0.opacity": 1,
+            "tint_index": 1,
+            "tab_overlap": 0,
+            "tab_width": "var(tabWidth)",
+            "tab_height": "var(tabHeight)",
+            "content_margin": "var(tabMargin)",
+            "mouse_wheel_switch": false
+        },
+        {
+            "class": "tab_control",
+            "layer0.opacity": 1,
+            "layer0.tint": "var(tabBackground)",
+            "layer0.draw_center": false,
+            "layer0.inner_margin": "var(tabSelectedBorderSize)",
+            "layer0.tint": "var(tabSelectedBorderColor)",
+            "layer1.texture": "",
+            "layer2.texture": "",
+            "layer3.texture": ""
+        },
+        {
+            "class": "tab_control",
+            "attributes": ["selected"],
+            "layer3.opacity": 1,
+            "layer3.texture": "",
+            "layer3.inner_margin": "var(tabSelectedBorderSize)",
+            "layer3.draw_center": false,
+            "layer3.tint": "var(tabSelectedBorderColor)"
+        },
+        {
+            "class": "sidebar_container",
+            "layer0.tint": "var(sidebarContainerBg)",
+            "layer0.opacity": 1,
+            "content_margin": [0, 6, 0, 0]
+        },
+        {
+            "class": "disclosure_button_control",
+            "content_margin": [0, 0, 0, 0]
+        },
+        {
+            "class": "disclosure_button_control",
+            "settings": ["show_sidebar_disclosure"],
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "status_bar",
+            "content_margin": "var(statusbarMargin)",
+            "layer0.tint": "var(statusbarBackground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "button_control",
+            "layer0.tint": "var(buttonBackground)",
+            "layer0.opacity": {
+                "target": 0.6,
+                "speed": 4,
+                "interpolation": "smoothstep"
+            },
+            "layer0.inner_margin": [6, 6],
+            "content_margin": [6, 10, 6, 10],
+            "min_size": "var(buttonMinSize)"
+        }
+    ]
+}
