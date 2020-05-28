@@ -10,11 +10,12 @@
         "white": "#fff",
         "gray": "#fafbfc",
         "blue": "#79b8ff",
-        "green": "#85E89D",
-        "yellow": "#FFFDEF",
+        "green": "#85e89d",
+        "yellow": "#fffdef",
         "orange": "#ffab70",
-        "red": "#F97583",
-        "purple": "#b392f0"
+        "red": "#f97583",
+        "purple": "#b392f0",
+        "pink": "#f692ce"
     },
     "globals": {
         "active_guide": "var(cyan)",

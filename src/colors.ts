@@ -14,8 +14,8 @@ const dark: IColors = {
     yellow: colors.yellow[0],
     orange: colors.orange[3],
     red: colors.red[3],
-    purple: colors.red[3],
-    pink: colors.red[3]
+    purple: colors.purple[3],
+    pink: colors.pink[3]
 };
 
 const light: IColors = {
@@ -27,11 +27,12 @@ const light: IColors = {
     white: '#fff',
     gray: colors.gray[9],
     blue: colors.blue[6],
-    green: '#22863A',
-    yellow: '#735C0F',
-    orange: '#E36209',
-    red: '#D73A49',
-    purple: '#6F42C1'
+    green: colors.green[6],
+    yellow: colors.yellow[9],
+    orange: colors.orange[6],
+    red: colors.red[5],
+    purple: colors.purple[5],
+    pink: colors.pink[5]
 };
 
 export { light, dark };

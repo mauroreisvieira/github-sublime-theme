@@ -1,4 +1,3 @@
-// @ts-ignore
 import {
     generateScheme,
     ISchemeSetting,
