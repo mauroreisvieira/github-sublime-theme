@@ -18,9 +18,9 @@
         "pink": "#ea4aaa",
         "deprecated": "#b31d28",
         "invalid": "#b31d28",
-        "diffAdded": "#28a74580",
-        "diffModified": "#e2b93d80",
-        "diffDeleted": "#d73a4980"
+        "diffAdded": "#28a745",
+        "diffModified": "#ffd33d",
+        "diffDeleted": "#d73a49"
     },
     "globals": {
         "active_guide": "var(cyan)",
@@ -44,7 +44,7 @@
         "line_diff_added": "var(diffAdded)",
         "line_diff_deleted": "var(diffDeleted)",
         "line_diff_modified": "var(diffModified)",
-        "line_diff_width": "2",
+        "line_diff_width": "3",
         "line_highlight": "color(var(foreground) alpha(0.1))",
         "misspelling": "var(red)",
         "rulers": "color(var(foreground) alpha(0.5))",

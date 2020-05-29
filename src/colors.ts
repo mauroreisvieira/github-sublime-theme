@@ -18,9 +18,9 @@ const dark: IColors = {
     pink: colors.pink[3],
     deprecated: colors.red[7],
     invalid: colors.red[7],
-    diffAdded: '#28a74580',
-    diffModified: '#e2b93d80',
-    diffDeleted: '#d73a4980',
+    diffAdded: colors.green[5],
+    diffModified: colors.yellow[5],
+    diffDeleted: colors.red[5]
 };
 
 const light: IColors = {
@@ -40,9 +40,9 @@ const light: IColors = {
     pink: colors.pink[5],
     deprecated: colors.red[7],
     invalid: colors.red[7],
-    diffAdded: '#28a74580',
-    diffModified: '#e2b93d80',
-    diffDeleted: '#d73a4980',
+    diffAdded: colors.green[5],
+    diffModified: colors.yellow[5],
+    diffDeleted: colors.red[5]
 };
 
 export { light, dark };

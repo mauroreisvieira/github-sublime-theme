@@ -34,6 +34,9 @@ interface IScheme {
     const settings: ISchemeSetting = {
         colors: variables,
         rules,
+        ui: {
+            line_diff_width: "3"
+        },
         useDefaultRules: false
     };
     generateScheme(item.name, item.author, item.name, settings, 'schemes');
