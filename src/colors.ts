@@ -24,7 +24,7 @@ const dark: IColors = {
 };
 
 const light: IColors = {
-    cursor: colors.blue[3],
+    cursor: "#e36209",
     foreground: colors.gray[9],
     background: '#fff',
     comments: colors.gray[5],

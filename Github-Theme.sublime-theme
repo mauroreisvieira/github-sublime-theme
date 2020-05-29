@@ -116,6 +116,47 @@
             "layer0.opacity": 1
         },
         {
+            "class": "overlay_control",
+            "layer0.tint": "var(borderColor)",
+            "layer0.opacity": 1.0,
+            "content_margin": 1
+        },
+        {
+            "class": "overlay_control",
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "layer0.tint": "var(borderColorLight)"
+        },
+        {
+            "class": "quick_panel",
+            "row_padding": [6, 4, 6, 4],
+            "layer0.tint": ["background", 1],
+            "layer0.opacity": 1.0
+        },
+      {
+            "class": "quick_panel",
+            "row_padding": [6, 4, 6, 4],
+            "layer0.tint": ["background", 1],
+            "layer0.opacity": 1.0,
+            "dark_content": true
+        },
+        {
+            "class": "quick_panel",
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "dark_content": false
+        },
+        {
+            "class": "quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.tint": ["foreground", 0.1],
+            "layer0.opacity": 1
+        },
+        {
+            "class": "mini_quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.tint": ["foreground", 0.1],
+            "layer0.opacity": 1
+        },
+        {
             "class": "panel_control",
             "layer0.tint": "var(bg)",
             "layer1.texture": "",
@@ -141,6 +182,15 @@
             "layer0.inner_margin": [6, 6],
             "content_margin": [6, 10, 6, 10],
             "min_size": "var(buttonMinSize)"
+        },
+        {
+            "class": "button_control",
+            "attributes": ["hover"],
+            "layer0.opacity": {
+                "target": 0.25,
+                "speed": 4.0,
+                "interpolation": "smoothstep"
+            }
         }
     ]
 }
