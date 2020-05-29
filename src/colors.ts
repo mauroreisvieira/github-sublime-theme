@@ -19,7 +19,7 @@ const dark: IColors = {
     deprecated: colors.red[7],
     invalid: colors.red[7],
     diffAdded: colors.green[5],
-    diffModified: colors.yellow[5],
+    diffModified: colors.blue[5],
     diffDeleted: colors.red[5]
 };
 
@@ -41,7 +41,7 @@ const light: IColors = {
     deprecated: colors.red[7],
     invalid: colors.red[7],
     diffAdded: colors.green[5],
-    diffModified: colors.yellow[5],
+    diffModified: colors.blue[5],
     diffDeleted: colors.red[5]
 };
 

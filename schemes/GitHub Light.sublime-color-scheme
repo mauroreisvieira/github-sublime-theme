@@ -19,7 +19,7 @@
         "deprecated": "#b31d28",
         "invalid": "#b31d28",
         "diffAdded": "#28a745",
-        "diffModified": "#ffd33d",
+        "diffModified": "#0366d6",
         "diffDeleted": "#d73a49"
     },
     "globals": {
@@ -184,6 +184,16 @@
         {
             "scope": "markup.ignored,markup.untracked",
             "foreground": "var(blue)"
+        },
+        {
+            "scope": "markup.underline",
+            "font_style": "underline",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "markup.underline.link",
+            "font_style": "underline",
+            "foreground": "var(red)"
         },
         {
             "scope": "meta.diff.range",

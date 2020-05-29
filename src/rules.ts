@@ -210,6 +210,20 @@ export const rules: Array<IRules> = [
         },
     },
     {
+        scope: ['markup.underline'],
+        settings: {
+            font_style: 'underline',
+            foreground: 'var(purple)',
+        },
+    },
+    {
+        scope: ['markup.underline.link'],
+        settings: {
+            font_style: 'underline',
+            foreground: 'var(red)',
+        },
+    },
+    {
         scope: ['meta.diff.range'],
         settings: {
             foreground: 'var(blue)',

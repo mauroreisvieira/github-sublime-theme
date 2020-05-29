@@ -14,7 +14,15 @@
         "tabWidth": 80,
         "statusbarBg": ["background", 1],
         "statusbarMargin": [10, 2, 0, 2],
-        "buttonMinSize": [80, 28]
+        "buttonMinSize": [80, 28],
+        "vcsBadgeSize": 5,
+        "vcsIgnored": "color(var(--foreground) a(.4))",
+        "vcsModified": "var(--bluish)",
+        "vcsUnmerged": "var(--redish)",
+        "vcsDeleted": "var(--pinkish)",
+        "vcsStaged": "var(--yellowish)",
+        "vcsUntracked": "var(--greenish)",
+        "vcsMissing": "var(--orangish)"
     },
     "rules": [
         {
@@ -132,7 +140,7 @@
             "layer0.tint": ["background", 1],
             "layer0.opacity": 1.0
         },
-      {
+        {
             "class": "quick_panel",
             "row_padding": [6, 4, 6, 4],
             "layer0.tint": ["background", 1],
@@ -141,7 +149,7 @@
         },
         {
             "class": "quick_panel",
-            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "dark_content": false
         },
         {
@@ -191,6 +199,146 @@
                 "speed": 4.0,
                 "interpolation": "smoothstep"
             }
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["untracked"] }
+            ],
+            "layer0.texture": "GitHub Theme/textures/diff/vcs_untracked.png",
+            "layer0.tint": "var(vcsUntracked)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["modified"] }
+            ],
+            "layer0.texture": "GitHub Theme/textures/diff/vcs_modified.png",
+            "layer0.tint": "var(vcsModified)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["added"] }
+            ],
+            "layer0.texture": "GitHub Theme/textures/diff/vcs_added.png",
+            "layer0.tint": "var(vcsUntracked)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["unmerged"] }
+            ],
+            "layer0.texture": "Theme - Default/common/status_unmerged.png",
+            "layer0.tint": "var(vcsUnmerged)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["staged"] }
+            ],
+            "layer0.texture": "GitHub Theme/textures/diff/vcs_staged.png",
+            "layer0.tint": "var(vcsStaged)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["deleted"] }
+            ],
+            "layer0.tint": "var(vcsDeleted)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["missing"] }
+            ],
+            "layer0.tint": "var(vcsMissing)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [{ "class": "tree_row", "attributes": ["expandable"] }],
+            "layer0.texture": "Theme - Default/common/status_modified.png"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                { "class": "tree_row", "attributes": ["expandable"] },
+                { "class": "file_system_entry", "attributes": ["unmerged"] }
+            ],
+            "layer0.texture": "Theme - Default/common/status_unmerged.png"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["ignored"] }
+            ],
+            "color": "color(var(vcsIgnored)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["untracked"] }
+            ],
+            "color": "var(vcsUntracked)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["modified"] }
+            ],
+            "color": "var(vcsModified)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["added"] }
+            ],
+            "color": "var(vcsUntracked)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["unmerged"] }
+            ],
+            "color": "var(vcsUnmerged)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["missing"] }
+            ],
+            "color": "var(vcsMissing)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["deleted"] }
+            ],
+            "color": "var(vcsDeleted)"
+        },
+        {
+            "class": "sidebar_label",
+            "parents": [
+                { "class": "file_system_entry", "attributes": ["staged"] }
+            ],
+            "color": "var(vcsStaged)"
+        },
+        {
+            "class": "vcs_changes_annotation",
+            "border_color": "var(borderColor)",
+            "content_margin": [3, 1, 3, 1]
+        },
+        {
+            "class": "vcs_changes_annotation",
+            "parents": [{"class": "window", "attributes": ["file_light"]}, {"class": "status_bar"}],
+            "border_color": "var(borderColorLight)"
         }
     ]
 }
