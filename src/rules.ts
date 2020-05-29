@@ -93,24 +93,31 @@ export const rules: Array<IRules> = [
         },
     },
     {
-        scope: ['invalid.broken'],
-        settings: {
-            font_style: 'italic',
-            foreground: 'var(red)',
-        },
-    },
-    {
         scope: ['invalid.deprecated'],
         settings: {
             font_style: 'italic',
-            foreground: 'var(red)',
+            foreground: 'var(deprecated)',
+        },
+    },
+    {
+        scope: ['invalid.broken'],
+        settings: {
+            font_style: 'italic',
+            foreground: 'var(invalid)',
         },
     },
     {
         scope: ['invalid.illegal'],
         settings: {
             font_style: 'italic',
-            foreground: 'var(red)',
+            foreground: 'var(invalid)',
+        },
+    },
+    {
+        scope: ['invalid.unimplemented'],
+        settings: {
+            font_style: 'italic',
+            foreground: 'var(invalid)',
         },
     },
     {
@@ -233,5 +240,5 @@ export const rules: Array<IRules> = [
         settings: {
             foreground: 'var(purple)',
         },
-    }
+    },
 ];

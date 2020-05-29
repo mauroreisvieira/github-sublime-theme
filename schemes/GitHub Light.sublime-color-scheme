@@ -15,7 +15,12 @@
         "orange": "#e36209",
         "red": "#d73a49",
         "purple": "#6f42c1",
-        "pink": "#ea4aaa"
+        "pink": "#ea4aaa",
+        "deprecated": "#ffc777a1",
+        "invalid": "#d46c6c66",
+        "diffAdded": "#34d05822",
+        "diffModified": "#e2b93d",
+        "diffDeleted": "#d73a492"
     },
     "globals": {
         "active_guide": "var(cyan)",
@@ -106,19 +111,24 @@
             "foreground": "var(gray)"
         },
         {
-            "scope": "invalid.broken",
-            "font_style": "italic",
-            "foreground": "var(red)"
-        },
-        {
             "scope": "invalid.deprecated",
             "font_style": "italic",
-            "foreground": "var(red)"
+            "foreground": "var(deprecated)"
+        },
+        {
+            "scope": "invalid.broken",
+            "font_style": "italic",
+            "foreground": "var(invalid)"
         },
         {
             "scope": "invalid.illegal",
             "font_style": "italic",
-            "foreground": "var(red)"
+            "foreground": "var(invalid)"
+        },
+        {
+            "scope": "invalid.unimplemented",
+            "font_style": "italic",
+            "foreground": "var(invalid)"
         },
         {
             "scope": "support.constant",
