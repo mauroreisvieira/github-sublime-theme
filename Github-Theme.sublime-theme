@@ -3,7 +3,7 @@
     "variables": {
         "titleBarBackground": ["background", 1],
         "titleBarColor": ["foreground", 1],
-        "sidebarContainerBg": ["background", 1],
+        "sidebarContainerBg": ["background", 0.95],
         "tabBackground": ["background", 1],
         "tabBorderColor": ["foreground", 0.1],
         "tabBorderSize": [0, 0, 0, 1],
@@ -84,11 +84,6 @@
         },
         {
             "class": "button_control",
-            "layer0.opacity": {
-                "target": 0.6,
-                "speed": 4,
-                "interpolation": "smoothstep"
-            },
             "layer0.inner_margin": [6, 6],
             "content_margin": [6, 10, 6, 10],
             "min_size": "var(buttonMinSize)"
