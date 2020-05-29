@@ -15,3 +15,11 @@
 1. Download latest release and unzip. it into your Packages folder.
 2. Go to `Sublime Text → Preferences → Browse Packages`.
 3. Move folder to inside and rename the folder to `Github Theme`.
+
+## Settings
+
+```json
+{
+    "show_sidebar_disclosure": "false"
+}
+```

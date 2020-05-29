@@ -1,6 +1,7 @@
 {
     "extends": "Adaptive.sublime-theme",
     "variables": {
+        "titleBarBackground": ["background", 1],
         "titleBarColor": ["foreground", 1],
         "sidebarContainerBg": ["background", 1],
         "tabBackground": ["background", 1],
@@ -12,10 +13,8 @@
         "tabWidth": 90,
         "tabMargin": 0,
         "statusbarBackground": ["background", 1],
-        "titleBarBackground": ["background", 1],
-        "statusbarMargin": [10, 4, 0, 4],
+        "statusbarMargin": [10, 2, 0, 2],
         "buttonBackground": ["background", 0.5],
-        "buttonBackgroundHover": "color(var(colorAccent) a(0.2))",
         "buttonMinSize": [80, 28]
     },
     "rules": [
@@ -85,7 +84,6 @@
         },
         {
             "class": "button_control",
-            "layer0.tint": "var(buttonBackground)",
             "layer0.opacity": {
                 "target": 0.6,
                 "speed": 4,
