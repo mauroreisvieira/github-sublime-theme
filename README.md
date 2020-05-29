@@ -1,8 +1,6 @@
 # GitHub Sublime Text theme
 
-<p align="center">
-    <img width="800px" src="./assets/screen.png">
-</p>
+![GitHub Sublime Text theme](./assets/screen.png)
 
 ## Install
 
