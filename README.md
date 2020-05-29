@@ -8,7 +8,7 @@
 
 1. ~~Open `Command Palette` using menu item `Tools → Command Palette` or <kbd>CMD/CTRL</kbd> + <kbd>SHIFT</kbd> +<kbd>P</kbd>~~.
 2. ~~Choose `Package Control: Install Package`~~.
-3. ~~Type `Github Theme` and press <kbd>ENTER</kbd>~~.
+3. ~~Type `GitHub Theme` and press <kbd>ENTER</kbd>~~.
 
 **Manually:**
 
