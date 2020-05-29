@@ -25,9 +25,6 @@ then
   git commit -m "chore(release): v$VERSION"
   git tag -a "v$VERSION" -m $VERSION
 
-  # commit
-  yarn publish --tag next --new-version "$VERSION" --no-commit-hooks --no-git-tag-version
-
   # publish
   git push origin refs/tags/v$VERSION
   git push

@@ -2,9 +2,9 @@
     "name": "GitHub Dark",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "cursor": "#c8e1ff",
+        "cursor": "#79b8ff",
         "foreground": "#fafbfc",
-        "background": "#1f2428",
+        "background": "#24292E",
         "comments": "#637777",
         "black": "#1b1f23",
         "white": "#fff",

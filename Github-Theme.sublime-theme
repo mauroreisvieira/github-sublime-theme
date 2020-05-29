@@ -1,35 +1,46 @@
 {
     "extends": "Adaptive.sublime-theme",
     "variables": {
-        "titleBarBackground": ["background", 1],
+        "titleBarBg": ["background", 1],
         "titleBarColor": ["foreground", 1],
-        "sidebarContainerBg": ["background", 0.95],
-        "tabBackground": ["background", 1],
-        "tabBorderColor": ["foreground", 0.1],
-        "tabBorderSize": [0, 0, 0, 1],
-        "tabSelectedBorderColor": "#e36209",
-        "tabSelectedBorderSize": [0, 2, 0, 0],
-        "tabHeight": 45,
+        "tabBg": "#1f2428",
+        "tabBgLight": "#f6f8fa",
+        "tabBorderColor": "#2f363d",
+        "tabBorderColorLight": "#e1e4e8",
+        "tabBorderSize": [0, 1, 1, 1],
+        "tabSelectedBg": ["background", 1],
+        "tabSelectedBorderColor": "var(tabBorderColor)",
+        "tabSelectedBorderColorLight": "var(tabBorderColorLight)",
+        "tabSelectedBorderSize": [0, 1, 1, 0],
+        "tabHeight": 40,
         "tabWidth": 90,
-        "tabMargin": 0,
-        "statusbarBackground": ["background", 1],
+        "sidebarBg": "var(tabBg)",
+        "sidebarBorderColor": "var(tabBorderColor)",
+        "sidebarBorderColorLight": "var(tabBorderColorLight)",
+        "sidebarBgLight": "var(tabBgLight)",
+        "statusbarBg": ["background", 1],
         "statusbarMargin": [10, 2, 0, 2],
-        "buttonBackground": ["background", 0.5],
         "buttonMinSize": [80, 28]
     },
     "rules": [
         {
             "class": "title_bar",
-            "bg": "var(titleBarBackground)",
+            "bg": "var(titleBarBg)",
             "fg": "var(titleBarColor)"
         },
         {
             "class": "tabset_control",
-            "layer0.tint": "var(tabBackground)",
+            "layer0.tint": "var(tabBg)",
             "layer3.inner_margin": "var(tabBorderSize)",
             "layer3.draw_center": false,
             "layer3.tint": "var(tabBorderColor)",
             "layer3.opacity": 1
+        },
+        {
+            "class": "tabset_control",
+            "attributes": ["file_light"],
+            "layer0.tint": "var(tabBgLight)",
+            "layer3.tint": "var(tabBorderColorLight)",
         },
         {
             "class": "tabset_control",
@@ -38,22 +49,34 @@
             "tab_overlap": 0,
             "tab_width": "var(tabWidth)",
             "tab_height": "var(tabHeight)",
-            "content_margin": "var(tabMargin)",
             "mouse_wheel_switch": false
         },
         {
             "class": "tab_control",
             "layer0.opacity": 1,
-            "layer0.tint": "var(tabBackground)",
-            "layer0.draw_center": false,
-            "layer0.inner_margin": "var(tabSelectedBorderSize)",
-            "layer0.tint": "var(tabSelectedBorderColor)",
             "layer1.texture": "",
+
+            "layer2.opacity": 1,
             "layer2.texture": "",
-            "layer3.texture": ""
+            "layer3.inner_margin":"var(tabBorderSize)",
+            "layer3.draw_center": true,
+            "layer2.tint": "var(tabBg)",
+
+            "layer3.opacity": 1,
+            "layer3.texture": "",
+            "layer3.draw_center": false,
+            "layer3.tint": "var(tabSelectedBorderColor)"
         },
         {
             "class": "tab_control",
+            "attributes": ["file_light"],
+            "layer2.tint": "var(tabBgLight)",
+            "layer3.tint": "var(tabSelectedBorderColorLight)"
+        },
+       {
+            "class": "tab_control",
+            "layer2.tint": "var(tabSelectedBg)",
+            "layer3.opacity": 1,
             "attributes": ["selected"],
             "layer3.opacity": 1,
             "layer3.texture": "",
@@ -62,10 +85,26 @@
             "layer3.tint": "var(tabSelectedBorderColor)"
         },
         {
+            "class": "tab_control",
+            "attributes": ["file_light"],
+            "layer3.tint": "var(tabSelectedBorderColorLight)"
+        },
+        {
             "class": "sidebar_container",
-            "layer0.tint": "var(sidebarContainerBg)",
             "layer0.opacity": 1,
+            "layer0.tint": "var(sidebarBg)",
+            "content_margin": [0, 6, 0, 0],
+            "layer1.opacity": 1,
+            "layer1.inner_margin": [0, 0, 1, 0],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(sidebarBorderColor)",
             "content_margin": [0, 6, 0, 0]
+        },
+        {
+            "class": "sidebar_container",
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "layer0.tint": "var(sidebarBgLight)",
+            "layer1.tint": "var(sidebarBorderColorLight)"
         },
         {
             "class": "disclosure_button_control",
@@ -79,7 +118,7 @@
         {
             "class": "status_bar",
             "content_margin": "var(statusbarMargin)",
-            "layer0.tint": "var(statusbarBackground)",
+            "layer0.tint": "var(statusbarBg)",
             "layer0.opacity": 1
         },
         {
@@ -87,6 +126,6 @@
             "layer0.inner_margin": [6, 6],
             "content_margin": [6, 10, 6, 10],
             "min_size": "var(buttonMinSize)"
-        }
+        },
     ]
 }

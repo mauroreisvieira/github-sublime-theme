@@ -2,7 +2,7 @@
     "name": "GitHub Light",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "cursor": "#044289",
+        "cursor": "#79b8ff",
         "foreground": "#24292e",
         "background": "#fff",
         "comments": "#6a737d",
@@ -16,8 +16,8 @@
         "red": "#d73a49",
         "purple": "#6f42c1",
         "pink": "#ea4aaa",
-        "deprecated": "#ffc777a1",
-        "invalid": "#d46c6c66",
+        "deprecated": "#b31d28",
+        "invalid": "#b31d28",
         "diffAdded": "#28a74580",
         "diffModified": "#e2b93d80",
         "diffDeleted": "#d73a4980"
