@@ -2,6 +2,7 @@ import {
     generateScheme,
     ISchemeSetting,
     IRules,
+    IUi,
     IColors,
 } from '@meetio/scheme-generator';
 
@@ -13,7 +14,7 @@ interface IScheme {
     author: string;
     variables: IColors;
     rules: Array<IRules>;
-    useDefaultRules: boolean;
+    customeUi?: IUi;
 }
 
 [
@@ -21,23 +22,32 @@ interface IScheme {
         name: 'GitHub Dark',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: dark,
+        customeUi: {
+            line_diff_width: '3',
+        },
         rules,
     },
     {
         name: 'GitHub Light',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: light,
+        customeUi: {
+            line_diff_width: '3',
+        },
         rules,
     },
 ].map((item: IScheme) => {
-    const { variables, rules } = item;
+    const { variables, customeUi, rules } = item;
     const settings: ISchemeSetting = {
         colors: variables,
         rules,
         ui: {
-            line_diff_width: "3"
+            ...customeUi,
+            ...{
+                line_diff_width: '3'
+            },
         },
-        useDefaultRules: false
+        useDefaultRules: false,
     };
     generateScheme(item.name, item.author, item.name, settings, 'schemes');
 });

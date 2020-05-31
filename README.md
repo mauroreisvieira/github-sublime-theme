@@ -2,6 +2,8 @@
 
 ![GitHub Sublime Text theme](./assets/screen.png)
 
+> Project inspired on [GitHub VS Code theme](https://github.com/primer/github-vscode-theme).
+
 ## Install
 
 **~~Package Control:~~**
@@ -37,4 +39,5 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 ## What’s Next
 
 - Support for more language syntax.
-- Support for [A File Icons](https://github.com/SublimeText/AFileIcon) with custome icons based on GitHub.
+- Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
+- Add new UI icons based on GitHub.
