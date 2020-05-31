@@ -2,7 +2,7 @@ import { IColors } from '@meetio/scheme-generator';
 import { colors } from '@primer/primitives';
 
 const dark: IColors = {
-    cursor: colors.blue[3],
+    cursor: colors.blue[2],
     foreground: colors.gray[0],
     background: colors.gray[9],
     comments: '#637777',

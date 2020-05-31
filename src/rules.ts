@@ -87,7 +87,13 @@ export const rules: Array<IRules> = [
         },
     },
     {
-        scope: ['variable.other'],
+        scope: ['variable.other.object'],
+        settings: {
+            foreground: 'var(blue)',
+        },
+    },
+    {
+        scope: ['variable.other', 'variable.object.property'],
         settings: {
             foreground: 'var(gray)',
         },

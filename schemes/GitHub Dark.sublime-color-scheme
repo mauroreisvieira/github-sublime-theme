@@ -2,7 +2,7 @@
     "name": "GitHub Dark",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "cursor": "#79b8ff",
+        "cursor": "#c8e1ff",
         "foreground": "#fafbfc",
         "background": "#24292e",
         "comments": "#637777",
@@ -29,16 +29,16 @@
         "bracket_contents_foreground": "var(yellow)",
         "bracket_contents_options": "underline",
         "brackets_foreground": "var(cyan)",
-        "brackets_options": "underline",
+        "brackets_options": "stippled_underline",
         "caret": "var(cursor)",
-        "find_highlight": "var(yellow)",
-        "find_highlight_foreground": "var(background)",
+        "find_highlight": "#ffd33d22",
+        "find_highlight_foreground": "#fafbfc",
         "fold_marker": "var(yellow)",
         "foreground": "var(foreground)",
         "gutter": "var(background)",
         "gutter_foreground": "color(var(foreground) alpha(0.2))",
-        "highlight": "var(yellow)",
-        "inactive_selection": "color(var(cyan) alpha(0.1))",
+        "highlight": "#17E5E699",
+        "inactive_selection": "#3392FF22",
         "inactive_selection_border": "color(var(cyan) alpha(0.1))",
         "invisibles": "color(var(foreground) alpha(0.3))",
         "line_diff_added": "var(diffAdded)",
@@ -47,14 +47,17 @@
         "line_diff_width": "3",
         "line_highlight": "color(var(foreground) alpha(0.1))",
         "misspelling": "var(red)",
-        "selection": "color(var(foreground) alpha(0.10))",
+        "selection": "#3392FF44",
         "selection_border": "var(cyan)",
         "selection_corner_radius": "cut",
         "selection_corner_style": "cut",
         "shadow": "color(var(background) alpha(0.5))",
         "stack_guide": "var(brown)",
         "tags_foreground": "var(cyan)",
-        "tags_options": "underline"
+        "tags_options": "underline",
+        "gutter_foreground_highlight": "#fafbfc",
+        "scroll_highlight": "#fff5b1",
+        "scroll_selected_highlight": "#85e89d"
     },
     "rules": [
         {
@@ -106,7 +109,11 @@
             "foreground": "var(orange)"
         },
         {
-            "scope": "variable.other",
+            "scope": "variable.other.object",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "variable.other,variable.object.property",
             "foreground": "var(gray)"
         },
         {
