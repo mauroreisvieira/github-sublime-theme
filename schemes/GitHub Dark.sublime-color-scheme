@@ -31,8 +31,8 @@
         "brackets_foreground": "var(cyan)",
         "brackets_options": "stippled_underline",
         "caret": "var(cursor)",
-        "find_highlight": "#ffd33d22",
-        "find_highlight_foreground": "#fafbfc",
+        "find_highlight": "#FFD33D22",
+        "find_highlight_foreground": "var(foreground)",
         "fold_marker": "var(yellow)",
         "foreground": "var(foreground)",
         "gutter": "var(background)",
@@ -55,9 +55,9 @@
         "stack_guide": "var(brown)",
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
-        "gutter_foreground_highlight": "#fafbfc",
-        "scroll_highlight": "#fff5b1",
-        "scroll_selected_highlight": "#85e89d"
+        "gutter_foreground_highlight": "var(foreground)",
+        "scroll_highlight": "var(yellow)",
+        "scroll_selected_highlight": "var(green)"
     },
     "rules": [
         {
