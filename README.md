@@ -41,3 +41,4 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 - Support for more language syntax.
 - Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
 - Add new UI icons based on GitHub.
+- Improvements on Buttons, Inputs and Panel UI.
