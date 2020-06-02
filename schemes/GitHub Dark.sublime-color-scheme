@@ -2,6 +2,7 @@
     "name": "GitHub Dark",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
+        "accent": "#e36209",
         "cursor": "#c8e1ff",
         "foreground": "#fafbfc",
         "background": "#24292e",
@@ -55,6 +56,7 @@
         "stack_guide": "var(brown)",
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
+        "accent": "var(accent)",
         "gutter_foreground_highlight": "var(foreground)",
         "scroll_highlight": "var(yellow)",
         "scroll_selected_highlight": "var(green)"
@@ -222,6 +224,14 @@
         {
             "scope": "meta.function-call.constructor variable.type",
             "foreground": "var(purple)"
+        },
+        {
+            "scope": "meta.mapping.key string.quoted.double",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "meta.mapping.value string.quoted.double",
+            "foreground": "var(foreground)"
         }
     ]
 }

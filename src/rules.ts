@@ -261,4 +261,18 @@ export const rules: Array<IRules> = [
             foreground: 'var(purple)',
         },
     },
+    {
+        scope: ['meta.mapping.key string.quoted.double'],
+        settings: {
+            foreground: 'var(blue)',
+        },
+    },
+    {
+        scope: [
+            'meta.mapping.value string.quoted.double',
+        ],
+        settings: {
+            foreground: 'var(foreground)',
+        },
+    },
 ];

@@ -50,6 +50,7 @@ interface IScheme {
         ui: {
             ...customeUi,
             ...{
+                accent: 'var(accent)',
                 line_diff_width: '3',
                 gutter_foreground_highlight: 'var(foreground)',
                 scroll_highlight: 'var(yellow)',
