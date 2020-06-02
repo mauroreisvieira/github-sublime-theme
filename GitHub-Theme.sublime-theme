@@ -109,6 +109,13 @@
             "layer1.tint": "var(borderColorLight)"
         },
         {
+            "class": "sidebar_heading",
+            "fg": ["foreground", 1.0],
+            "font.face": "var(font_face)",
+            "font.size": "var(font_size_sm)",
+            "font.bold": true
+        },
+        {
             "class": "disclosure_button_control",
             "content_margin": [0, 0, 0, 0]
         },
