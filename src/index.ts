@@ -6,6 +6,7 @@ import {
     IColors,
 } from '@meetio/scheme-generator';
 
+import { primer } from './primer';
 import { light, dark } from './colors';
 import { rules } from './rules';
 
@@ -23,6 +24,9 @@ interface IScheme {
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: dark,
         customeUi: {
+            guide: primer.gray[8],
+            stack_guide: primer.gray[8],
+            active_guide: primer.gray[7],
             selection: '#3392FF44',
             highlight: '#17E5E699',
             inactive_selection: '#3392FF22',
@@ -35,6 +39,9 @@ interface IScheme {
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: light,
         customeUi: {
+            guide: '#eff2f6',
+            stack_guide: '#eff2f6',
+            active_guide: '#d7dbe0',
             selection: '#0366D625',
             highlight: '#24943E99',
             inactive_selection: '#0366D611',

@@ -24,7 +24,7 @@
         "diffDeleted": "#d73a49"
     },
     "globals": {
-        "active_guide": "var(cyan)",
+        "active_guide": "#d7dbe0",
         "background": "var(background)",
         "block_caret": "var(cursor)",
         "bracket_contents_foreground": "var(yellow)",
@@ -53,9 +53,10 @@
         "selection_corner_radius": "cut",
         "selection_corner_style": "cut",
         "shadow": "color(var(background) alpha(0.5))",
-        "stack_guide": "var(brown)",
+        "stack_guide": "#eff2f6",
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
+        "guide": "#eff2f6",
         "accent": "var(accent)",
         "gutter_foreground_highlight": "var(foreground)",
         "scroll_highlight": "var(yellow)",
