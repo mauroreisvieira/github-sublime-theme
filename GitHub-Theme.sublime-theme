@@ -70,6 +70,18 @@
             "content_margin": 0
         },
         {
+            "class": "show_tabs_dropdown_button",
+            "layer0.texture": "GitHub Theme/textures/navigation/more.png",
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
+            "layer0.tint": ["foreground", 1.0],
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "show_tabs_dropdown_button",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
+        },
+        {
             "class": "tabset_control",
             "layer0.tint": "var(bg)",
             "layer3.inner_margin": "var(tabBorderSize)",
@@ -299,6 +311,12 @@
             "content_margin": 0
         },
         {
+            "class": "text_line_control",
+            "layer0.opacity": 1.0,
+            "layer0.inner_margin": 2,
+            "content_margin": 4
+        },
+        {
             "class": "dropdown_button_control",
             "layer0.texture": "GitHub Theme/textures/find/history.png",
             "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
@@ -330,7 +348,11 @@
             "layer0.opacity": 0.0,
             "layer0.inner_margin": 2,
             "layer0.tint": ["foreground", 1.0],
-            "content_margin": 2
+            "content_margin": 4
+        },
+        {
+            "class": "icon_button_group",
+            "spacing": 4
         },
         {
             "class": "icon_button_control",
@@ -339,19 +361,18 @@
         },
         {
             "class": "icon_regex",
-            "layer0.texture": "Theme - Default/common/dark/icon_regex.png",
+            "layer0.texture": "GitHub Theme/textures/find/regex.png",
             "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_regex",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_regex",
@@ -372,19 +393,18 @@
         },
         {
             "class": "icon_case",
-            "layer0.texture": "Theme - Default/common/dark/icon_case_sensitive.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/case-sensitive.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_case",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_case",
@@ -405,19 +425,18 @@
         },
         {
             "class": "icon_whole_word",
-            "layer0.texture": "Theme - Default/common/dark/icon_whole_word.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/whole-word.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_whole_word",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_whole_word",
@@ -438,19 +457,18 @@
         },
         {
             "class": "icon_wrap",
-            "layer0.texture": "Theme - Default/common/dark/icon_wrap.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/wrap.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_wrap",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_wrap",
@@ -471,19 +489,18 @@
         },
         {
             "class": "icon_in_selection",
-            "layer0.texture": "Theme - Default/common/dark/icon_in_selection.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/selection.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_in_selection",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_in_selection",
@@ -504,19 +521,18 @@
         },
         {
             "class": "icon_highlight",
-            "layer0.texture": "Theme - Default/common/dark/icon_highlight_matches.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/matches.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_highlight",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_highlight",
@@ -537,19 +553,18 @@
         },
         {
             "class": "icon_preserve_case",
-            "layer0.texture": "Theme - Default/common/dark/icon_preserve_case.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/preserve-case.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_preserve_case",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_preserve_case",
@@ -570,19 +585,18 @@
         },
         {
             "class": "icon_context",
-            "layer0.texture": "Theme - Default/common/dark/icon_context.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/context.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_context",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_context",
@@ -603,19 +617,18 @@
         },
         {
             "class": "icon_use_buffer",
-            "layer0.texture": "Theme - Default/common/dark/icon_use_buffer.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/buffer.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_use_buffer",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_use_buffer",
@@ -636,19 +649,18 @@
         },
         {
             "class": "icon_use_gitignore",
-            "layer0.texture": "Theme - Default/common/icon_use_gitignore.png",
-            "layer0.tint": [255, 255, 255],
+            "layer0.texture": "GitHub Theme/textures/find/gitignore.png",
+            "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
                 "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
-            "content_margin": [14, 11]
+            "content_margin": [10, 10]
         },
         {
             "class": "icon_use_gitignore",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_use_gitignore",
@@ -801,12 +813,12 @@
             "class": "vcs_branch_icon",
             "layer0.texture": "GitHub Theme/textures/vcs/branch.png",
             "layer0.tint": "var(statusBarFg)",
-            "content_margin": [6, 6]
+            "content_margin": [5, 5]
         },
         {
             "class": "vcs_changes_annotation",
             "border_color": "var(borderColor)",
-            "content_margin": [3, 1, 3, 1]
+            "content_margin": [4, 1]
         },
         {
             "class": "vcs_changes_annotation",
