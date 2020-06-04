@@ -92,6 +92,16 @@
             "layer3.tint": "var(borderColorLight)"
         },
         {
+            "class": "grid_layout_control",
+            "border_color": "var(borderColor)",
+            "border_size": 1
+        },
+        {
+            "class": "grid_layout_control",
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "border_color": "var(borderColorLight)"
+        },
+        {
             "class": "sidebar_container",
             "layer0.opacity": 1,
             "layer0.tint": "var(bg)",
