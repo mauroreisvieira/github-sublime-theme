@@ -36,6 +36,15 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 }
 ```
 
+## Recommended Settings
+
+```json
+{
+    "show_tab_navigation": "false",
+    "show_sidebar_disclosure": "false"
+}
+```
+
 ## What’s Next
 
 - Support for more language syntax.

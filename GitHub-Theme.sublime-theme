@@ -34,12 +34,33 @@
             "fg": "var(titleBarColor)"
         },
         {
+            "class": "scroll_tabs_left_button",
+            "settings": ["show_tab_navigation"],
+            "content_margin": [9, 10]
+        },
+        {
+            "class": "scroll_tabs_right_button",
+            "settings": ["show_tab_navigation"],
+            "content_margin": [9, 10]
+        },
+        {
+            "class": "scroll_tabs_left_button",
+            "settings": ["!show_tab_navigation"],
+            "content_margin": 0
+        },
+        {
+            "class": "scroll_tabs_right_button",
+            "settings": ["!show_tab_navigation"],
+            "content_margin": 0
+        },
+        {
             "class": "tabset_control",
             "layer0.tint": "var(bg)",
             "layer3.inner_margin": "var(tabBorderSize)",
             "layer3.draw_center": false,
             "layer3.tint": "var(borderColor)",
-            "layer3.opacity": 1
+            "layer3.opacity": 1,
+            "content_margin": [0, 0, 8, 0],
         },
         {
             "class": "tabset_control",
