@@ -137,6 +137,16 @@
             "content_margin": [8, 8]
         },
         {
+            "class": "fold_button_control",
+            "layer0.opacity": { "target": 0.2, "speed": 4.0, "interpolation": "smoothstep" },
+            "content_margin": 8
+        },
+        {
+            "class": "fold_button_control",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" }
+        },
+        {
             "class": "status_bar",
             "content_margin": "var(statusbarMargin)",
             "layer0.tint": "var(statusbarBg)",
