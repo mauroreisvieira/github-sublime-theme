@@ -16,7 +16,7 @@
         "tabWidth": 80,
         "statusbarBg": ["background", 1],
         "statusBarFg": ["foreground", 1],
-        "statusbarMargin": [10, 2, 0, 2],
+        "statusbarMargin": [10, 3, 0, 0],
         "buttonMinSize": [80, 28],
         "vcsBadgeSize": 5,
         "vcsIgnored": "color(var(--foreground) a(.4))",
@@ -36,12 +36,28 @@
         {
             "class": "scroll_tabs_left_button",
             "settings": ["show_tab_navigation"],
-            "content_margin": [9, 10]
+            "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-left.png",
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
+            "layer0.tint": ["foreground", 1.0],
+            "content_margin": [10, 10]
+        },
+        {
+            "class": "scroll_tabs_left_button",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "scroll_tabs_right_button",
             "settings": ["show_tab_navigation"],
-            "content_margin": [9, 10]
+            "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-right.png",
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
+            "layer0.tint": ["foreground", 1.0],
+            "content_margin": [10, 10]
+        },
+        {
+            "class": "scroll_tabs_right_button",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "scroll_tabs_left_button",
@@ -160,13 +176,20 @@
         },
         {
             "class": "fold_button_control",
-            "layer0.opacity": { "target": 0.2, "speed": 4.0, "interpolation": "smoothstep" },
+            "layer0.texture": "GitHub Theme/textures/navigation/chevron-right.png",
+            "layer0.opacity": 1.0,
+            "layer0.tint": ["foreground", 1],
             "content_margin": 8
         },
         {
             "class": "fold_button_control",
+            "attributes": ["expanded"],
+            "layer0.texture": "GitHub Theme/textures/navigation/chevron-down.png",
+        },
+        {
+            "class": "fold_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "status_bar",
@@ -276,6 +299,17 @@
             "content_margin": 0
         },
         {
+            "class": "dropdown_button_control",
+            "layer0.texture": "GitHub Theme/textures/find/history.png",
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "dropdown_button_control",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" },
+        },
+        {
             "class": "button_control",
             "content_margin": [6, 10, 6, 10],
             "min_size": "var(buttonMinSize)",
@@ -308,7 +342,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_regex.png",
             "layer0.tint": ["foreground", 1.0],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -317,7 +351,7 @@
         {
             "class": "icon_regex",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_regex",
@@ -341,7 +375,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_case_sensitive.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -350,7 +384,7 @@
         {
             "class": "icon_case",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_case",
@@ -374,7 +408,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_whole_word.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -383,7 +417,7 @@
         {
             "class": "icon_whole_word",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_whole_word",
@@ -407,7 +441,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_wrap.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -416,7 +450,7 @@
         {
             "class": "icon_wrap",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_wrap",
@@ -440,7 +474,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_in_selection.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -449,7 +483,7 @@
         {
             "class": "icon_in_selection",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_in_selection",
@@ -473,7 +507,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_highlight_matches.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -482,7 +516,7 @@
         {
             "class": "icon_highlight",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_highlight",
@@ -506,7 +540,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_preserve_case.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -515,7 +549,7 @@
         {
             "class": "icon_preserve_case",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_preserve_case",
@@ -539,7 +573,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_context.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -548,7 +582,7 @@
         {
             "class": "icon_context",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_context",
@@ -572,7 +606,7 @@
             "layer0.texture": "Theme - Default/common/dark/icon_use_buffer.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -581,7 +615,7 @@
         {
             "class": "icon_use_buffer",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_use_buffer",
@@ -605,7 +639,7 @@
             "layer0.texture": "Theme - Default/common/icon_use_gitignore.png",
             "layer0.tint": [255, 255, 255],
             "layer0.opacity": {
-                "target": 0.7,
+                "target": 0.5,
                 "speed": 5.0,
                 "interpolation": "smoothstep"
             },
@@ -614,7 +648,7 @@
         {
             "class": "icon_use_gitignore",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": [0, 0, 0, 0.7]
+            "layer0.tint": [0, 0, 0, 0.5]
         },
         {
             "class": "icon_use_gitignore",
@@ -638,7 +672,7 @@
             "parents": [
                 { "class": "file_system_entry", "attributes": ["untracked"] }
             ],
-            "layer0.texture": "GitHub Theme/textures/diff/vcs_untracked.png",
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_untracked.png",
             "layer0.tint": "var(vcsUntracked)",
             "content_margin": "var(vcsBadgeSize)"
         },
@@ -647,7 +681,7 @@
             "parents": [
                 { "class": "file_system_entry", "attributes": ["modified"] }
             ],
-            "layer0.texture": "GitHub Theme/textures/diff/vcs_modified.png",
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_modified.png",
             "layer0.tint": "var(vcsModified)",
             "content_margin": "var(vcsBadgeSize)"
         },
@@ -656,7 +690,7 @@
             "parents": [
                 { "class": "file_system_entry", "attributes": ["added"] }
             ],
-            "layer0.texture": "GitHub Theme/textures/diff/vcs_added.png",
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_added.png",
             "layer0.tint": "var(vcsUntracked)",
             "content_margin": "var(vcsBadgeSize)"
         },
@@ -674,7 +708,7 @@
             "parents": [
                 { "class": "file_system_entry", "attributes": ["staged"] }
             ],
-            "layer0.texture": "GitHub Theme/textures/diff/vcs_staged.png",
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_staged.png",
             "layer0.tint": "var(vcsStaged)",
             "content_margin": "var(vcsBadgeSize)"
         },
@@ -762,6 +796,12 @@
                 { "class": "file_system_entry", "attributes": ["staged"] }
             ],
             "color": "var(vcsStaged)"
+        },
+        {
+            "class": "vcs_branch_icon",
+            "layer0.texture": "GitHub Theme/textures/vcs/branch.png",
+            "layer0.tint": "var(statusBarFg)",
+            "content_margin": [6, 6]
         },
         {
             "class": "vcs_changes_annotation",
