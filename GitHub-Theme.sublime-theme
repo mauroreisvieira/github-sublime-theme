@@ -7,6 +7,8 @@
         "bgLight": "#f6f8fa",
         "borderColor": "#2f363d",
         "borderColorLight": "#e1e4e8",
+        "puckControlColor": "#6a737d44",
+        "puckControlColorLight": "#959da544",
         "tabBorderSize": [0, 1, 1, 1],
         "tabSelectedBg": ["background", 1],
         "tabSelectedBorderSize": [0, 1, 1, 0],
@@ -150,6 +152,28 @@
             "class": "overlay_control",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "layer0.tint": "var(borderColorLight)"
+        },
+        {
+            "class": "scroll_track_control",
+            "layer0.texture": "",
+            "layer0.opacity": 0,
+            "layer0.inner_margin": 0,
+            "content_margin": 6
+        },
+        {
+            "class": "scroll_bar_control",
+            "content_margin": 0
+        },
+        {
+            "class": "puck_control",
+            "layer0.texture": "",
+            "layer0.opacity": 1.0,
+            "layer0.tint": "var(puckControlColor)"
+        },
+        {
+            "class": "puck_control",
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "layer0.tint": "var(puckControlColorLight)"
         },
         {
             "class": "quick_panel",
