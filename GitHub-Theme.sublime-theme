@@ -5,7 +5,7 @@
         "titleBarColor": ["foreground", 1],
         "bg": "#1f2428",
         "bgLight": "#f6f8fa",
-        "borderColor": "#2f363d",
+        "borderColor": "#1B1F23",
         "borderColorLight": "#e1e4e8",
         "puckControlColor": "#6a737d44",
         "puckControlColorLight": "#959da544",
@@ -15,6 +15,7 @@
         "tabHeight": 40,
         "tabWidth": 80,
         "statusbarBg": ["background", 1],
+        "statusBarFg": ["foreground", 1],
         "statusbarMargin": [10, 2, 0, 2],
         "buttonMinSize": [80, 28],
         "vcsBadgeSize": 5,
@@ -148,9 +149,26 @@
         },
         {
             "class": "status_bar",
-            "content_margin": "var(statusbarMargin)",
+            "layer0.opacity": 1,
             "layer0.tint": "var(statusbarBg)",
-            "layer0.opacity": 1
+            "layer1.opacity": 1,
+            "layer1.tint": "var(borderColor)",
+            "content_margin": "var(statusbarMargin)",
+        },
+        {
+            "class": "status_bar",
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "layer1.tint": "var(borderColorLight)"
+        },
+        {
+            "class": "status_bar",
+            "settings": ["!adaptive_dividers"],
+            "layer1.opacity": 0
+        },
+        {
+            "class": "label_control",
+            "parents": [{"class": "status_bar"}],
+            "fg": "var(statusBarFg)"
         },
         {
             "class": "overlay_control",
