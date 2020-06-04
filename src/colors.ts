@@ -2,7 +2,7 @@ import { IColors } from '@meetio/scheme-generator';
 import { primer } from './primer';
 
 const dark: IColors = {
-    accent: '#e36209',
+    accent: primer.orange[6],
     cursor: primer.blue[2],
     foreground: primer.gray[0],
     background: primer.gray[9],
@@ -25,7 +25,7 @@ const dark: IColors = {
 };
 
 const light: IColors = {
-    accent: '#e36209',
+    accent: primer.orange[6],
     cursor: primer.orange[6],
     foreground: primer.gray[9],
     background: primer.white,

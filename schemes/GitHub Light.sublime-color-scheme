@@ -46,7 +46,7 @@
         "line_diff_deleted": "var(diffDeleted)",
         "line_diff_modified": "var(diffModified)",
         "line_diff_width": "3",
-        "line_highlight": "color(var(foreground) alpha(0.1))",
+        "line_highlight": "#f6f8fa",
         "misspelling": "var(red)",
         "selection": "#0366D625",
         "selection_border": "var(cyan)",

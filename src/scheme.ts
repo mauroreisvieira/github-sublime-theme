@@ -24,6 +24,7 @@ interface IScheme {
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: dark,
         customeUi: {
+            line_highlight: "#2b3036",
             guide: primer.gray[8],
             stack_guide: primer.gray[8],
             active_guide: primer.gray[7],
@@ -39,6 +40,7 @@ interface IScheme {
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: light,
         customeUi: {
+            line_highlight: primer.gray[1],
             guide: '#eff2f6',
             stack_guide: '#eff2f6',
             active_guide: '#d7dbe0',
