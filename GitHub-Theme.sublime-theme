@@ -2,13 +2,19 @@
     "extends": "Adaptive.sublime-theme",
     "variables": {
         "titleBarBg": ["background", 1],
-        "titleBarColor": ["foreground", 1],
+        "titleBarFg": ["foreground", 1],
         "bg": "#1f2428",
         "bgLight": "#f6f8fa",
         "borderColor": "#1B1F23",
         "borderColorLight": "#e1e4e8",
-        "puckControlColor": "#6a737d44",
-        "puckControlColorLight": "#959da544",
+        "sidebarHeadingFg": "#fafbfc",
+        "sidebarHeadingFgLight": "#24292e",
+        "treeHoverBg": "#282e34",
+        "treeSelectedBg": "#39414a",
+        "treeHoverBgLight": "#ebf0f4",
+        "treeSelectedBgLight": "#e2e5e9",
+        "puckControlBg": "#6a737d44",
+        "puckControlBgLight": "#959da544",
         "tabBorderSize": [0, 1, 1, 1],
         "tabSelectedBg": ["background", 1],
         "tabSelectedBorderSize": [0, 1, 1, 0],
@@ -16,7 +22,7 @@
         "tabWidth": 80,
         "statusbarBg": ["background", 1],
         "statusBarFg": ["foreground", 1],
-        "statusbarMargin": [10, 3, 0, 0],
+        "statusbarMargin": [8, 5, 0, 3],
         "buttonMinSize": [80, 28],
         "vcsBadgeSize": 5,
         "vcsIgnored": "color(var(--foreground) a(.4))",
@@ -31,7 +37,7 @@
         {
             "class": "title_bar",
             "bg": "var(titleBarBg)",
-            "fg": "var(titleBarColor)"
+            "fg": "var(titleBarFg)"
         },
         {
             "class": "scroll_tabs_left_button",
@@ -172,10 +178,25 @@
         },
         {
             "class": "sidebar_heading",
-            "fg": ["foreground", 1.0],
-            "font.face": "var(font_face)",
-            "font.size": "var(font_size_sm)",
-            "font.bold": true
+            "fg": "var(sidebarHeadingFg)",
+            "font.size": "var(font_size_sm)"
+        },
+        {
+            "class": "sidebar_heading",
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
+            "fg": "var(sidebarHeadingFgLight)"
+        },
+        {
+            "class": "sidebar_button_control",
+            "layer0.texture": "GitHub Theme/textures/tree/sidebar-button.png",
+            "layer0.opacity": { "target": 0.5, "speed": 5.0, "interpolation": "smoothstep" },
+            "layer0.tint": "var(statusBarFg)",
+            "content_margin": [7, 7]
+        },
+        {
+            "class": "sidebar_button_control",
+            "attributes": ["hover"],
+            "layer0.opacity": { "target": 1.0, "speed": 5.0, "interpolation": "smoothstep" },
         },
         {
             "class": "disclosure_button_control",
@@ -252,12 +273,12 @@
             "class": "puck_control",
             "layer0.texture": "",
             "layer0.opacity": 1.0,
-            "layer0.tint": "var(puckControlColor)"
+            "layer0.tint": "var(puckControlBg)"
         },
         {
             "class": "puck_control",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
-            "layer0.tint": "var(puckControlColorLight)"
+            "layer0.tint": "var(puckControlBgLight)"
         },
         {
             "class": "quick_panel",
@@ -810,6 +831,49 @@
             "color": "var(vcsStaged)"
         },
         {
+            "class": "icon_folder",
+            "layer0.texture": "GitHub Theme/textures/tree/folder.png",
+            "layer0.opacity": 0.5,
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "icon_folder",
+            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+            "layer0.texture": "GitHub Theme/textures/tree/folder-opened.png",
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "icon_folder_dup",
+            "layer0.texture": "GitHub Theme/textures/tree/folder-dup.png",
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["hover"],
+            "layer0.tint": "var(treeHoverBg)",
+            "layer0.opacity": 1.0,
+        },
+        {
+            "class": "tree_row",
+            "attributes": ["selected"],
+            "layer0.tint": "var(treeSelectedBg)",
+            "layer0.opacity": 1.0,
+        },
+        {
+            "class": "tree_row",
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "attributes": ["hover"],
+            "layer0.tint": "var(treeHoverBgLight)",
+            "layer0.opacity": 1.0,
+        },
+        {
+            "class": "tree_row",
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "attributes": ["selected"],
+            "layer0.tint": "var(treeSelectedBgLight)",
+            "layer0.opacity": 1.0,
+        },
+        {
             "class": "vcs_branch_icon",
             "layer0.texture": "GitHub Theme/textures/vcs/branch.png",
             "layer0.tint": "var(statusBarFg)",
@@ -818,7 +882,9 @@
         {
             "class": "vcs_changes_annotation",
             "border_color": "var(borderColor)",
-            "content_margin": [4, 1]
+            "font.face": "var(font_face)",
+            "color": "var(statusBarFg)",
+            "content_margin": [3, 1]
         },
         {
             "class": "vcs_changes_annotation",
