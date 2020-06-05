@@ -44,8 +44,8 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
 {
     "font_face": "Fira Code",
     "highlight_line": true,
-    "font_options": ["gray_antialias", "subpixel_antialias"], // On retina Mac & Windows
-    "indent_guide_options": ["draw_normal", "draw_active"], // Highlight active indent
+    "font_options": ["gray_antialias", "subpixel_antialias"], 
+    "indent_guide_options": ["draw_normal", "draw_active"], 
     "margin": 20,
     "line_padding_bottom": 7,
     "line_padding_top": 7,
