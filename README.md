@@ -38,16 +38,23 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 
 ## Recommended Settings
 
-```json
+To enjoy a better experience of using the GitHub Theme in your Sublime Text, please check the following settings.
+
 {
+    "font_face": "Fira Code",
+    "highlight_line": true,
+    "font_options": ["gray_antialias", "subpixel_antialias"], // On retina Mac & Windows
+    "indent_guide_options": ["draw_normal", "draw_active"], // Highlight active indent
+    "margin": 20,
+    "line_padding_bottom": 7,
+    "line_padding_top": 7,
     "show_tab_navigation": "false",
     "show_sidebar_disclosure": "false"
 }
-```
 
 ## What’s Next
 
-- Support for more language syntax.
-- Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
-- Add new UI icons based on GitHub.
-- Improvements on Buttons, Inputs and Panel UI.
+-   Support for more language syntax.
+-   Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
+-   Add new UI icons based on GitHub.
+-   Improvements on Buttons, Inputs and Panel UI.
