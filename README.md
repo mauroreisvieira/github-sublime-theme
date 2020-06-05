@@ -40,6 +40,7 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 
 To enjoy a better experience of using the GitHub Theme in your Sublime Text, please check the following settings.
 
+```json
 {
     "font_face": "Fira Code",
     "highlight_line": true,
@@ -51,6 +52,7 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
     "show_tab_navigation": "false",
     "show_sidebar_disclosure": "false"
 }
+```
 
 ## What’s Next
 
