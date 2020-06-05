@@ -1,5 +1,3 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-  <circle cx="42.667" cy="213.333" r="42.667" transform="matrix(.04219 0 0 .04219 3 3.446526)"/>
-  <circle cx="213.333" cy="213.333" r="42.667" transform="matrix(.04219 0 0 .04219 3 3.446526)"/>
-  <circle cx="384" cy="213.333" r="42.667" transform="matrix(.04219 0 0 .04219 3 3.446526)"/>
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+  <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm5 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
 </svg>
