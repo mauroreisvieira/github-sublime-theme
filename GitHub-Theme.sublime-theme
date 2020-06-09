@@ -80,7 +80,7 @@
             "layer0.texture": "GitHub Theme/textures/navigation/more.png",
             "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
             "layer0.tint": ["foreground", 1.0],
-            "content_margin": [8, 8]
+            "content_margin": [10, 10]
         },
         {
             "class": "show_tabs_dropdown_button",
