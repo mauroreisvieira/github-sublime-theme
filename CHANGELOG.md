@@ -1,3 +1,42 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.0...v1.2.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* closes [#1](https://github.com/mauroreisvieira/github-sublime-theme/issues/1) issue related with string color ([55e366a](https://github.com/mauroreisvieira/github-sublime-theme/commit/55e366a))
+* **docs:** formatting ([eb6632c](https://github.com/mauroreisvieira/github-sublime-theme/commit/eb6632c))
+
+
+
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.1.0...v1.2.0) (2020-06-05)
+
+
+### Bug Fixes
+
+* **active_guide:** update color for guide and active_guide ([847442e](https://github.com/mauroreisvieira/github-sublime-theme/commit/847442e))
+* **button:** background color of buttons in light scheme ([468a39c](https://github.com/mauroreisvieira/github-sublime-theme/commit/468a39c))
+* **fold_button_control:** opacity level ([bc99f07](https://github.com/mauroreisvieira/github-sublime-theme/commit/bc99f07))
+* **grid_layout_control:** border color ([988289c](https://github.com/mauroreisvieira/github-sublime-theme/commit/988289c))
+* **line_highlight:** color for light and dark ([539a912](https://github.com/mauroreisvieira/github-sublime-theme/commit/539a912))
+* **scroll_track_control:** background color ([f902793](https://github.com/mauroreisvieira/github-sublime-theme/commit/f902793))
+* **sidebar heading:** sidebar heading color ([f25d9fe](https://github.com/mauroreisvieira/github-sublime-theme/commit/f25d9fe))
+* **status_bar:** border color and label color ([8d1025d](https://github.com/mauroreisvieira/github-sublime-theme/commit/8d1025d))
+* **tags_options:** add underline as an options ([1f9924e](https://github.com/mauroreisvieira/github-sublime-theme/commit/1f9924e))
+* typo in docs ([cd4ef9f](https://github.com/mauroreisvieira/github-sublime-theme/commit/cd4ef9f))
+
+
+### Features
+
+* **accent:** add accent color in theme from scheme ([89a3af4](https://github.com/mauroreisvieira/github-sublime-theme/commit/89a3af4))
+* **icons:** add icons ([766ef88](https://github.com/mauroreisvieira/github-sublime-theme/commit/766ef88))
+* **icons:** add tree icons ([d20096a](https://github.com/mauroreisvieira/github-sublime-theme/commit/d20096a))
+* **icons:** new filter icons ([8289da2](https://github.com/mauroreisvieira/github-sublime-theme/commit/8289da2))
+* **show_tab_navigation:** add option `show_tab_navigation` ([d0a0c68](https://github.com/mauroreisvieira/github-sublime-theme/commit/d0a0c68))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.1.0...v1.2.0) (2020-06-05)
 
