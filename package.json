@@ -13,7 +13,7 @@
     "license": "MIT",
     "scripts": {
         "watch": "tsc -w",
-        "build": "ts-node src/scheme.ts",
+        "scheme": "ts-node src/scheme.ts",
         "icons": "ts-node src/icons.ts",
         "prettier": "prettier --write \"src/*.ts?(x)\"",
         "lint": "eslint src/*.ts",

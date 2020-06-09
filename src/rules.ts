@@ -269,10 +269,10 @@ export const rules: Array<IRules> = [
     },
     {
         scope: [
-            'meta.mapping.value string.quoted.double',
+            'string.quoted.single', 'string.quoted.double',
         ],
         settings: {
-            foreground: 'var(foreground)',
+            foreground: 'var(palenight)',
         },
     },
 ];

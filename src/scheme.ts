@@ -22,7 +22,10 @@ interface IScheme {
     {
         name: 'GitHub Dark',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
-        variables: dark,
+        variables: {
+            ...dark,
+            palenight: '#9ECBFF',
+        },
         customeUi: {
             line_highlight: "#2b3036",
             guide: primer.gray[8],
@@ -38,7 +41,10 @@ interface IScheme {
     {
         name: 'GitHub Light',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
-        variables: light,
+        variables: {
+            ...light,
+            palenight: primer.blue[8],
+        },
         customeUi: {
             line_highlight: primer.gray[1],
             guide: '#eff2f6',

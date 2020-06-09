@@ -21,7 +21,8 @@
         "invalid": "#b31d28",
         "diffAdded": "#28a745",
         "diffModified": "#0366d6",
-        "diffDeleted": "#d73a49"
+        "diffDeleted": "#d73a49",
+        "palenight": "#032f62"
     },
     "globals": {
         "active_guide": "#d7dbe0",
@@ -231,8 +232,8 @@
             "foreground": "var(blue)"
         },
         {
-            "scope": "meta.mapping.value string.quoted.double",
-            "foreground": "var(foreground)"
+            "scope": "string.quoted.single,string.quoted.double",
+            "foreground": "var(palenight)"
         }
     ]
 }
