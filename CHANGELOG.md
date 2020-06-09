@@ -1,3 +1,24 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.1...v1.3.0) (2020-06-09)
+
+
+### Features
+
+* **icon:** add new folder icons ([5708599](https://github.com/mauroreisvieira/github-sublime-theme/commit/5708599))
+
+
+
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.0...v1.2.1) (2020-06-09)
+
+
+### Bug Fixes
+
+* closes [#1](https://github.com/mauroreisvieira/github-sublime-theme/issues/1) issue related with string color ([55e366a](https://github.com/mauroreisvieira/github-sublime-theme/commit/55e366a))
+* **docs:** formatting ([eb6632c](https://github.com/mauroreisvieira/github-sublime-theme/commit/eb6632c))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.0...v1.2.1) (2020-06-09)
 
