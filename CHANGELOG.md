@@ -1,3 +1,24 @@
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.0...v1.3.1) (2020-06-23)
+
+
+### Bug Fixes
+
+* **quick_panel:** remove row_padding ([1b57241](https://github.com/mauroreisvieira/github-sublime-theme/commit/1b57241))
+* **scheme:** closes [#4](https://github.com/mauroreisvieira/github-sublime-theme/issues/4) remove cyan color ([eb5dcc7](https://github.com/mauroreisvieira/github-sublime-theme/commit/eb5dcc7))
+
+
+
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.1...v1.3.0) (2020-06-09)
+
+
+### Features
+
+* **icon:** add new folder icons ([5708599](https://github.com/mauroreisvieira/github-sublime-theme/commit/5708599))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.2.1...v1.3.0) (2020-06-09)
 
