@@ -43,43 +43,27 @@
             "class": "scroll_tabs_left_button",
             "settings": ["show_tab_navigation"],
             "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-left.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
             "layer0.tint": ["foreground", 1.0],
             "content_margin": [10, 10]
         },
         {
             "class": "scroll_tabs_left_button",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "scroll_tabs_right_button",
             "settings": ["show_tab_navigation"],
             "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-right.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
             "layer0.tint": ["foreground", 1.0],
             "content_margin": [10, 10]
         },
         {
             "class": "scroll_tabs_right_button",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "scroll_tabs_left_button",
@@ -94,22 +78,14 @@
         {
             "class": "show_tabs_dropdown_button",
             "layer0.texture": "GitHub Theme/textures/navigation/more.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
             "layer0.tint": ["foreground", 1.0],
             "content_margin": [10, 10]
         },
         {
             "class": "show_tabs_dropdown_button",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "tabset_control",
@@ -118,7 +94,7 @@
             "layer3.draw_center": false,
             "layer3.tint": "var(borderColor)",
             "layer3.opacity": 1,
-            "content_margin": [0, 0, 8, 0]
+            "content_margin": [0, 0, 8, 0],
         },
         {
             "class": "tabset_control",
@@ -180,7 +156,7 @@
         },
         {
             "class": "grid_layout_control",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
             "border_color": "var(borderColorLight)"
         },
         {
@@ -207,28 +183,20 @@
         },
         {
             "class": "sidebar_heading",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
             "fg": "var(sidebarHeadingFgLight)"
         },
         {
             "class": "sidebar_button_control",
             "layer0.texture": "GitHub Theme/textures/tree/sidebar-button.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 5.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": { "target": 0.5, "speed": 5.0, "interpolation": "smoothstep" },
             "layer0.tint": "var(statusBarFg)",
             "content_margin": [7, 7]
         },
         {
             "class": "sidebar_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 5.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 5.0, "interpolation": "smoothstep" },
         },
         {
             "class": "disclosure_button_control",
@@ -249,16 +217,12 @@
         {
             "class": "fold_button_control",
             "attributes": ["expanded"],
-            "layer0.texture": "GitHub Theme/textures/navigation/chevron-down.png"
+            "layer0.texture": "GitHub Theme/textures/navigation/chevron-down.png",
         },
         {
             "class": "fold_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "status_bar",
@@ -266,11 +230,11 @@
             "layer0.tint": "var(statusbarBg)",
             "layer1.opacity": 1,
             "layer1.tint": "var(borderColor)",
-            "content_margin": "var(statusbarMargin)"
+            "content_margin": "var(statusbarMargin)",
         },
         {
             "class": "status_bar",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{"class": "window", "attributes": ["file_light"]}],
             "layer1.tint": "var(borderColorLight)"
         },
         {
@@ -280,7 +244,7 @@
         },
         {
             "class": "label_control",
-            "parents": [{ "class": "status_bar" }],
+            "parents": [{"class": "status_bar"}],
             "fg": "var(statusBarFg)"
         },
         {
@@ -324,13 +288,13 @@
         },
         {
             "class": "quick_panel",
-            "parents": [{ "class": "overlay_control goto_symbol" }],
-            "row_padding": [0, 0, 0, 0]
+            "parents": [{"class": "overlay_control goto_symbol"}],
+            "row_padding": 0,
         },
         {
             "class": "quick_panel",
-            "parents": [{ "class": "overlay_control goto_symbol_in_project" }],
-            "row_padding": [0, 0, 0, 0]
+            "parents": [{"class": "overlay_control goto_symbol_in_project"}],
+            "row_padding": 0,
         },
         {
             "class": "quick_panel_row",
@@ -347,7 +311,6 @@
         {
             "class": "panel_control",
             "layer0.tint": "var(bg)",
-            "layer1.texture": "",
             "layer1.opacity": 1,
             "layer1.draw_center": false,
             "layer1.inner_margin": [0, 1, 0, 1],
@@ -372,23 +335,21 @@
             "content_margin": 4
         },
         {
+            "class": "panel_control",
+            "parents": [{"class": "switch_project_window"}],
+            "layer0.tint": "var(bg)",
+            "content_margin": 0
+        },
+        {
             "class": "dropdown_button_control",
             "layer0.texture": "GitHub Theme/textures/find/history.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
             "content_margin": [8, 8]
         },
         {
             "class": "dropdown_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" },
         },
         {
             "class": "button_control",
@@ -435,7 +396,7 @@
         },
         {
             "class": "icon_regex",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_regex",
@@ -467,7 +428,7 @@
         },
         {
             "class": "icon_case",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_case",
@@ -499,7 +460,7 @@
         },
         {
             "class": "icon_whole_word",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_whole_word",
@@ -531,7 +492,7 @@
         },
         {
             "class": "icon_wrap",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_wrap",
@@ -563,7 +524,7 @@
         },
         {
             "class": "icon_in_selection",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_in_selection",
@@ -595,7 +556,7 @@
         },
         {
             "class": "icon_highlight",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_highlight",
@@ -627,7 +588,7 @@
         },
         {
             "class": "icon_preserve_case",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_preserve_case",
@@ -659,7 +620,7 @@
         },
         {
             "class": "icon_context",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_context",
@@ -691,7 +652,7 @@
         },
         {
             "class": "icon_use_buffer",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_use_buffer",
@@ -723,7 +684,7 @@
         },
         {
             "class": "icon_use_gitignore",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }]
+            "parents": [{ "class": "window", "attributes": ["file_light"] }],
         },
         {
             "class": "icon_use_gitignore",
@@ -880,7 +841,7 @@
         },
         {
             "class": "icon_folder",
-            "parents": [{ "class": "tree_row", "attributes": ["expanded"] }],
+            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
             "layer0.texture": "GitHub Theme/textures/tree/folder-opened.png",
             "content_margin": [8, 8]
         },
@@ -893,27 +854,27 @@
             "class": "tree_row",
             "attributes": ["hover"],
             "layer0.tint": "var(treeHoverBg)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
         },
         {
             "class": "tree_row",
             "attributes": ["selected"],
             "layer0.tint": "var(treeSelectedBg)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
         },
         {
             "class": "tree_row",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "attributes": ["hover"],
             "layer0.tint": "var(treeHoverBgLight)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
         },
         {
             "class": "tree_row",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "attributes": ["selected"],
             "layer0.tint": "var(treeSelectedBgLight)",
-            "layer0.opacity": 1.0
+            "layer0.opacity": 1.0,
         },
         {
             "class": "vcs_branch_icon",
