@@ -1,3 +1,25 @@
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.1...v1.3.2) (2020-06-24)
+
+
+### Bug Fixes
+
+* **theme:** background color of panel ([355e909](https://github.com/mauroreisvieira/github-sublime-theme/commit/355e909))
+* **theme:** update panel_control in switch_project_window ([f461884](https://github.com/mauroreisvieira/github-sublime-theme/commit/f461884))
+
+
+
+<a name="1.3.1"></a>
+## [1.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.0...v1.3.1) (2020-06-23)
+
+
+### Bug Fixes
+
+* **quick_panel:** remove row_padding ([1b57241](https://github.com/mauroreisvieira/github-sublime-theme/commit/1b57241))
+* **scheme:** closes [#4](https://github.com/mauroreisvieira/github-sublime-theme/issues/4) remove cyan color ([eb5dcc7](https://github.com/mauroreisvieira/github-sublime-theme/commit/eb5dcc7))
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.0...v1.3.1) (2020-06-23)
 
