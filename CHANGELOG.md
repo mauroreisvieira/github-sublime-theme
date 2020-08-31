@@ -1,3 +1,26 @@
+<a name="1.3.3"></a>
+## [1.3.3](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.2...v1.3.3) (2020-08-31)
+
+
+### Bug Fixes
+
+* **theme:** remove duplicated proprieties ([7b931cc](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b931cc))
+* update packages outdated ([fc32484](https://github.com/mauroreisvieira/github-sublime-theme/commit/fc32484))
+* **theme:** update dialog background ([43cd1e8](https://github.com/mauroreisvieira/github-sublime-theme/commit/43cd1e8))
+
+
+
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.1...v1.3.2) (2020-06-24)
+
+
+### Bug Fixes
+
+* **theme:** background color of panel ([355e909](https://github.com/mauroreisvieira/github-sublime-theme/commit/355e909))
+* **theme:** update panel_control in switch_project_window ([f461884](https://github.com/mauroreisvieira/github-sublime-theme/commit/f461884))
+
+
+
 <a name="1.3.2"></a>
 ## [1.3.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.1...v1.3.2) (2020-06-24)
 
