@@ -94,7 +94,7 @@
             "layer3.draw_center": false,
             "layer3.tint": "var(borderColor)",
             "layer3.opacity": 1,
-            "content_margin": [0, 0, 8, 0],
+            "content_margin": [0, 0, 8, 0]
         },
         {
             "class": "tabset_control",
@@ -124,7 +124,6 @@
 
             "layer3.opacity": 1,
             "layer3.texture": "",
-            "layer3.draw_center": false,
             "layer3.tint": "var(borderColor)"
         },
         {
@@ -138,7 +137,6 @@
             "layer2.tint": "var(tabSelectedBg)",
             "layer3.opacity": 1,
             "attributes": ["selected"],
-            "layer3.opacity": 1,
             "layer3.texture": "",
             "layer3.inner_margin": "var(tabSelectedBorderSize)",
             "layer3.draw_center": false,
@@ -163,9 +161,8 @@
             "class": "sidebar_container",
             "layer0.opacity": 1,
             "layer0.tint": "var(bg)",
-            "content_margin": [0, 6, 0, 0],
             "layer1.opacity": 1,
-            "layer1.inner_margin": [0, 0, 1, 0],
+            "layer1.inner_margin": [0, 1, 1, 0],
             "layer1.draw_center": false,
             "layer1.tint": "var(borderColor)",
             "content_margin": [0, 6, 0, 0]
@@ -196,7 +193,7 @@
         {
             "class": "sidebar_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": { "target": 1.0, "speed": 5.0, "interpolation": "smoothstep" },
+            "layer0.opacity": { "target": 1.0, "speed": 5.0, "interpolation": "smoothstep" }
         },
         {
             "class": "disclosure_button_control",
@@ -217,7 +214,7 @@
         {
             "class": "fold_button_control",
             "attributes": ["expanded"],
-            "layer0.texture": "GitHub Theme/textures/navigation/chevron-down.png",
+            "layer0.texture": "GitHub Theme/textures/navigation/chevron-down.png"
         },
         {
             "class": "fold_button_control",
@@ -230,7 +227,7 @@
             "layer0.tint": "var(statusbarBg)",
             "layer1.opacity": 1,
             "layer1.tint": "var(borderColor)",
-            "content_margin": "var(statusbarMargin)",
+            "content_margin": "var(statusbarMargin)"
         },
         {
             "class": "status_bar",
@@ -294,12 +291,12 @@
         {
             "class": "quick_panel",
             "parents": [{"class": "overlay_control goto_symbol"}],
-            "row_padding": 0,
+            "row_padding": 0
         },
         {
             "class": "quick_panel",
             "parents": [{"class": "overlay_control goto_symbol_in_project"}],
-            "row_padding": 0,
+            "row_padding": 0
         },
         {
             "class": "quick_panel_row",
@@ -354,7 +351,7 @@
         {
             "class": "dropdown_button_control",
             "attributes": ["hover"],
-            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" },
+            "layer0.opacity": { "target": 1.0, "speed": 4.0, "interpolation": "smoothstep" }
         },
         {
             "class": "button_control",
@@ -401,7 +398,7 @@
         },
         {
             "class": "icon_regex",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_regex",
@@ -433,7 +430,7 @@
         },
         {
             "class": "icon_case",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_case",
@@ -465,7 +462,7 @@
         },
         {
             "class": "icon_whole_word",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_whole_word",
@@ -497,7 +494,7 @@
         },
         {
             "class": "icon_wrap",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_wrap",
@@ -529,7 +526,7 @@
         },
         {
             "class": "icon_in_selection",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_in_selection",
@@ -561,7 +558,7 @@
         },
         {
             "class": "icon_highlight",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_highlight",
@@ -593,7 +590,7 @@
         },
         {
             "class": "icon_preserve_case",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_preserve_case",
@@ -625,7 +622,7 @@
         },
         {
             "class": "icon_context",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_context",
@@ -657,7 +654,7 @@
         },
         {
             "class": "icon_use_buffer",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_use_buffer",
@@ -689,7 +686,7 @@
         },
         {
             "class": "icon_use_gitignore",
-            "parents": [{ "class": "window", "attributes": ["file_light"] }],
+            "parents": [{ "class": "window", "attributes": ["file_light"] }]
         },
         {
             "class": "icon_use_gitignore",
@@ -859,27 +856,27 @@
             "class": "tree_row",
             "attributes": ["hover"],
             "layer0.tint": "var(treeHoverBg)",
-            "layer0.opacity": 1.0,
+            "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
             "attributes": ["selected"],
             "layer0.tint": "var(treeSelectedBg)",
-            "layer0.opacity": 1.0,
+            "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "attributes": ["hover"],
             "layer0.tint": "var(treeHoverBgLight)",
-            "layer0.opacity": 1.0,
+            "layer0.opacity": 1.0
         },
         {
             "class": "tree_row",
             "parents": [{ "class": "window", "attributes": ["file_light"] }],
             "attributes": ["selected"],
             "layer0.tint": "var(treeSelectedBgLight)",
-            "layer0.opacity": 1.0,
+            "layer0.opacity": 1.0
         },
         {
             "class": "vcs_branch_icon",
