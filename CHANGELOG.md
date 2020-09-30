@@ -1,3 +1,25 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.3...v1.4.0) (2020-09-30)
+
+
+### Bug Fixes
+
+* add support for `link_color` ([e774621](https://github.com/mauroreisvieira/github-sublime-theme/commit/e774621))
+
+
+
+<a name="1.3.3"></a>
+## [1.3.3](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.2...v1.3.3) (2020-08-31)
+
+
+### Bug Fixes
+
+* **theme:** remove duplicated proprieties ([7b931cc](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b931cc))
+* update packages outdated ([fc32484](https://github.com/mauroreisvieira/github-sublime-theme/commit/fc32484))
+* **theme:** update dialog background ([43cd1e8](https://github.com/mauroreisvieira/github-sublime-theme/commit/43cd1e8))
+
+
+
 <a name="1.3.3"></a>
 ## [1.3.3](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.2...v1.3.3) (2020-08-31)
 
