@@ -149,7 +149,6 @@
             "layer1.opacity": 1,
 
             "layer2.draw_center": false,
-            "layer2.draw_center": false,
             "layer2.texture": "",
             "layer2.tint": "var(borderColor)",
             "layer2.inner_margin": "var(tabBorderSize)",
@@ -164,11 +163,11 @@
         {
             "class": "tab_control",
             "attributes": ["file_light"],
+            "layer1.tint": "var(bgLight)",
             "layer2.tint": "var(borderColorLight)",
             "layer3.tint": "var(borderColorLight)",
-            "layer0.opacity": 1,
-            "layer3.opacity": 1,
-            "tint_modifier": "var(bgLight)"
+            "layer0.opacity": 0,
+            "layer3.opacity": 1
         },
         {
             "class": "tab_control",
