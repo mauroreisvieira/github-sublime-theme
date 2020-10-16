@@ -1,3 +1,23 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.4.0...v1.5.0) (2020-10-16)
+
+
+### Bug Fixes
+
+* updated `icon_button_control` UI and states ([d739ce7](https://github.com/mauroreisvieira/github-sublime-theme/commit/d739ce7))
+
+
+
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.3...v1.4.0) (2020-09-30)
+
+
+### Bug Fixes
+
+* add support for `link_color` ([e774621](https://github.com/mauroreisvieira/github-sublime-theme/commit/e774621))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.3.3...v1.4.0) (2020-09-30)
 
