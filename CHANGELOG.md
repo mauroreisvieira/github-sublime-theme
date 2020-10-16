@@ -1,3 +1,24 @@
+<a name="1.5.1"></a>
+## [1.5.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.0...v1.5.1) (2020-10-16)
+
+
+### Bug Fixes
+
+* back tab close [#5](https://github.com/mauroreisvieira/github-sublime-theme/issues/5) ([2167074](https://github.com/mauroreisvieira/github-sublime-theme/commit/2167074))
+* background tab for dev build ([7ae52b1](https://github.com/mauroreisvieira/github-sublime-theme/commit/7ae52b1))
+
+
+
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.4.0...v1.5.0) (2020-10-16)
+
+
+### Bug Fixes
+
+* updated `icon_button_control` UI and states ([d739ce7](https://github.com/mauroreisvieira/github-sublime-theme/commit/d739ce7))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.4.0...v1.5.0) (2020-10-16)
 
