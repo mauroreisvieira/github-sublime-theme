@@ -8,9 +8,9 @@
 
 **Package Control:**
 
-1. Open `Command Palette` using menu item `Tools → Command Palette` or <kbd>CMD/CTRL</kbd> + <kbd>SHIFT</kbd> +<kbd>P</kbd>.
+1. Open `Command Palette` using menu item `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` +`P`.
 2. Choose `Package Control: Install Package`.
-3. Type `GitHub Theme` and press <kbd>ENTER</kbd>.
+3. Type `GitHub Theme` and press `ENTER`.
 
 **Manually:**
 
@@ -36,6 +36,19 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 }
 ```
 
+## Theme Settings
+This theme provide a visual configuration tool that allow you to configure the theme by activating the available options from an inline pop-up.
+
+Just click in `Sublime Text` → `Preferences` → `Packages Settings` → `GitHub Theme` → `Edit Settings`.
+You can also open the settings from the Command Palette by searching `GitHub Theme: Edit Settings`.
+
+```json
+{
+    // show tab navigation buttons left and right
+    "show_tab_navigation": false
+}
+``
+
 ## Recommended Settings
 
 To enjoy a better experience of using the GitHub Theme in your Sublime Text, please check the following settings.
@@ -58,5 +71,3 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
 
 -   Support for more language syntax.
 -   Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
--   Add new UI icons based on GitHub.
--   Improvements on Buttons, Inputs and Panel UI.
