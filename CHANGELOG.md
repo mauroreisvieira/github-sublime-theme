@@ -1,3 +1,25 @@
+<a name="1.5.2"></a>
+## [1.5.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.1...v1.5.2) (2020-10-19)
+
+
+### Bug Fixes
+
+* `tint_modifier` for dark theme ([b511764](https://github.com/mauroreisvieira/github-sublime-theme/commit/b511764))
+* add command palette to edit GitHub Theme ([7af9e5c](https://github.com/mauroreisvieira/github-sublime-theme/commit/7af9e5c))
+
+
+
+<a name="1.5.1"></a>
+## [1.5.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.0...v1.5.1) (2020-10-16)
+
+
+### Bug Fixes
+
+* back tab close [#5](https://github.com/mauroreisvieira/github-sublime-theme/issues/5) ([2167074](https://github.com/mauroreisvieira/github-sublime-theme/commit/2167074))
+* background tab for dev build ([7ae52b1](https://github.com/mauroreisvieira/github-sublime-theme/commit/7ae52b1))
+
+
+
 <a name="1.5.1"></a>
 ## [1.5.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.0...v1.5.1) (2020-10-16)
 
