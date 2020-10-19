@@ -158,7 +158,8 @@
             "layer3.texture": "",
             "layer3.tint": "var(borderColor)",
             "layer3.inner_margin": [0, 0, 1, 1],
-            "layer3.opacity": 1
+            "layer3.opacity": 1,
+            "tint_modifier": "var(bg)"
         },
         {
             "class": "tab_control",
@@ -177,7 +178,7 @@
 
             "layer2.inner_margin": "var(tabSelectedBorderSize)",
 
-            "layer3.inner_margin": [0, 2, 0, 0],
+            "layer3.inner_margin": [0, 1, 0, 0],
             "layer3.tint": "var(accent)",
             "tint_modifier": "var(tabSelectedBg)"
         },
