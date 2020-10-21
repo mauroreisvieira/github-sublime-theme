@@ -18,7 +18,7 @@
         "puckControlBgLight": "#959da544",
         "tabBorderSize": [0, 1, 1, 1],
         "tabSelectedBg": ["background", 1],
-        "tabSelectedBorderSize": [0, 1, 1, 0],
+        "tabSelectedBorderBorderColor": ["accent", 1],
         "tabHeight": 40,
         "tabWidth": 80,
         "statusbarBg": ["background", 1],
@@ -176,10 +176,10 @@
             "attributes": ["selected"],
             "layer1.tint": "var(tabSelectedBg)",
 
-            "layer2.inner_margin": "var(tabSelectedBorderSize)",
+            "layer2.inner_margin": [0, 1, 1, 0],
 
             "layer3.inner_margin": [0, 1, 0, 0],
-            "layer3.tint": "var(accent)",
+            "layer3.tint": "var(tabSelectedBorderBorderColor)",
             "tint_modifier": "var(tabSelectedBg)"
         },
         {
@@ -392,6 +392,11 @@
             "parents": [{ "class": "switch_project_window" }],
             "layer0.tint": "var(bg)",
             "content_margin": 0
+        },
+        {
+            "class": "panel_control",
+            "parents": [{ "class": "switch_project_window", "attributes": ["file_light"] }],
+            "layer0.tint": "var(bgLight)"
         },
         {
             "class": "dropdown_button_control",
