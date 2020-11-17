@@ -47,7 +47,7 @@ You can also open the settings from the Command Palette by searching `GitHub The
     // show tab navigation buttons left and right
     "show_tab_navigation": false
 }
-``
+```
 
 ## Recommended Settings
 
