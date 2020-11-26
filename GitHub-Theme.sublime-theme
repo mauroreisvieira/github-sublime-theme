@@ -748,6 +748,13 @@
         },
         {
             "class": "vcs_status_badge",
+            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+            "layer0.texture": "Meetio Theme/textures/vcs/vcs_untracked.png",
+            "layer0.tint": "var(vcsUntracked)",
+            "content_margin": "var(vcsBadgeSize)"
+        },
+        {
+            "class": "vcs_status_badge",
             "parents": [
                 { "class": "file_system_entry", "attributes": ["modified"] }
             ],
