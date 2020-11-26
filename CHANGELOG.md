@@ -1,3 +1,29 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* input border in switch_project_window ([7b87b78](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b87b78))
+
+
+### Features
+
+* added icon for untracked files in sidebar ([66f959d](https://github.com/mauroreisvieira/github-sublime-theme/commit/66f959d))
+
+
+
+<a name="1.5.2"></a>
+## [1.5.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.1...v1.5.2) (2020-10-19)
+
+
+### Bug Fixes
+
+* `tint_modifier` for dark theme ([b511764](https://github.com/mauroreisvieira/github-sublime-theme/commit/b511764))
+* add command palette to edit GitHub Theme ([7af9e5c](https://github.com/mauroreisvieira/github-sublime-theme/commit/7af9e5c))
+
+
+
 <a name="1.5.2"></a>
 ## [1.5.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.1...v1.5.2) (2020-10-19)
 
