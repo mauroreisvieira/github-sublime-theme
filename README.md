@@ -36,18 +36,6 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 }
 ```
 
-## Theme Settings
-This theme provide a visual configuration tool that allow you to configure the theme by activating the available options from an inline pop-up.
-
-Just click in `Sublime Text` → `Preferences` → `Packages Settings` → `GitHub Theme` → `Edit Settings`.  
-You can also open the settings from the Command Palette by searching `GitHub Theme: Edit Settings`.
-
-```json
-{
-    "show_tab_navigation": false // show tab navigation buttons left and right
-}
-```
-
 ## Recommended Settings
 
 To enjoy a better experience of using the GitHub Theme in your Sublime Text, please check the following settings.
@@ -61,8 +49,8 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
     "margin": 20,
     "line_padding_bottom": 7,
     "line_padding_top": 7,
-    "show_tab_navigation": "false",
-    "show_sidebar_disclosure": "false"
+    "enable_tab_scrolling": false,
+    "show_sidebar_disclosure": false
 }
 ```
 
