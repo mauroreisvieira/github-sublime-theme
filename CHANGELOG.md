@@ -1,3 +1,29 @@
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v1.7.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* flick in title_bar when change scheme ([c4a07f6](https://github.com/mauroreisvieira/github-sublime-theme/commit/c4a07f6))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([caabe07](https://github.com/mauroreisvieira/github-sublime-theme/commit/caabe07))
+
+
+
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* input border in switch_project_window ([7b87b78](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b87b78))
+
+
+### Features
+
+* added icon for untracked files in sidebar ([66f959d](https://github.com/mauroreisvieira/github-sublime-theme/commit/66f959d))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
 
