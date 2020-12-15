@@ -37,8 +37,24 @@
     "rules": [
         {
             "class": "title_bar",
+            "settings": ["themed_title_bar"],
             "bg": "var(titleBarBg)",
-            "fg": "var(titleBarFg)"
+            "fg": "var(titleBarFg)",
+            "style": "system"
+        },
+        {
+            "class": "title_bar",
+            "settings": ["!themed_title_bar"],
+            "bg": ["background", 255, 255, 255, 0.15],
+            "style": "dark"
+        },
+        {
+            "class": "title_bar",
+            "attributes": ["file_light"],
+            "settings": ["!themed_title_bar"],
+            "fg": ["background", 0, 0, 0, 0.7],
+            "bg": ["background", 0, 0, 0, 0.1],
+            "style": "light"
         },
         {
             "class": "scroll_tabs_left_button",
