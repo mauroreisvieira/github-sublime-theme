@@ -1,3 +1,29 @@
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v1.8.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* remove `link_color` prop from ST4000 ([3c0f499](https://github.com/mauroreisvieira/github-sublime-theme/commit/3c0f499))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([a8e3ae3](https://github.com/mauroreisvieira/github-sublime-theme/commit/a8e3ae3))
+
+
+
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* input border in switch_project_window ([7b87b78](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b87b78))
+
+
+### Features
+
+* added icon for untracked files in sidebar ([66f959d](https://github.com/mauroreisvieira/github-sublime-theme/commit/66f959d))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v1.7.0) (2020-12-15)
 
