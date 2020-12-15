@@ -42,7 +42,6 @@
         },
         {
             "class": "scroll_tabs_left_button",
-            "settings": ["show_tab_navigation"],
             "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-left.png",
             "layer0.opacity": {
                 "target": 0.5,
@@ -63,7 +62,6 @@
         },
         {
             "class": "scroll_tabs_right_button",
-            "settings": ["show_tab_navigation"],
             "layer0.texture": "GitHub Theme/textures/navigation/arrow-small-right.png",
             "layer0.opacity": {
                 "target": 0.5,
@@ -81,16 +79,6 @@
                 "speed": 4.0,
                 "interpolation": "smoothstep"
             }
-        },
-        {
-            "class": "scroll_tabs_left_button",
-            "settings": ["!show_tab_navigation"],
-            "content_margin": 0
-        },
-        {
-            "class": "scroll_tabs_right_button",
-            "settings": ["!show_tab_navigation"],
-            "content_margin": 0
         },
         {
             "class": "show_tabs_dropdown_button",
