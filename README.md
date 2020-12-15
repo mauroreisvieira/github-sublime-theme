@@ -49,8 +49,8 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
     "margin": 20,
     "line_padding_bottom": 7,
     "line_padding_top": 7,
-    "show_tab_navigation": "false",
-    "show_sidebar_disclosure": "false"
+    "enable_tab_scrolling": false,
+    "show_sidebar_disclosure": false
 }
 ```
 
