@@ -10,14 +10,6 @@
                     {
                         "caption": "GitHub Theme",
                         "children": [
-                            {
-                                "caption": "Edit Settings",
-                                "command": "edit_settings",
-                                "args": {
-                                    "base_file": "${packages}/GitHub Theme/Preferences.sublime-settings",
-                                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
-                                }
-                            },
                             { "caption": "-" },
                             {
                                 "caption": "Changelog",
