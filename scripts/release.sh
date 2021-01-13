@@ -3,10 +3,10 @@ echo "Current version: "$(grep version package.json | sed -E 's/^.*"(4[^"]+)".*$
 echo "Enter release version: "
 read VERSION
 
-read -p "Releasing v$VERSION - are you sure? (y/n)" -n 1 -r
+read -p "Releasing 4070-$VERSION - are you sure? (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  echo "Releasing v$VERSION ..."
+  echo "Releasing 4070-$VERSION ..."
   npm run lint
 
   npm run build
@@ -21,10 +21,10 @@ then
 
   # COMMIT AND TAG
   git add CHANGELOG.md package.json
-  git commit -m "chore(release): v$VERSION"
-  git tag -a "v$VERSION" -m "v$VERSION"
+  git commit -m "chore(release): 4070-$VERSION"
+  git tag -a "4070-$VERSION" -m "4070-$VERSION"
 
   # PUBLISH
-  git push origin refs/tags/v$VERSION
+  git push origin refs/tags/4070-$VERSION
   git push
 fi

@@ -1,89 +1,35 @@
-import {
-    generateScheme,
-    ISchemeSetting,
-    IRules,
-    IUi,
-    IColors,
-} from '@meetio/scheme-generator';
+import { generateScheme, ISchemeSetting } from '@meetio/scheme-generator';
 
-import { primer } from './primer';
-import { light, dark } from './colors';
-import { rules } from './rules';
+import { light, dark } from './settings';
 
 interface IScheme {
     name: string;
     author: string;
-    variables: IColors;
-    rules: Array<IRules>;
-    customeUi?: IUi;
+    variables: ISchemeSetting;
 }
 
 [
     {
         name: 'GitHub Dark',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
-        variables: {
-            ...dark,
-            palenight: '#9ECBFF',
-        },
-        customeUi: {
-            line_highlight: '#2b3036',
-            guide: primer.gray[8],
-            stack_guide: primer.gray[8],
-            active_guide: primer.gray[7],
-            highlight: '#17E5E699',
-            selection: '#3392FF44',
-            selection_border: '#3392FF44',
-            inactive_selection: '#3392FF22',
-            inactive_selection_border: '#3392FF22',
-            find_highlight: '#FFD33D22',
-        },
-        rules,
+        variables: dark,
     },
     {
         name: 'GitHub Light',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
-        variables: {
-            ...light,
-            palenight: primer.blue[8],
-        },
-        customeUi: {
-            line_highlight: primer.gray[1],
-            guide: '#eff2f6',
-            stack_guide: '#eff2f6',
-            active_guide: '#d7dbe0',
-            highlight: '#24943E99',
-            selection: '#0366D625',
-            selection_border: '#0366D625',
-            inactive_selection: '#0366D611',
-            inactive_selection_border: '#0366D611',
-            find_highlight: '#FFDF5D66',
-        },
-        rules,
+        variables: light,
     },
-].map((item: IScheme) => {
-    const { variables, customeUi, rules } = item;
-    const settings: ISchemeSetting = {
-        colors: variables,
-        rules,
-        ui: {
-            ...customeUi,
-            ...{
-                accent: 'var(accent)',
-                bracket_contents_foreground: 'var(yellow)',
-                bracket_contents_options: 'underline',
-                brackets_foreground: 'var(yellow)',
-                tags_options: 'underline',
-                tags_foreground: 'var(yellow)',
-                brackets_options: 'underline',
-                line_diff_width: '3',
-                gutter_foreground_highlight: 'var(foreground)',
-                scroll_highlight: 'var(yellow)',
-                scroll_selected_highlight: 'var(green)',
-                find_highlight_foreground: 'var(foreground)',
-            },
+].map((scheme: IScheme) => {
+    const { colors, rules, ui, useDefaultRules } = scheme.variables;
+    generateScheme({
+        name: scheme.name,
+        author: scheme.author,
+        schemeName: scheme.name,
+        settings: {
+            colors,
+            rules,
+            ui,
+            useDefaultRules
         },
-        useDefaultRules: false,
-    };
-    generateScheme(item.name, item.author, item.name, settings, 'schemes');
+    });
 });
