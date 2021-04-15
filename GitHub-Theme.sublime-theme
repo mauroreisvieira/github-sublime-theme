@@ -51,23 +51,27 @@
         },
         {
             "class": "title_bar",
+            "settings": ["!themed_title_bar"],
             "attributes": ["file_dark"],
             "bg": ["background", 255, 255, 255, 0.15],
             "style": "dark"
         },
         {
             "class": "title_bar",
+            "settings": ["!themed_title_bar"],
             "attributes": ["file_medium_dark"],
             "style": "dark"
         },
         {
             "class": "title_bar",
+            "settings": ["!themed_title_bar"],
             "attributes": ["file_medium"],
             "bg": ["background", 0, 0, 0, 0.2],
             "style": "light"
         },
         {
             "class": "title_bar",
+            "settings": ["!themed_title_bar"],
             "attributes": ["file_light"],
             "fg": ["background", 0, 0, 0, 0.7],
             "bg": ["background", 0, 0, 0, 0.1],
