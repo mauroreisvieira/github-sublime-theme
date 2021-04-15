@@ -118,24 +118,25 @@
             }
         },
         {
+            "class": "scroll_tabs_left_button",
+            "content_margin": 0
+        },
+        {
+            "class": "scroll_tabs_right_button",
+            "content_margin": 0
+        },
+        {
             "class": "show_tabs_dropdown_button",
             "layer0.texture": "GitHub Theme/textures/navigation/more.png",
-            "layer0.opacity": {
-                "target": 0.5,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            },
+            "layer0.opacity": 0.5,
             "layer0.tint": ["foreground", 1.0],
+            "layer0.inner_margin": 0,
             "content_margin": [10, 10]
         },
         {
             "class": "show_tabs_dropdown_button",
             "attributes": ["hover"],
-            "layer0.opacity": {
-                "target": 1.0,
-                "speed": 4.0,
-                "interpolation": "smoothstep"
-            }
+            "layer0.opacity": 1.0
         },
 
         {
