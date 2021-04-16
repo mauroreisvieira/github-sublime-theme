@@ -40,10 +40,28 @@ interface Scheme {
     });
 });
 
+
+interface Theme {
+    name: string;
+    color: {
+        varibles: any;
+        rules: any;
+    }
+}
+
 [
     {
-        scheme: getTheme('dark'),
+        name: 'GitHub Dark',
+        color: getTheme('dark'),
     },
-].map((theme) => {
-    console.log(theme.scheme);
+    {
+        name: 'GitHub Light',
+        color: getTheme('light'),
+    },
+    {
+        name: 'GitHub Dimmed',
+        color: getTheme('dimmed'),
+    },
+].map((theme: Theme) => {
+    console.log(theme.color);
 });

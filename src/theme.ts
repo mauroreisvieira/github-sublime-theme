@@ -1,4 +1,7 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { getColors, Theme } from './colors';
+import { GenerateTheme } from './interfaces';
 
 export function variables(theme: Theme) {
     const color = getColors(theme);
@@ -879,4 +882,33 @@ export function getTheme(theme: Theme) {
         variables: variables(theme),
         rules: rules(theme),
     };
+}
+
+export function generateTheme(options: GenerateTheme) {
+    const { settings, output } = options;
+
+    // eslint-disable-next-line no-undef
+    const dist = output.path || path.resolve(__dirname);
+
+    fs.mkdir(dist, () => {
+        try {
+            fs.writeFileSync(
+                `${dist}/${output.filename}${
+                    output.extension || '.sublime-theme'
+                }`,
+                JSON.stringify(
+                    {
+                        extends: settings.extends,
+                        variables: settings.variables || [],
+                        rules: settings.rules,
+                    },
+                    null,
+                    4
+                )
+            );
+            console.log(output.filename, dist);
+        } catch (e) {
+            console.error(e);
+        }
+    });
 }
