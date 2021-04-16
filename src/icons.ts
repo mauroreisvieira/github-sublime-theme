@@ -3,13 +3,13 @@ import * as fs from 'fs';
 import glob from 'glob';
 import svg2img from 'svg2img';
 
-export interface ISettings {
+export interface Settings {
     size: number;
     suffix: string | boolean;
     fill?: string;
 }
 
-const defaultOptions: ISettings[] = [
+const defaultOptions: Settings[] = [
     {
         size: 24,
         suffix: false
@@ -38,7 +38,7 @@ glob('./src/icons/**/*.svg', function (_: Error, files: string[]) {
             if (err) throw err;
             // eslint-disable-next-line no-undef
             data = Buffer.from(data, 'utf8');
-            defaultOptions.forEach((setting: ISettings) => {
+            defaultOptions.forEach((setting: Settings) => {
                 const { size, suffix } = setting;
                 fs.mkdir(distFolder, function() {
                     svg2img(
