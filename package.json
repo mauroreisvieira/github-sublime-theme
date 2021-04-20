@@ -31,7 +31,7 @@
         "@babel/preset-env": "7.13.15",
         "@commitlint/cli": "^12.1.1",
         "@commitlint/config-conventional": "^12.1.1",
-        "@meetio/scheme-generator": "^3.0.0",
+        "@meetio/scheme-generator": "^3.0.2",
         "@primer/primitives": "^4.2.1",
         "@typescript-eslint/eslint-plugin": "4.22.0",
         "@typescript-eslint/parser": "4.22.0",

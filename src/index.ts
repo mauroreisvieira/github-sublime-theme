@@ -1,12 +1,7 @@
-import { generateScheme, SchemeSetting } from '@meetio/scheme-generator';
+import { generateScheme } from '@meetio/scheme-generator';
 import { getScheme } from './scheme';
 import { getTheme } from './theme';
-
-interface Scheme {
-    name: string;
-    author: string;
-    variables: SchemeSetting;
-}
+import { Scheme, Theme } from './interfaces';
 
 [
     {
@@ -41,25 +36,17 @@ interface Scheme {
 });
 
 
-interface Theme {
-    name: string;
-    color: {
-        varibles: any;
-        rules: any;
-    }
-}
-
 [
     {
-        name: 'GitHub Dark',
+        name: 'GitHub Theme Dark',
         color: getTheme('dark'),
     },
     {
-        name: 'GitHub Light',
+        name: 'GitHub Theme Light',
         color: getTheme('light'),
     },
     {
-        name: 'GitHub Dimmed',
+        name: 'GitHub Theme Dimmed',
         color: getTheme('dimmed'),
     },
 ].map((theme: Theme) => {
