@@ -1,13 +1,8 @@
-import { Colors, Rules, UI, options } from '@meetio/scheme-generator';
-import { getColors, Theme } from './colors';
+import { Colors, options, Rules, UI } from '@meetio/scheme-generator';
+import { getColors } from './colors';
+import { Options, Primer } from './interfaces';
 
-export type Options = {
-    light: string;
-    dark: string;
-    dimmed: string;
-};
-
-export function ui(theme: Theme): UI {
+export function ui(theme: Primer): UI {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
@@ -40,8 +35,9 @@ export function ui(theme: Theme): UI {
     };
 }
 
-export function colors(theme: Theme): Colors {
+export function colors(theme: Primer): Colors {
     const color = getColors(theme);
+    console.log(color.ansi);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
 
@@ -60,22 +56,10 @@ export function colors(theme: Theme): Colors {
         diffAdded: color.diff.addition.border,
         diffModified: color.diff.change.border,
         diffDeleted: color.diff.deletion.border,
-        base: {
-            black: color.ansi.black,
-            blue: color.ansi.blue,
-            gray: color.ansi.gray,
-            green: color.ansi.green,
-            orange: color.ansi.orange,
-            pink: color.ansi.pink,
-            purple: color.ansi.purple,
-            red: color.ansi.red,
-            white: color.ansi.white,
-            yellow: color.ansi.yellow,
-        },
     };
 }
 
-export function rules(theme: Theme): Rules[] {
+export function rules(theme: Primer): Rules[] {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
@@ -603,7 +587,7 @@ export function rules(theme: Theme): Rules[] {
     ];
 }
 
-export function getScheme(theme: Theme) {
+export function getScheme(theme: Primer) {
     return {
         colors: colors(theme),
         ui: ui(theme),

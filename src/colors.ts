@@ -1,11 +1,9 @@
-/* eslint-disable no-undef */
-const lightColors = require('@primer/primitives/dist/json/colors/light.json');
-const darkColors = require('@primer/primitives/dist/json/colors/dark.json');
-const dimmedColors = require('@primer/primitives/dist/json/colors/dark_dimmed.json');
+import darkColors from '@primer/primitives/dist/json/colors/dark.json';
+import dimmedColors from '@primer/primitives/dist/json/colors/dark_dimmed.json';
+import lightColors from '@primer/primitives/dist/json/colors/light.json';
+import { Primer } from './interfaces';
 
-export type Theme = 'light' | 'dark' | 'dimmed';
-
-export function getColors(theme: Theme) {
+export function getColors(theme: Primer) {
     if (theme === 'light') {
         return lightColors;
     } else if (theme === 'dark') {

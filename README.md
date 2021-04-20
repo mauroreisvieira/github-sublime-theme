@@ -31,8 +31,8 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 
 ```json
 {
-    "color_scheme": "Packages/GitHub Theme/schemes/GitHub Light.sublime-color-scheme",
-    "theme": "GitHub-Theme.sublime-theme"
+    "color_scheme": "Packages/GitHub Theme/schemes/GitHub Dark.sublime-color-scheme",
+    "theme": "GitHub Dark.sublime-theme"
 }
 ```
 
@@ -44,13 +44,12 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
 {
     "font_face": "Fira Code",
     "highlight_line": true,
-    "font_options": ["gray_antialias", "subpixel_antialias"], 
-    "indent_guide_options": ["draw_normal", "draw_active"], 
     "margin": 20,
     "line_padding_bottom": 7,
     "line_padding_top": 7,
+    "caret_extra_bottom": 12,
+    "caret_extra_top": 12,
     "hide_tab_scrolling_buttons": true,
-    "show_sidebar_disclosure": false
 }
 ```
 

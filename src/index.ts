@@ -1,7 +1,6 @@
 import { generateScheme } from '@meetio/scheme-generator';
+import { Scheme } from './interfaces';
 import { getScheme } from './scheme';
-import { getTheme } from './theme';
-import { Scheme, Theme } from './interfaces';
 
 [
     {
@@ -36,19 +35,19 @@ import { Scheme, Theme } from './interfaces';
 });
 
 
-[
-    {
-        name: 'GitHub Theme Dark',
-        color: getTheme('dark'),
-    },
-    {
-        name: 'GitHub Theme Light',
-        color: getTheme('light'),
-    },
-    {
-        name: 'GitHub Theme Dimmed',
-        color: getTheme('dimmed'),
-    },
-].map((theme: Theme) => {
-    console.log(theme.color);
-});
+// [
+//     {
+//         name: 'GitHub Dark',
+//         color: getTheme('dark'),
+//     },
+//     {
+//         name: 'GitHub Light',
+//         color: getTheme('light'),
+//     },
+//     {
+//         name: 'GitHub Dimmed',
+//         color: getTheme('dimmed'),
+//     },
+// ].map((theme: Theme) => {
+//     console.log(theme.color);
+// });

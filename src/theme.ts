@@ -1,34 +1,110 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { getColors, Theme } from './colors';
-import { GenerateTheme } from './interfaces';
+import { getColors } from './colors';
+import { GenerateTheme, Primer, Options } from './interfaces';
 
-export function variables(theme: Theme) {
+export function variables(theme: Primer) {
     const color = getColors(theme);
-
+    const themes = (options: Options) => options[theme];
+    const scale = color.scale;
     return {
-        accent: ['accent', 1],
-        titleBarBg: ['background', 1],
-        titleBarFg: ['foreground', 1],
-        bg: color.bg.canvasInset,
-        borderColor: '#1B1F23',
-        borderColorLight: '#e1e4e8',
-        sidebarHeadingFg: '#fafbfc',
-        sidebarHeadingFgLight: '#24292e',
-        treeHoverBg: '#282e34',
-        treeSelectedBg: '#39414a',
-        puckControlBg: '#6a737d44',
-        tabBorderSize: [0, 1, 1, 1],
-        tabSelectedBg: ['background', 1],
-        tabSelectedBorderBorderColor: ['accent', 1],
-        tabHeight: 40,
-        tabWidth: 80,
-        statusbarBg: ['background', 1],
-        statusBarFg: ['foreground', 1],
-        statusbarMargin: [8, 5, 0, 3],
-        buttonMinSize: [80, 30],
-        vcsBadgeSize: 5,
-        vcsIgnored: 'color(var(--foreground) a(.4))',
+        focusBorder: color.state.focus.border,
+        foreground: color.text.primary,
+        descriptionForeground: color.text.tertiary,
+        errorForeground: color.text.danger,
+
+        textLinkForeground: color.text.link,
+        textLinkActiveForeground: color.text.link,
+
+        buttonBackground: color.btn.primary.bg,
+        buttonForeground: color.btn.primary.text,
+        buttonHoverBackground: color.btn.primary.hoverBg,
+
+        inputBackground: color.input.bg,
+        inputBorder: color.input.border,
+        inputForeground: color.text.primary,
+        inputPlaceholderForeground: color.text.placeholder,
+
+        progressBarBackground: themes({
+            light: scale.blue[4],
+            dark: scale.blue[5],
+            dimmed: scale.blue[5],
+        }),
+
+        titleBarActiveForeground: color.text.secondary,
+        titleBarActiveBackground: color.bg.canvas,
+        titleBarInactiveForeground: color.text.tertiary,
+        titleBarInactiveBackground: color.bg.canvasInset,
+        titleBarBorder: color.border.primary,
+
+        sideBarForeground: color.text.secondary,
+        sideBarBackground: color.bg.canvasInset,
+        sideBarBorder: color.border.primary,
+        sideBarTitleForeground: color.text.primary,
+        sideBarSectionHeaderForeground: color.text.primary,
+        sideBarSectionHeaderBackground: color.bg.canvasInset,
+        sideBarSectionHeaderBorder: color.border.primary,
+
+        listHoverForeground: color.text.secondary,
+        listInactiveSelectionForeground: color.text.secondary,
+        listActiveSelectionForeground: color.text.secondary,
+        listHoverBackground: themes({
+            light: '#ebf0f4',
+            dark: scale.gray[8],
+            dimmed: scale.gray[8],
+        }),
+        listInactiveSelectionBackground: themes({
+            light: '#e8eaed',
+            dark: scale.gray[8],
+            dimmed: scale.gray[8],
+        }),
+        listActiveSelectionBackground: themes({
+            light: '#e2e5e9',
+            dark: scale.gray[7],
+            dimmed: scale.gray[7],
+        }),
+        listFocusForeground: themes({
+            light: scale.blue[9],
+            dark: scale.gray[0],
+            dimmed: scale.gray[0],
+        }),
+        listFocusBackground: themes({
+            light: '#cce5ff',
+            dark: scale.gray[7],
+            dimmed: scale.gray[7],
+        }),
+        listInactiveFocusBackground: themes({
+            light: scale.blue[1],
+            dark: scale.gray[8],
+            dimmed: scale.gray[8],
+        }),
+        listHighlightForeground: themes({
+            light: scale.blue[5],
+            dark: scale.blue[4],
+            dimmed: scale.blue[4],
+        }),
+
+        statusBarForeground: color.text.secondary,
+        statusBarBackground: color.bg.canvas,
+        statusBarBorder: color.border.primary,
+
+        tabActiveForeground: color.text.primary,
+        tabInactiveForeground: color.text.tertiary,
+        tabInactiveBackground: color.bg.canvasInset,
+        tabActiveBackground: color.bg.canvas,
+        tabHoverBackground: color.bg.canvas,
+        tabUnfocusedHoverBackground: color.state.hover.secondaryBg,
+        tabBorder: color.border.primary,
+        tabUnfocusedActiveBorderTop: color.border.primary,
+        tabActiveBorder: color.bg.canvas,
+        tabUnfocusedActiveBorder: color.bg.canvas,
+        tabActiveBorderTop: color.underlinenav.borderActive,
+
+        vcsIgnored: themes({
+            light: scale.gray[4],
+            dark: color.text.disabled,
+            dimmed: color.text.disabled,
+        }),
         vcsModified: 'var(--bluish)',
         vcsUnmerged: 'var(--redish)',
         vcsDeleted: 'var(--pinkish)',
@@ -38,8 +114,9 @@ export function variables(theme: Theme) {
     };
 }
 
-export function rules(theme: Theme) {
+export function rules(theme: Primer) {
     const color = getColors(theme);
+    console.log(color);
 
     return [
         {
@@ -196,8 +273,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'sidebar_button_control',
-            'layer0.texture':
-                'GitHub Theme/textures/tree/sidebar-button.png',
+            'layer0.texture': 'GitHub Theme/textures/tree/sidebar-button.png',
             'layer0.opacity': {
                 target: 0.5,
                 speed: 5.0,
@@ -436,9 +512,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_regex',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -459,15 +533,12 @@ export function rules(theme: Theme) {
         {
             class: 'icon_case',
             content_margin: [8, 8],
-            'layer0.texture':
-                'GitHub Theme/textures/find/case-sensitive.png',
+            'layer0.texture': 'GitHub Theme/textures/find/case-sensitive.png',
             'layer0.opacity': 1,
         },
         {
             class: 'icon_case',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -492,9 +563,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_whole_word',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -519,9 +588,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_wrap',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -546,9 +613,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_in_selection',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -573,9 +638,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_highlight',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -595,15 +658,12 @@ export function rules(theme: Theme) {
         {
             class: 'icon_preserve_case',
             content_margin: [8, 8],
-            'layer0.texture':
-                'GitHub Theme/textures/find/preserve-case.png',
+            'layer0.texture': 'GitHub Theme/textures/find/preserve-case.png',
             'layer0.opacity': 1,
         },
         {
             class: 'icon_preserve_case',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -628,9 +688,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_context',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -655,9 +713,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_use_buffer',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -682,9 +738,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'icon_use_gitignore',
-            parents: [
-                { class: 'icon_button_control', attributes: ['hover'] },
-            ],
+            parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
         },
         {
@@ -712,53 +766,41 @@ export function rules(theme: Theme) {
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['modified'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['modified'] }],
             'layer0.texture': 'GitHub Theme/textures/vcs/diff_modified.png',
             'layer0.tint': 'var(vcsModified)',
             content_margin: 'var(vcsBadgeSize)',
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['added'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['added'] }],
             'layer0.texture': 'GitHub Theme/textures/vcs/diff_added.png',
             'layer0.tint': 'var(vcsUntracked)',
             content_margin: 'var(vcsBadgeSize)',
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['unmerged'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['unmerged'] }],
             'layer0.texture': 'Theme - Default/common/status_unmerged.png',
             'layer0.tint': 'var(vcsUnmerged)',
             content_margin: 'var(vcsBadgeSize)',
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['staged'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['staged'] }],
             'layer0.texture': 'GitHub Theme/textures/vcs/diff_staged.png',
             'layer0.tint': 'var(vcsStaged)',
             content_margin: 'var(vcsBadgeSize)',
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['deleted'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['deleted'] }],
             'layer0.tint': 'var(vcsDeleted)',
             content_margin: 'var(vcsBadgeSize)',
         },
         {
             class: 'vcs_status_badge',
-            parents: [
-                { class: 'file_system_entry', attributes: ['missing'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['missing'] }],
             'layer0.tint': 'var(vcsMissing)',
             content_margin: 'var(vcsBadgeSize)',
         },
@@ -777,9 +819,7 @@ export function rules(theme: Theme) {
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['ignored'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['ignored'] }],
             color: 'color(var(vcsIgnored)',
         },
         {
@@ -791,44 +831,32 @@ export function rules(theme: Theme) {
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['modified'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['modified'] }],
             color: 'var(vcsModified)',
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['added'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['added'] }],
             color: 'var(vcsUntracked)',
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['unmerged'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['unmerged'] }],
             color: 'var(vcsUnmerged)',
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['missing'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['missing'] }],
             color: 'var(vcsMissing)',
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['deleted'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['deleted'] }],
             color: 'var(vcsDeleted)',
         },
         {
             class: 'sidebar_label',
-            parents: [
-                { class: 'file_system_entry', attributes: ['staged'] },
-            ],
+            parents: [{ class: 'file_system_entry', attributes: ['staged'] }],
             color: 'var(vcsStaged)',
         },
         {
@@ -840,8 +868,7 @@ export function rules(theme: Theme) {
         {
             class: 'icon_folder',
             parents: [{ class: 'tree_row', attributes: ['expanded'] }],
-            'layer0.texture':
-                'GitHub Theme/textures/tree/folder-opened.png',
+            'layer0.texture': 'GitHub Theme/textures/tree/folder-opened.png',
             content_margin: [8, 8],
         },
         {
@@ -877,7 +904,7 @@ export function rules(theme: Theme) {
     ];
 }
 
-export function getTheme(theme: Theme) {
+export function getTheme(theme: Primer) {
     return {
         variables: variables(theme),
         rules: rules(theme),

@@ -1,5 +1,13 @@
 import { SchemeSetting } from '@meetio/scheme-generator';
 
+export type Primer = 'light' | 'dark' | 'dimmed';
+
+export type Options = {
+    light: string;
+    dark: string;
+    dimmed: string;
+};
+
 export interface Scheme {
     name: string;
     author: string;
@@ -9,7 +17,7 @@ export interface Scheme {
 export interface Theme {
     name: string;
     color: {
-        varibles: any;
+        variables: any;
         rules: any;
     };
 }
