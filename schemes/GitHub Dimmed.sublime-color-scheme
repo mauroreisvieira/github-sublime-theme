@@ -11,7 +11,16 @@
         "invalid": "#cdd9e5",
         "diffAdded": "#2b6a30",
         "diffModified": "#966600",
-        "diffDeleted": "#ad2e2c"
+        "diffDeleted": "#ad2e2c",
+        "black": "#22272e",
+        "blue": "#539bf5",
+        "gray": "#636e7b",
+        "green": "#57ab5a",
+        "purple": "#b083f0",
+        "red": "#f47067",
+        "cyan": "#76e3ea",
+        "white": "#909dab",
+        "yellow": "#c69026"
     },
     "globals": {
         "accent": "var(accent)",

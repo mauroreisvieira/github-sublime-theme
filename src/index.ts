@@ -1,6 +1,6 @@
-import { generateScheme } from '@meetio/scheme-generator';
-import { Scheme } from './interfaces';
-import { getScheme } from './scheme';
+import { Scheme, Theme } from './interfaces';
+import { generateScheme, getScheme } from './scheme';
+import { generateTheme, getTheme } from './theme';
 
 [
     {
@@ -24,7 +24,7 @@ import { getScheme } from './scheme';
         name: scheme.name,
         author: scheme.author,
         output: {
-            filename: scheme.name
+            filename: scheme.name,
         },
         settings: {
             colors,
@@ -34,20 +34,24 @@ import { getScheme } from './scheme';
     });
 });
 
-
-// [
-//     {
-//         name: 'GitHub Dark',
-//         color: getTheme('dark'),
-//     },
-//     {
-//         name: 'GitHub Light',
-//         color: getTheme('light'),
-//     },
-//     {
-//         name: 'GitHub Dimmed',
-//         color: getTheme('dimmed'),
-//     },
-// ].map((theme: Theme) => {
-//     console.log(theme.color);
-// });
+[
+    {
+        name: 'GitHub Dark',
+        settings: getTheme('dark'),
+    },
+    {
+        name: 'GitHub Light',
+        settings: getTheme('light'),
+    },
+    {
+        name: 'GitHub Dimmed',
+        settings: getTheme('dimmed'),
+    },
+].map((theme: Theme) => {
+    generateTheme({
+        output: {
+            filename: theme.name,
+        },
+        settings: theme.settings,
+    });
+});

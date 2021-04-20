@@ -14,14 +14,6 @@ export interface Scheme {
     variables: SchemeSetting;
 }
 
-export interface Theme {
-    name: string;
-    color: {
-        variables: any;
-        rules: any;
-    };
-}
-
 export interface ThemeVariables {
     [key: string]:
         | string
@@ -36,6 +28,11 @@ export interface ThemeSetting {
     extends?: string;
     variables: ThemeVariables;
     rules?: any;
+}
+
+export interface Theme {
+    name: string;
+    settings: ThemeSetting;
 }
 
 export interface GenerateTheme {

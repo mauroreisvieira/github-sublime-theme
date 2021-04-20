@@ -1,3 +1,4 @@
+export { generateScheme } from '@meetio/scheme-generator';
 import { Colors, options, Rules, UI } from '@meetio/scheme-generator';
 import { getColors } from './colors';
 import { Options, Primer } from './interfaces';
@@ -56,6 +57,17 @@ export function colors(theme: Primer): Colors {
         diffAdded: color.diff.addition.border,
         diffModified: color.diff.change.border,
         diffDeleted: color.diff.deletion.border,
+        base: {
+            black: color.ansi.black,
+            blue: color.ansi.blue,
+            gray: color.ansi.gray,
+            green: color.ansi.green,
+            purple: color.ansi.magenta,
+            red: color.ansi.red,
+            cyan: color.ansi.cyan,
+            white: color.ansi.white,
+            yellow: color.ansi.yellow,
+        },
     };
 }
 
