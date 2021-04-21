@@ -184,7 +184,7 @@
             "foreground": "#6cb6ff"
         },
         {
-            "scope": "punctuation.definition.list.begin.markdown",
+            "scope": "punctuation.definition.list.begin.markdown,markup.list.numbered.bullet.markdown,markup.list.unnumbered.bullet.markdown punctuation.definition.list_item.markdown",
             "foreground": "#f69d50"
         },
         {
@@ -257,7 +257,7 @@
             "foreground": "#ff938a"
         },
         {
-            "scope": "constant.other.reference.link,string.other.link",
+            "scope": "constant.other.reference.link,string.other.link,markup.underline.link",
             "foreground": "#96d0ff",
             "font_style": "underline"
         }

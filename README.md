@@ -23,18 +23,8 @@
 **You can active this theme from:**
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
-2. Typing `UI: Select Theme` next find for `GitHub Theme` and press `ENTER`
-3. Same process for scheme go to the Command Palette.
-4. Typing `UI: Select Color Scheme` choose you favorite scheme and press `ENTER`
-
-Manually you can go to (**Preferences → Settings - User**) and paste the following code:
-
-```json
-{
-    "color_scheme": "Packages/GitHub Theme/schemes/GitHub Dark.sublime-color-scheme",
-    "theme": "GitHub Dark.sublime-theme"
-}
-```
+2. Typing `UI: Select Theme` next find for `GitHub Dark/Dimmed/Light` and press `ENTER`
+3. Typing `UI: Select Color Scheme` choose you favorite scheme and press `ENTER`
 
 ## Recommended Settings
 
@@ -52,8 +42,3 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
     "hide_tab_scrolling_buttons": true,
 }
 ```
-
-## What’s Next
-
--   Support for more language syntax.
--   Support for [A File Icons](https://github.com/SublimeText/AFileIcon).

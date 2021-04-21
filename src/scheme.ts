@@ -425,7 +425,7 @@ export function rules(theme: Primer): Rules[] {
             },
         },
         {
-            scope: ['punctuation.definition.list.begin.markdown'],
+            scope: ['punctuation.definition.list.begin.markdown', 'markup.list.numbered.bullet.markdown', 'markup.list.unnumbered.bullet.markdown punctuation.definition.list_item.markdown'],
             settings: {
                 foreground: themes({
                     light: scale.orange[6],
@@ -617,7 +617,7 @@ export function rules(theme: Primer): Rules[] {
             },
         },
         {
-            scope: ['constant.other.reference.link', 'string.other.link'],
+            scope: ['constant.other.reference.link', 'string.other.link', 'markup.underline.link'],
             settings: {
                 foreground: themes({
                     light: scale.blue[8],
