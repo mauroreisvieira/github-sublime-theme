@@ -33,10 +33,11 @@
         "panelControlBorder": "#444c56",
         "panelRowBackground": "#1e2228",
         "panelRowForeground": "#adbac7",
+        "panelRowLabelForeground": "#768390",
         "panelRowSelectedBackground": "#768390",
         "panelRowSelectedForeground": "#1e2228",
-        "panelRowMatchForeground": "var(accent)",
-        "panelRowSelectedMatchForeground": "var(accent)",
+        "panelRowMatchForeground": "#4184e4",
+        "panelRowSelectedMatchForeground": "#4184e4",
         "panelRowLinkForeground": "#539bf5",
         "autoCompleteBackground": "#1e2228",
         "autoCompleteForeground": "#adbac7",
@@ -311,6 +312,16 @@
             ],
             "layer3.tint": "var(tabSelectedBorderBorder)",
             "tint_modifier": "var(tabActiveBackground)"
+        },
+        {
+            "class": "tab_label",
+            "font.face": "var(fontFace)",
+            "font.size": "var(fontSm)",
+            "fg": "var(tabActiveForeground)"
+        },
+        {
+            "class": "tab_close_button",
+            "layer0.tint": "var(tabActiveForeground)"
         },
         {
             "class": "grid_layout_control",
@@ -769,7 +780,7 @@
             "class": "quick_panel",
             "row_padding": [
                 10,
-                4
+                5
             ],
             "layer0.tint": [
                 "background",
@@ -838,7 +849,7 @@
             "class": "quick_panel_path_label",
             "font.face": "var(fontFace)",
             "font.size": "var(fontSizeSm)",
-            "fg": "var(panelRowForeground)",
+            "fg": "var(panelRowLabelForeground)",
             "match_fg": "var(panelRowMatchForeground)",
             "selected_fg": "var(panelRowSelectedForeground)",
             "selected_match_fg": "var(panelRowSelectedMatchForeground)"
@@ -1787,6 +1798,10 @@
             ],
             "layer0.tint": "var(treeActiveSelectionBackground)",
             "layer0.opacity": 1
+        },
+        {
+            "class": "sidebar_button_control",
+            "layer0.tint": "var(statusBarForeground)"
         },
         {
             "class": "vcs_branch_icon",

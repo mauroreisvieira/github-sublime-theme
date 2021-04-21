@@ -68,10 +68,11 @@ export function variables(theme: Primer): ThemeVariables {
 
         panelRowBackground: color.bg.canvasInset,
         panelRowForeground: color.text.primary,
+        panelRowLabelForeground: color.text.tertiary,
         panelRowSelectedBackground: color.text.tertiary,
         panelRowSelectedForeground: color.bg.canvasInset,
-        panelRowMatchForeground: 'var(accent)',
-        panelRowSelectedMatchForeground: 'var(accent)',
+        panelRowMatchForeground: themes({ light: scale.blue[5], dark: scale.blue[4], dimmed: scale.blue[4] }),
+        panelRowSelectedMatchForeground: themes({ light: scale.blue[5], dark: scale.blue[4], dimmed: scale.blue[4] }),
         panelRowLinkForeground: color.text.link,
 
         autoCompleteBackground: color.bg.canvasInset,
@@ -314,6 +315,18 @@ export function rules(theme: Primer) {
             'layer3.inner_margin': [0, 1, 0, 0],
             'layer3.tint': 'var(tabSelectedBorderBorder)',
             tint_modifier: 'var(tabActiveBackground)',
+        },
+
+        {
+            "class": "tab_label",
+            "font.face": "var(fontFace)",
+            "font.size": "var(fontSm)",
+            fg: 'var(tabActiveForeground)',
+        },
+
+        {
+            "class": "tab_close_button",
+            "layer0.tint": 'var(tabActiveForeground)',
         },
 
         // GRID
@@ -621,7 +634,7 @@ export function rules(theme: Primer) {
         },
         {
             class: 'quick_panel',
-            row_padding: [10, 4],
+            row_padding: [10, 5],
             'layer0.tint': ['background', 1],
             'layer0.opacity': 1.0,
         },
@@ -674,7 +687,7 @@ export function rules(theme: Primer) {
             class: 'quick_panel_path_label',
             'font.face': 'var(fontFace)',
             'font.size': 'var(fontSizeSm)',
-            fg: 'var(panelRowForeground)',
+            fg: 'var(panelRowLabelForeground)',
             match_fg: 'var(panelRowMatchForeground)',
             selected_fg: 'var(panelRowSelectedForeground)',
             selected_match_fg: 'var(panelRowSelectedMatchForeground)',
@@ -1277,7 +1290,11 @@ export function rules(theme: Primer) {
             'layer0.opacity': 1.0,
         },
 
-        // VCS ICON
+        // STATUS BAR ICONS
+        {
+            "class": "sidebar_button_control",
+            "layer0.tint": "var(statusBarForeground)"
+        },
         {
             class: 'vcs_branch_icon',
             'layer0.texture': 'GitHub Theme/textures/vcs/branch.png',
