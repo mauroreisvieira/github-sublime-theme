@@ -6,7 +6,6 @@ import { Options, Primer } from './interfaces';
 
 export function colors(theme: Primer): Colors {
     const color = getColors(theme);
-    console.log(color.ansi);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
 
@@ -64,7 +63,6 @@ export function ui(theme: Primer): UI {
         brackets_foreground: 'var(cyan)',
         brackets_options: 'underline',
         fold_marker: 'var(yellow)',
-        gutter: 'var(background)',
         inactive_selection: 'color(var(cyan) alpha(0.1))',
         inactive_selection_border: 'color(var(cyan) alpha(0.1))',
         invisibles: 'color(var(foreground) alpha(0.3))',
@@ -81,6 +79,7 @@ export function ui(theme: Primer): UI {
         shadow_width: '1',
         tags_foreground: 'var(cyan)',
         tags_options: 'underline',
+        gutter: 'var(background)',
         gutter_foreground: color.codemirror.linenumberText,
         gutter_foreground_highlight: color.text.primary,
         find_highlight: themes({

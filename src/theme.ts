@@ -15,6 +15,8 @@ export function variables(theme: Primer): ThemeVariables {
     const scale = color.scale;
     return {
         accent: color.underlinenav.borderActive,
+        background: 'var(--background)',
+        foreground: color.text.primary,
         fontSizeSm: 11,
         fontSizeMd: 12,
         fontSizeLg: 14,
@@ -79,18 +81,18 @@ export function variables(theme: Primer): ThemeVariables {
         autoCompleteMatchForeground: 'var(accent)',
         autoCompleteSelectedMatchForeground: 'var(accent)',
 
-        buttonBackground: color.btn.primary.bg,
-        buttonHoverBackground: color.btn.primary.hoverBg,
-        buttonForeground: color.btn.primary.text,
-
         inputBackground: color.input.bg,
         inputBorder: color.input.border,
         inputForeground: color.text.primary,
 
-        iconButtonBackground: color.btn.primary.bg,
-        iconButtonHoverBackground: color.btn.primary.hoverBg,
-        iconButtonPressedBackground: color.btn.primary.hoverBg,
-        iconButtonActiveBackground: color.btn.primary.hoverBg,
+        buttonForeground: color.text.primary,
+        buttonBackground: `color(${color.text.primary} alpha(0.05))`,
+        buttonHoverBackground: `color(${color.text.primary} alpha(0.1))`,
+        buttonPressedBackground: `color(${color.text.primary} alpha(0.2))`,
+        buttonSelecteddBackground: `color(${color.text.primary} alpha(0.1))`,
+
+        buttonIconForeground: 'var(foreground)',
+        buttonIconSelecteddForeground: 'var(accent)',
 
         statusBarForeground: color.text.secondary,
         statusBarBackground: color.bg.canvas,
@@ -240,97 +242,85 @@ export function rules(theme: Primer) {
                 interpolation: 'smoothstep',
             },
         },
+
         {
             class: 'show_tabs_dropdown_button',
-            'layer0.texture': 'GitHub Theme/textures/tab/more.png',
+            'layer0.texture': 'GitHub Theme/textures/navigation/more.png',
             'layer0.tint': 'var(tabButtonForeground)',
-            'layer0.opacity': 0.5,
-            content_margin: [10, 10],
+            'layer0.opacity': {
+                target: 0.5,
+                speed: 5,
+                interpolation: 'smoothstep',
+            },
+            content_margin: [15, 12],
         },
         {
             class: 'show_tabs_dropdown_button',
             attributes: ['hover'],
-            'layer0.opacity': 1.0,
+            'layer0.opacity': {
+                target: 1,
+                speed: 5,
+                interpolation: 'smoothstep',
+            },
         },
         {
             class: 'tabset_control',
-            'layer0.opacity': 1.0,
             'layer0.tint': 'var(tabInactiveBackground)',
-            'layer0.inner_margin': 1,
+            'layer0.opacity': 1.0,
+
             'layer1.draw_center': false,
-            'layer1.inner_margin': 1,
+            'layer1.inner_margin': [0, 1, 1, 1],
             'layer1.tint': 'var(tabBorder)',
-            'layer1.opacity': 1,
-            tab_width: 90,
+            'layer1.opacity': 1.0,
+
+            content_margin: [0, 0, 8, 0],
+            connector_height: 0,
+            tint_index: 0,
+            tab_overlap: 0,
+            tab_width: 80,
             tab_height: 40,
-            content_margin: 0,
             mouse_wheel_switch: false,
         },
         {
-            class: 'tabset_control',
-            settings: ['mouse_wheel_switches_tabs', '!enable_tab_scrolling'],
-            mouse_wheel_switch: true,
-        },
-        {
             class: 'tab_control',
+            'layer0.texture': '',
             'layer0.tint': 'var(tabInactiveBackground)',
-            'layer0.opacity': 1.0,
-            'layer0.inner_margin': [24, 8],
+            'layer0.opacity': 1,
+
+            'layer1.texture': '',
             'layer1.tint': 'var(tabInactiveBackground)',
             'layer1.opacity': 1,
-            'layer1.inner_margin': 8,
+
             'layer2.draw_center': false,
+            'layer2.texture': '',
             'layer2.tint': 'var(tabBorder)',
             'layer2.inner_margin': [0, 1, 1, 1],
             'layer2.opacity': 1,
+
             'layer3.draw_center': false,
+            'layer3.texture': '',
             'layer3.tint': 'var(tabBorder)',
             'layer3.inner_margin': [0, 0, 1, 1],
             'layer3.opacity': 1,
-            content_margin: 8,
             tint_modifier: 'var(tabInactiveBackground)',
         },
         {
             class: 'tab_control',
             attributes: ['selected'],
             'layer1.tint': 'var(tabActiveBackground)',
+
             'layer2.inner_margin': [0, 1, 1, 0],
+
             'layer3.inner_margin': [0, 1, 0, 0],
             'layer3.tint': 'var(tabSelectedBorderBorder)',
             tint_modifier: 'var(tabActiveBackground)',
-        },
-
-        {
-            class: 'tab_close_button',
-            content_margin: 0,
-            'layer0.texture': 'GitHub Theme/textures/actions/close.png',
-            'layer0.tint': 'var(tabActiveForeground)',
-            'layer0.opacity': {
-                target: 0.5,
-                speed: 5,
-                interpolation: 'smoothstep',
-            },
-            'layer0.inner_margin': 0,
-            'layer1.texture': 'GitHub Theme/textures/common/dirty_dot.png',
-            'layer1.tint': 'var(tabActiveForeground)',
-            'layer1.inner_margin': [2, 2],
-            'layer1.opacity': 0,
-        },
-        {
-            class: 'tab_close_button',
-            settings: ['show_tab_close_buttons'],
-            content_margin: [7, 7],
-        },
-        {
-            class: 'tab_label',
-            fg: 'var(tabActiveForeground)',
         },
 
         // GRID
         {
             class: 'grid_layout_control',
             border_color: 'var(gridBorder)',
-            border_size: 1,
+            border_size: 2,
         },
 
         // SIDEBAR LABEL
@@ -338,7 +328,7 @@ export function rules(theme: Primer) {
             class: 'sidebar_container',
             'layer0.opacity': 1.0,
             'layer0.tint': 'var(sidebarBackground)',
-            'layer1.opacity': 1,
+            'layer1.opacity': 1.0,
             'layer1.inner_margin': [0, 1, 1, 0],
             'layer1.draw_center': false,
             'layer1.tint': 'var(sidebarBorder)',
@@ -348,8 +338,8 @@ export function rules(theme: Primer) {
             class: 'sidebar_heading',
             fg: 'var(sidebarHeadingForeground)',
             'font.size': 'var(fontSizeSm)',
+            'font.bold': false,
         },
-
         {
             class: 'sidebar_tree',
             row_padding: [14, 3],
@@ -359,7 +349,6 @@ export function rules(theme: Primer) {
             dark_content: false,
             spacer_rows: true,
         },
-
         {
             class: 'sidebar_label',
             fg: 'var(sidebarLabelForeground)',
@@ -583,16 +572,26 @@ export function rules(theme: Primer) {
             class: 'status_bar',
             'layer0.opacity': 1.0,
             'layer0.tint': 'var(statusBarBackground)',
-            content_margin: [10, 2],
             'layer1.inner_margin': [0, 1, 0, 0],
+            'layer1.opacity': 1.0,
             'layer1.tint': 'var(statusBarBorder)',
-            'layer1.draw_center': false,
+            content_margin: [8, 5, 0, 3],
         },
         {
             class: 'label_control',
             parents: [{ class: 'status_bar' }],
             'font.size': 'var(fontSizeSm)',
             fg: 'var(statusBarForeground)',
+        },
+        {
+            class: 'label_control',
+            parents: [
+                {
+                    class: 'panel_grid_control',
+                },
+            ],
+            'font.size': 'var(fontSizeSm)',
+            fg: 'var(buttonForeground)',
         },
         {
             class: 'overlay_control',
@@ -665,7 +664,7 @@ export function rules(theme: Primer) {
         {
             class: 'quick_panel_label',
             'font.face': 'var(fontFace)',
-            'font.size': 'var(panelRowFontSize)',
+            'font.size': 'var(fontSizeMd)',
             fg: 'var(panelRowForeground)',
             match_fg: 'var(panelRowMatchForeground)',
             selected_fg: 'var(panelRowSelectedForeground)',
@@ -679,7 +678,13 @@ export function rules(theme: Primer) {
             match_fg: 'var(panelRowMatchForeground)',
             selected_fg: 'var(panelRowSelectedForeground)',
             selected_match_fg: 'var(panelRowSelectedMatchForeground)',
-            link_color: "var(panelRowLinkForeground)"
+        },
+        {
+            'font.face': 'var(fontFace)',
+            'font.size': 'var(fontSizeSm)',
+            fg: 'var(panelRowForeground)',
+            class: 'quick_panel_detail_label',
+            link_color: 'var(panelRowLinkForeground)',
         },
         {
             class: 'quick_panel_label hint',
@@ -699,22 +704,14 @@ export function rules(theme: Primer) {
             'layer1.draw_center': false,
             'layer1.inner_margin': [0, 1, 0, 1],
             'layer1.tint': 'var(panelControlBorder)',
-            'layer1.opacity': 1,
+            'layer1.opacity': 1.0,
             content_margin: [12, 12],
         },
         {
             class: 'panel_control',
             parents: [{ class: 'switch_project_window' }],
             'layer0.tint': 'var(panelControlBackground)',
-            content_margin: 0,
-        },
-        {
-            class: 'panel_control',
-            parents: [
-                {
-                    class: 'window',
-                },
-            ],
+            content_margin: 2,
         },
         {
             class: 'panel_grid_control',
@@ -724,7 +721,6 @@ export function rules(theme: Primer) {
         },
         {
             class: 'panel_close_button',
-            'layer0.texture': '',
             content_margin: 0,
         },
 
@@ -732,14 +728,14 @@ export function rules(theme: Primer) {
         {
             class: 'text_line_control',
             'layer0.opacity': 1.0,
-            'layer0.inner_margin': [20, 5, 20, 5],
-            'layer0.tint': 'var(inputBackground)',
+            'layer0.inner_margin': [2, 2],
+            'layer0.tint': 'var(background)',
             'layer1.tint': 'var(inputBorder)',
-            'layer1.opacity': 1,
+            'layer1.opacity': 1.0,
             'layer1.inner_margin': 1,
             'layer1.draw_center': false,
             content_margin: [12, 8],
-            color_scheme_tint: 'var(inputBackground)',
+            color_scheme_tint: 'var(background)',
         },
 
         // DROPDOWN
@@ -817,23 +813,27 @@ export function rules(theme: Primer) {
             content_margin: [10, 10],
             min_size: [80, 40],
             'layer0.tint': 'var(buttonBackground)',
-            'layer0.inner_margin': [5, 6],
+            'layer1.tint': 'var(buttonHoverBackground)',
+            'layer2.tint': 'var(buttonPressedBackground)',
             'layer0.opacity': 1.0,
+            'layer1.opacity': 0.0,
+            'layer2.opacity': 0.0,
+            'layer0.inner_margin': [5, 6],
+            'layer1.inner_margin': [5, 6],
+            'layer2.inner_margin': [5, 6],
         },
         {
             class: 'button_control',
             attributes: ['hover'],
-            'layer0.tint': 'var(buttonHoverBackground)',
+            'layer0.opacity': 0.0,
+            'layer1.opacity': 1.0,
         },
         {
             class: 'button_control',
             attributes: ['pressed'],
-            'layer0.tint': 'var(buttonHoverBackground)',
-        },
-        {
-            class: 'button_control',
-            parents: [{ class: 'dialog' }],
-            'layer0.tint': 'var(buttonBackground)',
+            'layer0.opacity': 0.0,
+            'layer1.opacity': 0.0,
+            'layer2.opacity': 1.0,
         },
 
         // CLOSE BUTTON
@@ -855,26 +855,13 @@ export function rules(theme: Primer) {
             ],
             'layer0.opacity': 1,
         },
-        {
-            class: 'close_button',
-            attributes: ['dirty'],
-            'layer0.texture': 'GitHub Theme/textures/common/dirty_dot.png',
-            'layer0.tint': 'var(accent)',
-        },
-        {
-            class: 'close_button',
-            attributes: ['hover', 'dirty'],
-            'layer0.texture': 'GitHub Theme/textures/common/dirty_dot.png',
-            'layer0.tint': 'var(accent)',
-        },
-
         // ICON BUTTON
         {
             class: 'icon_button_control',
-            'layer0.tint': 'var(iconButtonBackground)',
-            'layer1.tint': 'var(iconButtonHoverBackground)',
-            'layer2.tint': 'var(iconButtonPressedBackground)',
-            'layer3.tint': 'var(iconButtonActiveBackground)',
+            'layer0.tint': 'var(buttonBackground)',
+            'layer1.tint': 'var(buttonHoverBackground)',
+            'layer2.tint': 'var(buttonPressedBackground)',
+            'layer3.tint': 'var(buttonSelecteddBackground)',
             'layer0.inner_margin': [5, 6],
             'layer1.inner_margin': [5, 6],
             'layer2.inner_margin': [5, 6],
@@ -904,18 +891,21 @@ export function rules(theme: Primer) {
             class: 'icon_regex',
             'layer0.texture': 'GitHub Theme/textures/find/regex.png',
             'layer0.opacity': 1.0,
+            'layer0.tint': 'var(buttonIconForeground)',
             content_margin: [8, 8],
         },
         {
             class: 'icon_regex',
             parents: [{ class: 'icon_button_control', attributes: ['hover'] }],
             'layer0.opacity': 1.0,
+            'layer0.tint': 'var(buttonIconForeground)',
         },
         {
             class: 'icon_regex',
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -923,13 +913,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
-            'layer0.tint': '#fff',
         },
         {
             class: 'icon_case',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/case-sensitive.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -942,6 +933,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -949,12 +941,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_whole_word',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/whole-word.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -967,6 +961,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -974,12 +969,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_wrap',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/wrap.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -992,6 +989,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -999,12 +997,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_in_selection',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/selection.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1017,6 +1017,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1024,12 +1025,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_highlight',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/matches.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1042,6 +1045,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1049,12 +1053,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_preserve_case',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/preserve-case.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1067,6 +1073,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1074,12 +1081,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_context',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/context.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1092,6 +1101,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1099,12 +1109,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_use_buffer',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/buffer.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1117,6 +1129,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1124,12 +1137,14 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
             class: 'icon_use_gitignore',
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/find/gitignore.png',
+            'layer0.tint': 'var(buttonIconForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1142,6 +1157,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['pressed'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
         {
@@ -1149,6 +1165,7 @@ export function rules(theme: Primer) {
             parents: [
                 { class: 'icon_button_control', attributes: ['selected'] },
             ],
+            'layer0.tint': 'var(buttonIconSelecteddForeground)',
             'layer0.opacity': 1.0,
         },
 
@@ -1265,19 +1282,7 @@ export function rules(theme: Primer) {
             class: 'vcs_branch_icon',
             'layer0.texture': 'GitHub Theme/textures/vcs/branch.png',
             'layer0.tint': 'var(statusBarForeground)',
-            'layer0.inner_margin': 2,
-            'layer0.opacity': 1,
-            content_margin: 8,
-        },
-        {
-            class: 'vcs_branch_icon',
-            attributes: ['hover'],
-            'layer0.opacity': 0.8,
-        },
-        {
-            class: 'vcs_branch_icon',
-            settings: ['!show_git_status_in_status_bar'],
-            content_margin: 0,
+            content_margin: 5,
         },
         {
             class: 'vcs_changes_annotation',
@@ -1290,6 +1295,7 @@ export function rules(theme: Primer) {
 
 export function getTheme(theme: Primer): ThemeSetting {
     return {
+        extends: 'Adaptive.sublime-theme',
         variables: variables(theme),
         rules: rules(theme),
     };
