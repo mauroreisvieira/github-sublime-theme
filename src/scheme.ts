@@ -1,40 +1,8 @@
 export { generateScheme } from '@meetio/scheme-generator';
-import { Colors, options, Rules, UI } from '@meetio/scheme-generator';
+import { Colors, Rules, UI } from '@meetio/scheme-generator';
 import { getColors } from './colors';
 import { Options, Primer } from './interfaces';
 
-export function ui(theme: Primer): UI {
-    const color = getColors(theme);
-    const themes = (options: Options) => options[theme];
-    const scale = color.scale;
-
-    return {
-        ...options.ui,
-        ...{
-            caret: themes({
-                light: scale.blue[7],
-                dark: scale.blue[2],
-                dimmed: scale.blue[2],
-            }),
-            gutter_foreground: color.codemirror.linenumberText,
-            line_highlight: color.codemirror.activelineBg,
-            find_highlight: themes({
-                light: scale.yellow[4],
-                dark: '#ffd33d44',
-                dimmed: '#ffd33d44',
-            }),
-            highlight: themes({
-                light: '#34d058',
-                dark: '#17E5E6',
-                dimmed: '#17E5E6',
-            }),
-            guide: color.border.secondary,
-            stack_guide: color.scale.gray[8],
-            active_guide: color.scale.gray[7],
-            line_diff_width: '4',
-        },
-    };
-}
 
 export function colors(theme: Primer): Colors {
     const color = getColors(theme);
@@ -71,6 +39,70 @@ export function colors(theme: Primer): Colors {
     };
 }
 
+
+export function ui(theme: Primer): UI {
+    const color = getColors(theme);
+    const themes = (options: Options) => options[theme];
+    const scale = color.scale;
+
+    return {
+        accent: 'var(accent)',
+        background: 'var(background)',
+        foreground: 'var(foreground)',
+        caret: themes({
+            light: scale.blue[7],
+            dark: scale.blue[2],
+            dimmed: scale.blue[2],
+        }),
+        block_caret: themes({
+            light: scale.blue[7],
+            dark: scale.blue[2],
+            dimmed: scale.blue[2],
+        }),
+        bracket_contents_foreground: 'var(yellow)',
+        bracket_contents_options: 'underline',
+        brackets_foreground: 'var(cyan)',
+        brackets_options: 'underline',
+        fold_marker: 'var(yellow)',
+        gutter: 'var(background)',
+        inactive_selection: 'color(var(cyan) alpha(0.1))',
+        inactive_selection_border: 'color(var(cyan) alpha(0.1))',
+        invisibles: 'color(var(foreground) alpha(0.3))',
+        line_diff_added: 'var(diffAdded)',
+        line_diff_deleted: 'var(diffDeleted)',
+        line_diff_modified: 'var(diffModified)',
+        line_highlight: color.codemirror.activelineBg,
+        misspelling: 'var(blue)',
+        selection: themes({ light: "#0366d625", dark: "#3392FF44", dimmed: "#3392FF44" }),
+        selection_border: themes({ light: "#34d05800", dark: "#17E5E600", dimmed: "#17E5E600" }),
+        selection_corner_radius: 'cut',
+        selection_corner_style: 'square',
+        shadow: themes({ light: "#6a737d33", dark: "#0008", dimmed: "#0008" }),
+        shadow_width: '1',
+        tags_foreground: 'var(cyan)',
+        tags_options: 'underline',
+        gutter_foreground: color.codemirror.linenumberText,
+        gutter_foreground_highlight: color.text.primary,
+        find_highlight: themes({
+            light: scale.yellow[4],
+            dark: '#ffd33d44',
+            dimmed: '#ffd33d44',
+        }),
+        find_highlight_foreground: color.text.primary,
+        highlight: themes({
+            light: '#34d058',
+            dark: '#17E5E6',
+            dimmed: '#17E5E6',
+        }),
+        guide: color.border.secondary,
+        stack_guide: color.scale.gray[8],
+        active_guide: color.scale.gray[7],
+        line_diff_width: '4',
+        scroll_highlight: themes({ light: scale.yellow[1], dark: "#a707", dimmed: "#a707" }),
+        scroll_selected_highlight: themes({ light: scale.yellow[2], dark: "#b808", dimmed: "#b808" }),
+    };
+}
+
 export function rules(theme: Primer): Rules[] {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
@@ -80,15 +112,15 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: [
                 'comment',
+                'comment.block',
+                'comment.line',
+                'comment.block.documentation',
                 'punctuation.definition.comment',
-                'string.comment',
+                'meta.toc-list',
             ],
             settings: {
-                foreground: themes({
-                    light: scale.gray[5],
-                    dark: scale.gray[3],
-                    dimmed: scale.gray[3],
-                }),
+                foreground: 'var(comments)',
+                font_style: 'italic',
             },
         },
         {
