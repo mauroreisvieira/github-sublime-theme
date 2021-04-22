@@ -143,7 +143,6 @@
         {
             "scope": "carriage-return",
             "font_style": "italic underline",
-            "background": "#d73a49",
             "foreground": "#fafbfc"
         },
         {
@@ -212,23 +211,19 @@
         },
         {
             "scope": "markup.deleted,meta.diff.header.from-file,punctuation.definition.deleted",
-            "background": "#ffeef0",
             "foreground": "#b31d28"
         },
         {
             "scope": "markup.inserted,meta.diff.header.to-file,punctuation.definition.inserted",
-            "background": "#f0fff4",
             "foreground": "#22863a"
         },
         {
             "scope": "markup.changed,punctuation.definition.changed",
-            "background": "#ffebda",
             "foreground": "#e36209"
         },
         {
             "scope": "markup.ignored,markup.untracked",
-            "foreground": "#f6f8fa",
-            "background": "#005cc5"
+            "foreground": "#f6f8fa"
         },
         {
             "scope": "meta.diff.range",
@@ -260,6 +255,26 @@
             "scope": "constant.other.reference.link,string.other.link,markup.underline.link",
             "foreground": "#032f62",
             "font_style": "underline"
+        },
+        {
+            "name": "DIFF - Deleted",
+            "scope": "diff.deleted",
+            "background": "color(var(diffDeleted) alpha(0.20))"
+        },
+        {
+            "name": "DIFF - Deleted Char",
+            "scope": "diff.deleted.char",
+            "background": "color(var(diffDeleted) alpha(0.20))"
+        },
+        {
+            "name": "DIFF - Inserted",
+            "scope": "diff.inserted",
+            "background": "color(var(diffAdded) alpha(0.20))"
+        },
+        {
+            "name": "DIFF - Inserted Char",
+            "scope": "diff.inserted.char",
+            "background": "color(var(diffAdded) alpha(0.20))"
         }
     ]
 }

@@ -61,7 +61,7 @@ export function variables(theme: Primer): ThemeVariables {
         tabButtonForeground: color.text.primary,
 
         gridBorder: color.border.primary,
-        overlayBorder: color.border.primary,
+        overlayBorder: color.border.overlay,
 
         panelControlBackground: color.bg.canvasInset,
         panelControlBorder: color.border.primary,
@@ -69,8 +69,8 @@ export function variables(theme: Primer): ThemeVariables {
         panelRowBackground: color.bg.canvasInset,
         panelRowForeground: color.text.primary,
         panelRowLabelForeground: color.text.tertiary,
-        panelRowSelectedBackground: color.text.tertiary,
-        panelRowSelectedForeground: color.bg.canvasInset,
+        panelRowSelectedBackground: color.bg.overlay,
+        panelRowSelectedForeground: color.text.primary,
         panelRowMatchForeground: themes({
             light: scale.blue[5],
             dark: scale.blue[4],
