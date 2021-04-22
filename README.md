@@ -1,4 +1,4 @@
-# GitHub Sublime Text theme
+# GitHub's Sublime Text themes
 
 ![GitHub Sublime Text theme](./assets/screen.png)
 
@@ -23,18 +23,8 @@
 **You can active this theme from:**
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
-2. Typing `UI: Select Theme` next find for `GitHub Theme` and press `ENTER`
-3. Same process for scheme go to the Command Palette.
-4. Typing `UI: Select Color Scheme` choose you favorite scheme and press `ENTER`
-
-Manually you can go to (**Preferences → Settings - User**) and paste the following code:
-
-```json
-{
-    "color_scheme": "Packages/GitHub Theme/schemes/GitHub Light.sublime-color-scheme",
-    "theme": "GitHub-Theme.sublime-theme"
-}
-```
+2. Typing `UI: Select Theme` next find for `GitHub Dark/Dimmed/Light` and press `ENTER`
+3. Typing `UI: Select Color Scheme` choose you favorite scheme and press `ENTER`
 
 ## Recommended Settings
 
@@ -44,17 +34,11 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
 {
     "font_face": "Fira Code",
     "highlight_line": true,
-    "font_options": ["gray_antialias", "subpixel_antialias"], 
-    "indent_guide_options": ["draw_normal", "draw_active"], 
     "margin": 20,
     "line_padding_bottom": 7,
     "line_padding_top": 7,
-    "enable_tab_scrolling": false,
-    "show_sidebar_disclosure": false
+    "caret_extra_bottom": 12,
+    "caret_extra_top": 12,
+    "hide_tab_scrolling_buttons": true,
 }
 ```
-
-## What’s Next
-
--   Support for more language syntax.
--   Support for [A File Icons](https://github.com/SublimeText/AFileIcon).
