@@ -1,8 +1,20 @@
 # GitHub's Sublime Text themes
 
+**Project inspired on [GitHub VS Code theme](https://github.com/primer/github-vscode-theme).**
+
 ![GitHub Sublime Text theme](./assets/screen.png)
 
-> Project inspired on [GitHub VS Code theme](https://github.com/primer/github-vscode-theme).
+<p align="center">
+    <a href="https://github.com/mauroreisvieira/github-sublime-theme/releases" title="GitHub tag">
+        <img src="https://img.shields.io/github/release/mauroreisvieira/github-sublime-theme.svg?style=for-the-badge"/>
+    </a>
+    <a href="" title="Sublime Version">
+        <img src="https://img.shields.io/badge/built_for_sublimetext-4070-e79330?style=for-the-badge&logo=sublime-text"/>
+    </a>
+    <a href="https://packagecontrol.io/packages/GitHub%20Theme" title="Package Control">
+        <img src="https://img.shields.io/packagecontrol/dt/GitHub%20Theme?style=for-the-badge"/>
+    </a>
+</p>
 
 ## Install
 
@@ -39,6 +51,6 @@ To enjoy a better experience of using the GitHub Theme in your Sublime Text, ple
     "line_padding_top": 7,
     "caret_extra_bottom": 12,
     "caret_extra_top": 12,
-    "hide_tab_scrolling_buttons": true,
+    "hide_tab_scrolling_buttons": true
 }
 ```
