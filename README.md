@@ -1,4 +1,4 @@
-# GitHub Sublime Text theme
+# GitHub's Sublime Text themes
 
 ![GitHub Sublime Text theme](./assets/screen.png)
 
