@@ -1,0 +1,236 @@
+{
+    "name": "GitHub Dark Legacy",
+    "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
+    "variables": {
+        "accent": "#e36209",
+        "cursor": "#c8e1ff",
+        "foreground": "#fafbfc",
+        "background": "#24292e",
+        "comments": "#637777",
+        "deprecated": "#b31d28",
+        "invalid": "#b31d28",
+        "diffAdded": "#28a745",
+        "diffModified": "#0366d6",
+        "diffDeleted": "#d73a49",
+        "black": "#1b1f23",
+        "blue": "#79b8ff",
+        "gray": "#fafbfc",
+        "green": "#85e89d",
+        "orange": "#ffab70",
+        "palenight": "#9ECBFF",
+        "pink": "#f692ce",
+        "purple": "#b392f0",
+        "red": "#f97583",
+        "white": "#fff",
+        "yellow": "#fff5b1"
+    },
+    "globals": {
+        "accent": "var(accent)",
+        "active_guide": "#444d56",
+        "background": "var(background)",
+        "block_caret": "var(cursor)",
+        "bracket_contents_foreground": "var(yellow)",
+        "bracket_contents_options": "underline",
+        "brackets_foreground": "var(cyan)",
+        "brackets_options": "underline",
+        "caret": "var(cursor)",
+        "find_highlight": "#FFD33D22",
+        "find_highlight_foreground": "var(background)",
+        "fold_marker": "var(yellow)",
+        "foreground": "var(foreground)",
+        "gutter": "var(background)",
+        "gutter_foreground": "color(var(foreground) alpha(0.2))",
+        "highlight": "#17E5E699",
+        "inactive_selection": "#3392FF22",
+        "inactive_selection_border": "#3392FF22",
+        "invisibles": "color(var(foreground) alpha(0.3))",
+        "line_diff_added": "var(diffAdded)",
+        "line_diff_deleted": "var(diffDeleted)",
+        "line_diff_modified": "var(diffModified)",
+        "line_diff_width": "2",
+        "line_highlight": "#2b3036",
+        "misspelling": "var(blue)",
+        "selection": "#3392FF44",
+        "selection_border": "#3392FF44",
+        "selection_corner_radius": "cut",
+        "selection_corner_style": "cut",
+        "shadow": "color(var(background) alpha(0.5))",
+        "stack_guide": "#2f363d",
+        "tags_foreground": "var(cyan)",
+        "tags_options": "underline",
+        "guide": "#2f363d"
+    },
+    "rules": [
+        {
+            "scope": "comment,punctuation.definition.comment,string.comment",
+            "foreground": "var(comments)"
+        },
+        {
+            "scope": "constant,entity.name.constant,variable.other.constant,variable.language",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "entity.name.type.class,entity, entity.name",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "entity.name.tag",
+            "foreground": "var(green)"
+        },
+        {
+            "scope": "keyword",
+            "foreground": "var(red)"
+        },
+        {
+            "scope": "meta.function meta.function-call.method variable.function",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "storage,storage.type",
+            "foreground": "var(red)"
+        },
+        {
+            "scope": "storage.modifier.package,storage.modifier.import,storage.type.java",
+            "foreground": "var(gray)"
+        },
+        {
+            "scope": "string,punctuation.definition.string,string punctuation.section.embedded source",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "support",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "meta.property-name",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "variable,variable.parameter.function",
+            "foreground": "var(orange)"
+        },
+        {
+            "scope": "variable.other.object",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "variable.other,variable.object.property",
+            "foreground": "var(gray)"
+        },
+        {
+            "scope": "invalid.deprecated",
+            "font_style": "italic",
+            "foreground": "var(deprecated)"
+        },
+        {
+            "scope": "invalid.broken",
+            "font_style": "italic",
+            "foreground": "var(invalid)"
+        },
+        {
+            "scope": "invalid.illegal",
+            "font_style": "italic",
+            "foreground": "var(invalid)"
+        },
+        {
+            "scope": "invalid.unimplemented",
+            "font_style": "italic",
+            "foreground": "var(invalid)"
+        },
+        {
+            "scope": "support.constant",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "support.variable",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "support.function.js,meta.function-call",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "markup.list",
+            "foreground": "var(yellow)"
+        },
+        {
+            "scope": "markup.heading,markup.heading entity.name",
+            "font_style": "bold",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "markup.quote",
+            "foreground": "var(green)"
+        },
+        {
+            "scope": "markup.italic",
+            "font_style": "italic",
+            "foreground": "var(gray)"
+        },
+        {
+            "scope": "markup.bold",
+            "font_style": "bold",
+            "foreground": "var(gray)"
+        },
+        {
+            "scope": "markup.raw",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "markup.deleted,meta.diff.header.from-file,punctuation.definition.deleted",
+            "foreground": "var(red)"
+        },
+        {
+            "scope": "markup.inserted,meta.diff.header.to-file,punctuation.definition.inserted",
+            "foreground": "var(green)"
+        },
+        {
+            "scope": "markup.changed,punctuation.definition.changed",
+            "foreground": "var(orange)"
+        },
+        {
+            "scope": "markup.ignored,markup.untracked",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "markup.underline",
+            "font_style": "underline",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "markup.underline.link",
+            "font_style": "underline",
+            "foreground": "var(red)"
+        },
+        {
+            "scope": "meta.diff.range",
+            "foreground": "var(blue)",
+            "font_style": "bold"
+        },
+        {
+            "scope": "meta.diff.header",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "meta.separator",
+            "font_style": "bold",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "meta.output",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "meta.function-call.constructor variable.type",
+            "foreground": "var(purple)"
+        },
+        {
+            "scope": "meta.mapping.key string.quoted.double",
+            "foreground": "var(blue)"
+        },
+        {
+            "scope": "string.quoted.single,string.quoted.double",
+            "foreground": "var(palenight)"
+        }
+    ]
+}

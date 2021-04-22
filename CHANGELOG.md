@@ -4,8 +4,8 @@
 
 ### Bug Fixes
 
-* remove `link_color` prop from ST4000 ([3c0f499](https://github.com/mauroreisvieira/github-sublime-theme/commit/3c0f499))
-* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([a8e3ae3](https://github.com/mauroreisvieira/github-sublime-theme/commit/a8e3ae3))
+* flick in title_bar when change scheme ([c4a07f6](https://github.com/mauroreisvieira/github-sublime-theme/commit/c4a07f6))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([caabe07](https://github.com/mauroreisvieira/github-sublime-theme/commit/caabe07))
 
 
 
@@ -30,8 +30,8 @@
 
 ### Bug Fixes
 
-* remove `link_color` prop from ST4000 ([3c0f499](https://github.com/mauroreisvieira/github-sublime-theme/commit/3c0f499))
-* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([a8e3ae3](https://github.com/mauroreisvieira/github-sublime-theme/commit/a8e3ae3))
+* flick in title_bar when change scheme ([c4a07f6](https://github.com/mauroreisvieira/github-sublime-theme/commit/c4a07f6))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([caabe07](https://github.com/mauroreisvieira/github-sublime-theme/commit/caabe07))
 
 
 
