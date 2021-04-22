@@ -62,13 +62,13 @@
         "scrollBar": "#484F5833",
         "scrollTrack": "#484F5888",
         "vcsAnnotationBorder": "#444c56",
+        "vcsUntracked": "#6bc46d",
+        "vcsModified": "#daaa3f",
+        "vcsDeleted": "#e5534b",
         "vcsIgnored": "#545d68",
-        "vcsModified": "var(--bluish)",
-        "vcsUnmerged": "var(--redish)",
-        "vcsDeleted": "var(--pinkish)",
-        "vcsStaged": "var(--yellowish)",
-        "vcsUntracked": "var(--greenish)",
-        "vcsMissing": "var(--orangish)"
+        "vcsUnmerged": "#daaa3f",
+        "vcsStaged": "var(--cyanish)",
+        "vcsMissing": "#daaa3f"
     },
     "rules": [
         {

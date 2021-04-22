@@ -125,17 +125,17 @@ export function variables(theme: Primer): ThemeVariables {
         }),
 
         vcsAnnotationBorder: color.border.primary,
+        vcsUntracked: color.diff.addition.text,
+        vcsModified: color.diff.change.text,
+        vcsDeleted: color.diff.deletion.text,
         vcsIgnored: themes({
             light: scale.gray[4],
             dark: color.text.disabled,
             dimmed: color.text.disabled,
         }),
-        vcsModified: 'var(--bluish)',
-        vcsUnmerged: 'var(--redish)',
-        vcsDeleted: 'var(--pinkish)',
-        vcsStaged: 'var(--yellowish)',
-        vcsUntracked: 'var(--greenish)',
-        vcsMissing: 'var(--orangish)',
+        vcsUnmerged: color.text.warning,
+        vcsStaged: 'var(--cyanish)',
+        vcsMissing: color.text.warning,
     };
 }
 
