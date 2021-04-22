@@ -592,9 +592,20 @@ export const rules = [
         content_margin: [8, 5, 0, 3],
     },
     {
+        "class": "status_bar",
+        "attributes": ["panel_visible"],
+        "layer1.opacity": 0.0
+    },
+    {
+        "class": "status_bar",
+        "attributes": ["!panel_visible"],
+        'layer1.opacity': 1.0
+    },
+    {
         class: 'label_control',
         parents: [{ class: 'status_bar' }],
         'font.size': 'var(fontSizeSm)',
+        'font.bold': false,
         fg: 'var(statusBarForeground)',
     },
     {
@@ -605,6 +616,7 @@ export const rules = [
             },
         ],
         'font.size': 'var(fontSizeSm)',
+        'font.bold': true,
         fg: 'var(buttonForeground)',
     },
     {
