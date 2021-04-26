@@ -16,8 +16,9 @@
         "sidebarBackground": "#1e2228",
         "sidebarBorder": "#444c56",
         "sidebarHeadingForeground": "#adbac7",
-        "sidebarLabelForeground": "#768390",
-        "sidebarLabelSelectedForeground": "#768390",
+        "sidebarLabelForeground": "#adbac7",
+        "sidebarLabelHoverForeground": "#adbac7",
+        "sidebarLabelSelectedForeground": "#adbac7",
         "sidebarFolderForeground": "#768390",
         "sidebarFolderExpandedForeground": "var(accent)",
         "treeActiveSelectionBackground": "#373e47",
@@ -370,6 +371,18 @@
         {
             "class": "sidebar_label",
             "fg": "var(sidebarLabelForeground)"
+        },
+        {
+            "class": "sidebar_label",
+            "fg": "var(sidebarLabelHoverForeground)",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": [
+                        "hover"
+                    ]
+                }
+            ]
         },
         {
             "class": "sidebar_label",

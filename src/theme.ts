@@ -41,8 +41,9 @@ export function variables(theme: Primer): ThemeVariables {
         sidebarBorder: color.border.primary,
         sidebarHeadingForeground: color.text.primary,
 
-        sidebarLabelForeground: color.text.secondary,
-        sidebarLabelSelectedForeground: color.text.secondary,
+        sidebarLabelForeground: color.text.primary,
+        sidebarLabelHoverForeground: color.text.primary,
+        sidebarLabelSelectedForeground: color.text.primary,
 
         sidebarFolderForeground: color.text.secondary,
         sidebarFolderExpandedForeground: 'var(accent)',
@@ -371,6 +372,11 @@ export const rules = [
     {
         class: 'sidebar_label',
         fg: 'var(sidebarLabelForeground)',
+    },
+    {
+        class: 'sidebar_label',
+        fg: 'var(sidebarLabelHoverForeground)',
+        parents: [{ class: 'tree_row', attributes: ['hover'] }],
     },
     {
         class: 'sidebar_label',
