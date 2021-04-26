@@ -260,7 +260,8 @@
             "tab_overlap": 0,
             "tab_width": 80,
             "tab_height": 40,
-            "mouse_wheel_switch": false
+            "mouse_wheel_switch": false,
+            "tint_modifier": "var(tabInactiveBackground)"
         },
         {
             "class": "tab_control",
@@ -316,7 +317,7 @@
         {
             "class": "tab_label",
             "font.face": "var(fontFace)",
-            "font.size": "var(fontSm)",
+            "font.size": "var(fontSizeSm)",
             "fg": "var(tabActiveForeground)"
         },
         {

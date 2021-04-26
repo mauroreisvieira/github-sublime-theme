@@ -286,6 +286,7 @@ export const rules = [
         tab_width: 80,
         tab_height: 40,
         mouse_wheel_switch: false,
+        tint_modifier: 'var(tabInactiveBackground)',
     },
     {
         class: 'tab_control',
@@ -325,7 +326,7 @@ export const rules = [
     {
         class: 'tab_label',
         'font.face': 'var(fontFace)',
-        'font.size': 'var(fontSm)',
+        'font.size': 'var(fontSizeSm)',
         fg: 'var(tabActiveForeground)',
     },
 
@@ -592,14 +593,14 @@ export const rules = [
         content_margin: [8, 5, 0, 3],
     },
     {
-        "class": "status_bar",
-        "attributes": ["panel_visible"],
-        "layer1.opacity": 0.0
+        class: 'status_bar',
+        attributes: ['panel_visible'],
+        'layer1.opacity': 0.0,
     },
     {
-        "class": "status_bar",
-        "attributes": ["!panel_visible"],
-        'layer1.opacity': 1.0
+        class: 'status_bar',
+        attributes: ['!panel_visible'],
+        'layer1.opacity': 1.0,
     },
     {
         class: 'label_control',
