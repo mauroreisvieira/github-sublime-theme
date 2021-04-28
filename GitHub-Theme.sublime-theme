@@ -359,7 +359,12 @@
         },
         {
             "class": "panel_control",
-            "parents": [{ "class": "switch_project_window", "attributes": ["file_light"] }],
+            "parents": [
+                {
+                    "class": "switch_project_window",
+                    "attributes": ["file_light"]
+                }
+            ],
             "layer0.tint": "var(bgLight)"
         },
         {
@@ -711,132 +716,190 @@
             "layer0.opacity": 1.0
         },
         {
-            "class": "vcs_status_badge",
-            "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-            "layer0.texture": "Meetio Theme/textures/vcs/vcs_untracked.png",
-            "layer0.tint": "var(vcsUntracked)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["modified"] }
-            ],
-            "layer0.texture": "GitHub Theme/textures/vcs/diff_modified.png",
-            "layer0.tint": "var(vcsModified)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["added"] }
-            ],
-            "layer0.texture": "GitHub Theme/textures/vcs/diff_added.png",
-            "layer0.tint": "var(vcsUntracked)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["unmerged"] }
-            ],
-            "layer0.texture": "Theme - Default/common/status_unmerged.png",
-            "layer0.tint": "var(vcsUnmerged)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["staged"] }
-            ],
-            "layer0.texture": "GitHub Theme/textures/vcs/diff_staged.png",
-            "layer0.tint": "var(vcsStaged)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["deleted"] }
-            ],
-            "layer0.tint": "var(vcsDeleted)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "file_system_entry", "attributes": ["missing"] }
-            ],
-            "layer0.tint": "var(vcsMissing)",
-            "content_margin": "var(vcsBadgeSize)"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [{ "class": "tree_row", "attributes": ["expandable"] }],
-            "layer0.texture": "Theme - Default/common/status_modified.png"
-        },
-        {
-            "class": "vcs_status_badge",
-            "parents": [
-                { "class": "tree_row", "attributes": ["expandable"] },
-                { "class": "file_system_entry", "attributes": ["unmerged"] }
-            ],
-            "layer0.texture": "Theme - Default/common/status_unmerged.png"
-        },
-        {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["ignored"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["ignored"]
+                }
             ],
             "color": "color(var(vcsIgnored)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["untracked"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["untracked"]
+                }
             ],
             "color": "var(vcsUntracked)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["modified"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["modified"]
+                }
             ],
             "color": "var(vcsModified)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["added"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["added"]
+                }
             ],
             "color": "var(vcsUntracked)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["unmerged"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["unmerged"]
+                }
             ],
             "color": "var(vcsUnmerged)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["missing"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["missing"]
+                }
             ],
             "color": "var(vcsMissing)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["deleted"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["deleted"]
+                }
             ],
             "color": "var(vcsDeleted)"
         },
         {
             "class": "sidebar_label",
             "parents": [
-                { "class": "file_system_entry", "attributes": ["staged"] }
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["staged"]
+                }
             ],
             "color": "var(vcsStaged)"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["untracked"]
+                }
+            ],
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_untracked.png",
+            "layer0.tint": "var(vcsUntracked)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["modified"]
+                }
+            ],
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_modified.png",
+            "layer0.tint": "var(vcsModified)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["added"]
+                }
+            ],
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_added.png",
+            "layer0.tint": "var(vcsUntracked)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["unmerged"]
+                }
+            ],
+            "layer0.texture": "Theme - Default/common/status_unmerged.png",
+            "layer0.tint": "var(vcsUnmerged)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["staged"]
+                }
+            ],
+            "layer0.texture": "GitHub Theme/textures/vcs/diff_staged.png",
+            "layer0.tint": "var(vcsStaged)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["deleted"]
+                }
+            ],
+            "layer0.tint": "var(vcsDeleted)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["missing"]
+                }
+            ],
+            "layer0.tint": "var(vcsMissing)",
+            "content_margin": 5
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": ["expandable"]
+                }
+            ],
+            "layer0.texture": "Theme - Default/common/status_modified.png"
+        },
+        {
+            "class": "vcs_status_badge",
+            "parents": [
+                {
+                    "class": "tree_row",
+                    "attributes": ["expandable"]
+                },
+                {
+                    "class": "file_system_entry",
+                    "attributes": ["unmerged"]
+                }
+            ],
+            "layer0.texture": "Theme - Default/common/status_unmerged.png"
         },
         {
             "class": "icon_folder",
