@@ -198,8 +198,7 @@
         },
         {
             "class": "sidebar_heading",
-            "fg": "var(sidebarHeadingFg)",
-            "font.size": "var(font_size_sm)"
+            "fg": "var(sidebarHeadingFg)"
         },
         {
             "class": "sidebar_heading",
