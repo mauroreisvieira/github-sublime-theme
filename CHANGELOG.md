@@ -1,3 +1,29 @@
+## [1.8.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v1.8.2) (2021-04-28)
+
+
+### Bug Fixes
+
+* icons for file_system_entry ([f8fedd6](https://github.com/mauroreisvieira/github-sublime-theme/commit/f8fedd622a8fbd9f749cbe729aaa64ede9e87566))
+* name of variable, closes [#11](https://github.com/mauroreisvieira/github-sublime-theme/issues/11) ([15c5f74](https://github.com/mauroreisvieira/github-sublime-theme/commit/15c5f74b0178bf070085c89f68ca20462a16797d))
+* remove `link_color` prop from ST4000 ([3c0f499](https://github.com/mauroreisvieira/github-sublime-theme/commit/3c0f499f6d0caa0c545b2ed9f457fd2ad2d90ea1))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([a8e3ae3](https://github.com/mauroreisvieira/github-sublime-theme/commit/a8e3ae3732a73635c4009ecfa3df1647d727de4f))
+
+
+
+# [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* input border in switch_project_window ([7b87b78](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b87b78419002adb79e9b727b687a65bf2ff38e0))
+
+
+### Features
+
+* added icon for untracked files in sidebar ([66f959d](https://github.com/mauroreisvieira/github-sublime-theme/commit/66f959db948b5a2ac7e858bfeb0fe229452afd1b))
+
+
+
 ## [1.8.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v1.8.1) (2021-04-28)
 
 
