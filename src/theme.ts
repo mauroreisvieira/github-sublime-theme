@@ -105,6 +105,7 @@ export function variables(theme: Primer): ThemeVariables {
         buttonIconSelecteddForeground: 'var(accent)',
 
         statusBarForeground: color.text.secondary,
+        statusBarHoverForeground: color.text.primary,
         statusBarBackground: color.bg.canvas,
         statusBarBorder: color.border.primary,
 
@@ -611,9 +612,16 @@ export const rules = [
     {
         class: 'label_control',
         parents: [{ class: 'status_bar' }],
-        'font.size': 'var(fontSizeSm)',
-        'font.bold': false,
+        'font.size': 'var(fontSizeMd)',
         fg: 'var(statusBarForeground)',
+    },
+    {
+        class: 'label_control',
+        parents: [
+            { class: 'window' },
+            { class: 'status_button', attributes: ['hover'] },
+        ],
+        fg: 'var(statusBarHoverForeground)',
     },
     {
         class: 'label_control',
@@ -767,7 +775,7 @@ export const rules = [
         'layer1.opacity': 1.0,
         'layer1.inner_margin': 1,
         'layer1.draw_center': false,
-        content_margin: [12, 8],
+        content_margin: 8,
         color_scheme_tint: 'var(background)',
     },
 
@@ -844,7 +852,7 @@ export const rules = [
     {
         class: 'button_control',
         content_margin: [10, 10],
-        min_size: [80, 40],
+        min_size: [80, 30],
         'layer0.tint': 'var(buttonBackground)',
         'layer1.tint': 'var(buttonHoverBackground)',
         'layer2.tint': 'var(buttonPressedBackground)',
@@ -888,22 +896,27 @@ export const rules = [
         ],
         'layer0.opacity': 1,
     },
+
+    {
+        class: 'icon_button_group',
+        spacing: 0,
+    },
     // ICON BUTTON
     {
         class: 'icon_button_control',
         'layer0.tint': 'var(buttonBackground)',
-        'layer1.tint': 'var(buttonHoverBackground)',
-        'layer2.tint': 'var(buttonPressedBackground)',
-        'layer3.tint': 'var(buttonSelecteddBackground)',
         'layer0.inner_margin': [5, 6],
-        'layer1.inner_margin': [5, 6],
-        'layer2.inner_margin': [5, 6],
-        'layer3.inner_margin': [5, 6],
         'layer0.opacity': 1.0,
+        'layer1.tint': 'var(buttonHoverBackground)',
+        'layer1.inner_margin': [5, 6],
         'layer1.opacity': 0.0,
+        'layer2.tint': 'var(buttonPressedBackground)',
+        'layer2.inner_margin': [5, 6],
         'layer2.opacity': 0.0,
+        'layer3.tint': 'var(buttonSelecteddBackground)',
+        'layer3.inner_margin': [5, 6],
         'layer3.opacity': 0.0,
-        content_margin: [12, 8, 12, 8],
+        content_margin: [12, 8],
     },
     {
         class: 'icon_button_control',
