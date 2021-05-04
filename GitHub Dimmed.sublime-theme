@@ -51,6 +51,7 @@
         "inputForeground": "#adbac7",
         "buttonForeground": "#adbac7",
         "buttonBackground": "color(#adbac7 alpha(0.05))",
+        "buttonBorder": "#373e47",
         "buttonHoverBackground": "color(#adbac7 alpha(0.1))",
         "buttonPressedBackground": "color(#adbac7 alpha(0.2))",
         "buttonSelecteddBackground": "color(#adbac7 alpha(0.1))",
@@ -824,8 +825,8 @@
         {
             "class": "quick_panel",
             "row_padding": [
-                10,
-                5
+                12,
+                6
             ],
             "layer0.tint": [
                 "background",
@@ -965,7 +966,10 @@
             "layer1.opacity": 1,
             "layer1.inner_margin": 1,
             "layer1.draw_center": false,
-            "content_margin": 8,
+            "content_margin": [
+                4,
+                2
+            ],
             "color_scheme_tint": "var(background)"
         },
         {
@@ -1008,6 +1012,7 @@
             "font.face": "var(fontFace)",
             "font.size": "var(fontSizeSm)",
             "font.italic": true,
+            "font.bold": true,
             "fg": "var(autoCompleteForeground)",
             "match_fg": "var(autoCompleteMatchForeground)",
             "selected_fg": "var(autoCompleteSelectedForeground)",
@@ -1048,43 +1053,32 @@
             ],
             "min_size": [
                 80,
-                30
+                26
             ],
             "layer0.tint": "var(buttonBackground)",
-            "layer1.tint": "var(buttonHoverBackground)",
-            "layer2.tint": "var(buttonPressedBackground)",
             "layer0.opacity": 1,
-            "layer1.opacity": 0,
-            "layer2.opacity": 0,
             "layer0.inner_margin": [
                 5,
                 6
             ],
-            "layer1.inner_margin": [
-                5,
-                6
-            ],
-            "layer2.inner_margin": [
-                5,
-                6
-            ]
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "layer1.tint": "var(buttonBorder)",
+            "layer1.opacity": 1
         },
         {
             "class": "button_control",
             "attributes": [
                 "hover"
             ],
-            "layer0.opacity": 0,
-            "layer1.opacity": 1
+            "layer0.tint": "var(buttonHoverBackground)"
         },
         {
             "class": "button_control",
             "attributes": [
                 "pressed"
             ],
-            "layer0.opacity": 0,
-            "layer1.opacity": 0,
-            "layer2.opacity": 1
+            "layer0.tint": "var(buttonPressedBackground)"
         },
         {
             "class": "close_button",
@@ -1124,24 +1118,15 @@
                 6
             ],
             "layer0.opacity": 1,
-            "layer1.tint": "var(buttonHoverBackground)",
+            "layer1.draw_center": false,
             "layer1.inner_margin": [
-                5,
-                6
+                0,
+                1,
+                1,
+                1
             ],
-            "layer1.opacity": 0,
-            "layer2.tint": "var(buttonPressedBackground)",
-            "layer2.inner_margin": [
-                5,
-                6
-            ],
-            "layer2.opacity": 0,
-            "layer3.tint": "var(buttonSelecteddBackground)",
-            "layer3.inner_margin": [
-                5,
-                6
-            ],
-            "layer3.opacity": 0,
+            "layer1.tint": "var(buttonBorder)",
+            "layer1.opacity": 1,
             "content_margin": [
                 12,
                 8
@@ -1150,23 +1135,34 @@
         {
             "class": "icon_button_control",
             "attributes": [
+                "left"
+            ],
+            "layer1.inner_margin": 1,
+            "layer1.tint": "var(buttonBorder)"
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": [
                 "hover"
             ],
-            "layer1.opacity": 1
+            "layer0.tint": "var(buttonHoverBackground)",
+            "layer0.opacity": 1
         },
         {
             "class": "icon_button_control",
             "attributes": [
                 "pressed"
             ],
-            "layer2.opacity": 1
+            "layer0.tint": "var(buttonPressedBackground)",
+            "layer0.opacity": 1
         },
         {
             "class": "icon_button_control",
             "attributes": [
                 "selected"
             ],
-            "layer3.opacity": 1
+            "layer0.tint": "var(buttonSelecteddBackground)",
+            "layer0.opacity": 1
         },
         {
             "class": "icon_regex",
@@ -1845,13 +1841,51 @@
         },
         {
             "class": "sidebar_button_control",
+            "settings": [
+                "show_sidebar_button"
+            ],
             "layer0.tint": "var(statusBarForeground)"
+        },
+        {
+            "class": "sidebar_button_control",
+            "settings": [
+                "!show_sidebar_button"
+            ],
+            "content_margin": 0,
+            "layer0.tint": "var(statusBarForeground)",
+            "layer0.opacity": 0
+        },
+        {
+            "class": "sidebar_button_control",
+            "settings": [
+                "show_sidebar_button"
+            ],
+            "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(statusBarHoverForeground)",
+            "layer0.opacity": 1
+        },
+        {
+            "class": "status_button",
+            "content_margin": [
+                10,
+                0
+            ],
+            "min_size": [
+                40,
+                22
+            ]
+        },
+        {
+            "class": "vcs_status",
+            "spacing": 4
         },
         {
             "class": "vcs_branch_icon",
             "layer0.texture": "GitHub Theme/textures/vcs/branch.png",
             "layer0.tint": "var(statusBarForeground)",
-            "content_margin": 5
+            "content_margin": 6
         },
         {
             "class": "vcs_changes_annotation",

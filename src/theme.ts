@@ -97,6 +97,7 @@ export function variables(theme: Primer): ThemeVariables {
 
         buttonForeground: color.text.primary,
         buttonBackground: `color(${color.text.primary} alpha(0.05))`,
+        buttonBorder: color.input.border,
         buttonHoverBackground: `color(${color.text.primary} alpha(0.1))`,
         buttonPressedBackground: `color(${color.text.primary} alpha(0.2))`,
         buttonSelecteddBackground: `color(${color.text.primary} alpha(0.1))`,
@@ -662,7 +663,7 @@ export const rules = [
     },
     {
         class: 'quick_panel',
-        row_padding: [10, 5],
+        row_padding: [12, 6],
         'layer0.tint': ['background', 1],
         'layer0.opacity': 1.0,
     },
@@ -775,7 +776,7 @@ export const rules = [
         'layer1.opacity': 1.0,
         'layer1.inner_margin': 1,
         'layer1.draw_center': false,
-        content_margin: 8,
+        content_margin: [4, 2],
         color_scheme_tint: 'var(background)',
     },
 
@@ -817,6 +818,7 @@ export const rules = [
         'font.face': 'var(fontFace)',
         'font.size': 'var(fontSizeSm)',
         'font.italic': true,
+        'font.bold': true,
         fg: 'var(autoCompleteForeground)',
         match_fg: 'var(autoCompleteMatchForeground)',
         selected_fg: 'var(autoCompleteSelectedForeground)',
@@ -848,33 +850,28 @@ export const rules = [
         'layer0.opacity': 1.0,
     },
 
-    // BUTTONS
+    // BUTTON CONTROL
     {
         class: 'button_control',
         content_margin: [10, 10],
-        min_size: [80, 30],
+        min_size: [80, 26],
         'layer0.tint': 'var(buttonBackground)',
-        'layer1.tint': 'var(buttonHoverBackground)',
-        'layer2.tint': 'var(buttonPressedBackground)',
         'layer0.opacity': 1.0,
-        'layer1.opacity': 0.0,
-        'layer2.opacity': 0.0,
         'layer0.inner_margin': [5, 6],
-        'layer1.inner_margin': [5, 6],
-        'layer2.inner_margin': [5, 6],
-    },
-    {
-        class: 'button_control',
-        attributes: ['hover'],
-        'layer0.opacity': 0.0,
+        'layer1.draw_center': false,
+        'layer1.inner_margin': 1,
+        'layer1.tint': 'var(buttonBorder)',
         'layer1.opacity': 1.0,
     },
     {
         class: 'button_control',
+        attributes: ['hover'],
+        'layer0.tint': 'var(buttonHoverBackground)',
+    },
+    {
+        class: 'button_control',
         attributes: ['pressed'],
-        'layer0.opacity': 0.0,
-        'layer1.opacity': 0.0,
-        'layer2.opacity': 1.0,
+        'layer0.tint': 'var(buttonPressedBackground)',
     },
 
     // CLOSE BUTTON
@@ -897,41 +894,46 @@ export const rules = [
         'layer0.opacity': 1,
     },
 
+    // ICON BUTTON GROUP
     {
         class: 'icon_button_group',
         spacing: 0,
     },
-    // ICON BUTTON
+    // ICON BUTTON CONTROL
     {
         class: 'icon_button_control',
         'layer0.tint': 'var(buttonBackground)',
         'layer0.inner_margin': [5, 6],
         'layer0.opacity': 1.0,
-        'layer1.tint': 'var(buttonHoverBackground)',
-        'layer1.inner_margin': [5, 6],
-        'layer1.opacity': 0.0,
-        'layer2.tint': 'var(buttonPressedBackground)',
-        'layer2.inner_margin': [5, 6],
-        'layer2.opacity': 0.0,
-        'layer3.tint': 'var(buttonSelecteddBackground)',
-        'layer3.inner_margin': [5, 6],
-        'layer3.opacity': 0.0,
+        'layer1.draw_center': false,
+        'layer1.inner_margin': [0, 1, 1 ,1],
+        'layer1.tint': 'var(buttonBorder)',
+        'layer1.opacity': 1.0,
         content_margin: [12, 8],
     },
     {
         class: 'icon_button_control',
+        "attributes": ["left"],
+        'layer1.inner_margin': 1,
+        'layer1.tint': 'var(buttonBorder)',
+    },
+    {
+        class: 'icon_button_control',
         attributes: ['hover'],
-        'layer1.opacity': 1.0,
+        'layer0.tint': 'var(buttonHoverBackground)',
+        'layer0.opacity': 1.0,
     },
     {
         class: 'icon_button_control',
         attributes: ['pressed'],
-        'layer2.opacity': 1.0,
+        'layer0.tint': 'var(buttonPressedBackground)',
+        'layer0.opacity': 1.0,
     },
     {
         class: 'icon_button_control',
         attributes: ['selected'],
-        'layer3.opacity': 1.0,
+        'layer0.tint': 'var(buttonSelecteddBackground)',
+        'layer0.opacity': 1.0,
     },
     {
         class: 'icon_regex',
@@ -1280,17 +1282,45 @@ export const rules = [
         'layer0.tint': 'var(treeActiveSelectionBackground)',
         'layer0.opacity': 1.0,
     },
-
-    // STATUS BAR ICONS
+    //  SIDEBAR BUTTON
     {
         class: 'sidebar_button_control',
+        settings: ['show_sidebar_button'],
         'layer0.tint': 'var(statusBarForeground)',
     },
+    {
+        class: 'sidebar_button_control',
+        settings: ['!show_sidebar_button'],
+        content_margin: 0,
+        'layer0.tint': 'var(statusBarForeground)',
+        'layer0.opacity': 0.0,
+    },
+
+    {
+        class: 'sidebar_button_control',
+        settings: ['show_sidebar_button'],
+        attributes: ['hover'],
+        'layer0.tint': 'var(statusBarHoverForeground)',
+        'layer0.opacity': 1.0,
+    },
+    {
+        class: 'status_button',
+        content_margin: [10, 0],
+        min_size: [40, 22],
+    },
+
+    // VCS STATUS
+
+    {
+        class: 'vcs_status',
+        spacing: 4,
+    },
+    // VCS ICON
     {
         class: 'vcs_branch_icon',
         'layer0.texture': 'GitHub Theme/textures/vcs/branch.png',
         'layer0.tint': 'var(statusBarForeground)',
-        content_margin: 5,
+        content_margin: 6,
     },
     {
         class: 'vcs_changes_annotation',
