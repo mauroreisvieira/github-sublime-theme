@@ -50,11 +50,11 @@
         "inputBorder": "#373e47",
         "inputForeground": "#adbac7",
         "buttonForeground": "#adbac7",
-        "buttonBackground": "color(#adbac7 alpha(0.05))",
+        "buttonBackground": "color(#adbac7 alpha(0.02))",
         "buttonBorder": "#373e47",
         "buttonHoverBackground": "color(#adbac7 alpha(0.1))",
         "buttonPressedBackground": "color(#adbac7 alpha(0.2))",
-        "buttonSelecteddBackground": "color(#adbac7 alpha(0.1))",
+        "buttonSelecteddBackground": "color(#adbac7 alpha(0.08))",
         "buttonIconForeground": "var(foreground)",
         "buttonIconSelecteddForeground": "var(accent)",
         "statusBarForeground": "#768390",
@@ -1122,7 +1122,7 @@
             "layer1.inner_margin": [
                 0,
                 1,
-                1,
+                0,
                 1
             ],
             "layer1.tint": "var(buttonBorder)",
@@ -1137,8 +1137,32 @@
             "attributes": [
                 "left"
             ],
-            "layer1.inner_margin": 1,
-            "layer1.tint": "var(buttonBorder)"
+            "layer1.inner_margin": [
+                1,
+                1,
+                0,
+                1
+            ]
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": [
+                "right"
+            ],
+            "layer1.inner_margin": [
+                0,
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "class": "icon_button_control",
+            "attributes": [
+                "left",
+                "right"
+            ],
+            "layer1.inner_margin": 1
         },
         {
             "class": "icon_button_control",
@@ -1844,7 +1868,8 @@
             "settings": [
                 "show_sidebar_button"
             ],
-            "layer0.tint": "var(statusBarForeground)"
+            "layer0.tint": "var(statusBarForeground)",
+            "layer0.opacity": 1
         },
         {
             "class": "sidebar_button_control",

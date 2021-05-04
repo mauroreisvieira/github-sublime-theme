@@ -96,11 +96,11 @@ export function variables(theme: Primer): ThemeVariables {
         inputForeground: color.text.primary,
 
         buttonForeground: color.text.primary,
-        buttonBackground: `color(${color.text.primary} alpha(0.05))`,
+        buttonBackground: `color(${color.text.primary} alpha(0.02))`,
         buttonBorder: color.input.border,
         buttonHoverBackground: `color(${color.text.primary} alpha(0.1))`,
         buttonPressedBackground: `color(${color.text.primary} alpha(0.2))`,
-        buttonSelecteddBackground: `color(${color.text.primary} alpha(0.1))`,
+        buttonSelecteddBackground: `color(${color.text.primary} alpha(0.08))`,
 
         buttonIconForeground: 'var(foreground)',
         buttonIconSelecteddForeground: 'var(accent)',
@@ -906,16 +906,25 @@ export const rules = [
         'layer0.inner_margin': [5, 6],
         'layer0.opacity': 1.0,
         'layer1.draw_center': false,
-        'layer1.inner_margin': [0, 1, 1 ,1],
+        'layer1.inner_margin': [0, 1, 0, 1],
         'layer1.tint': 'var(buttonBorder)',
         'layer1.opacity': 1.0,
         content_margin: [12, 8],
     },
     {
         class: 'icon_button_control',
-        "attributes": ["left"],
+        attributes: ['left'],
+        'layer1.inner_margin': [1, 1, 0, 1],
+    },
+    {
+        class: 'icon_button_control',
+        attributes: ['right'],
+        'layer1.inner_margin': [0, 1, 1, 1],
+    },
+    {
+        class: 'icon_button_control',
+        attributes: ['left', 'right'],
         'layer1.inner_margin': 1,
-        'layer1.tint': 'var(buttonBorder)',
     },
     {
         class: 'icon_button_control',
@@ -1287,6 +1296,7 @@ export const rules = [
         class: 'sidebar_button_control',
         settings: ['show_sidebar_button'],
         'layer0.tint': 'var(statusBarForeground)',
+        'layer0.opacity': 1.0,
     },
     {
         class: 'sidebar_button_control',
@@ -1295,7 +1305,6 @@ export const rules = [
         'layer0.tint': 'var(statusBarForeground)',
         'layer0.opacity': 0.0,
     },
-
     {
         class: 'sidebar_button_control',
         settings: ['show_sidebar_button'],
