@@ -55,7 +55,7 @@
         "find_highlight": "#ffdf5d",
         "find_highlight_foreground": "#24292e",
         "highlight": "#34d058",
-        "guide": "#eaecef",
+        "guide": "hsla(214,13%,93%,1)",
         "stack_guide": "#2f363d",
         "active_guide": "#444d56",
         "line_diff_width": "4",
