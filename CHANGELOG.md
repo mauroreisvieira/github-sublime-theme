@@ -1,3 +1,53 @@
+## [2.1.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v2.1.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* add generateTheme ([0d128a4](https://github.com/mauroreisvieira/github-sublime-theme/commit/0d128a41c3e875bed33c0559ba1d855633e6f871))
+* background color in tabs ([bd3c362](https://github.com/mauroreisvieira/github-sublime-theme/commit/bd3c3622fdf4e5dc2beb6a1ce44782cb28f24a13))
+* border in button group ([83f7f85](https://github.com/mauroreisvieira/github-sublime-theme/commit/83f7f858983a8832517616c5b1d6c1f21acdec8f))
+* border in status bar ([cf82c87](https://github.com/mauroreisvieira/github-sublime-theme/commit/cf82c87da8987e43a26e109b6ef0a95f753a46ce))
+* button border ([c390c72](https://github.com/mauroreisvieira/github-sublime-theme/commit/c390c721259c8f71332d06d6c6af5a1e3c2aa484))
+* colors of theme ([290bf97](https://github.com/mauroreisvieira/github-sublime-theme/commit/290bf979f3c1ebaa8e18b815628e6fdc73ffc145))
+* delete old folder ([57fdb05](https://github.com/mauroreisvieira/github-sublime-theme/commit/57fdb05292bfffc01e66de74c172b4bec939e4e5))
+* flick in title_bar when change scheme ([c4a07f6](https://github.com/mauroreisvieira/github-sublime-theme/commit/c4a07f61e446391314560bf9658ea157892f0a5d))
+* increase contrast for `sidebar_label` ([41be290](https://github.com/mauroreisvieira/github-sublime-theme/commit/41be290048c2ebbb5b2f3c056a55974cdd88b9c8))
+* markdown syntax ([56d2b88](https://github.com/mauroreisvieira/github-sublime-theme/commit/56d2b882d7768bff5d9ceb9a8ef5cc40ebb279ce))
+* remove `link_color` prop from ST4000 ([3c0f499](https://github.com/mauroreisvieira/github-sublime-theme/commit/3c0f499f6d0caa0c545b2ed9f457fd2ad2d90ea1))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([a8e3ae3](https://github.com/mauroreisvieira/github-sublime-theme/commit/a8e3ae3732a73635c4009ecfa3df1647d727de4f))
+* remove `show_tab_navigation` use `enable_tab_scrolling` instead ([caabe07](https://github.com/mauroreisvieira/github-sublime-theme/commit/caabe07ecc38c2c48fd115cdafc5882c86294161))
+* rename old scheme ([0dc2632](https://github.com/mauroreisvieira/github-sublime-theme/commit/0dc263210c90f0eb88946cf4bace9a4d9d3868b7))
+* scheme ([cdb42a0](https://github.com/mauroreisvieira/github-sublime-theme/commit/cdb42a07892f902314bfa59297ecfe4f1542f97f))
+* schemes and background of row panel ([9ac0d0f](https://github.com/mauroreisvieira/github-sublime-theme/commit/9ac0d0ffbf6b4ef27314b2e2f512548a8ecf1d19))
+* spacing between buttons ([b77068f](https://github.com/mauroreisvieira/github-sublime-theme/commit/b77068f150a96eb733f9e509a52d544269cfdadb))
+* tab color and icon in status bar ([6c30a41](https://github.com/mauroreisvieira/github-sublime-theme/commit/6c30a41eff2295c93da8aaa64c50f0aa5971e402))
+* tabs ([57182e1](https://github.com/mauroreisvieira/github-sublime-theme/commit/57182e17064f512a013c1cb5ac505450aebb8ff6))
+* update scheme colors ([6a97efa](https://github.com/mauroreisvieira/github-sublime-theme/commit/6a97efa83f9fbc88876f8c40348c3410392acc0e))
+* update versions ([a5b1ca4](https://github.com/mauroreisvieira/github-sublime-theme/commit/a5b1ca4bb62e7cc46b4881282b0e4ef648595713))
+
+
+### Features
+
+* add `Dimmed` new color scheme ([59ed06a](https://github.com/mauroreisvieira/github-sublime-theme/commit/59ed06a9dbf78c3d80aa608daaff57c29c76b399))
+* add new Themes files ([1db352e](https://github.com/mauroreisvieira/github-sublime-theme/commit/1db352ed630f11f07296c103c5155a4f31b5dc98))
+* update scheme generator ([e8165a6](https://github.com/mauroreisvieira/github-sublime-theme/commit/e8165a6dfef3745f2ec5250d0e0c902b4f959cdf))
+
+
+
+# [1.6.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.5.2...v1.6.0) (2020-11-26)
+
+
+### Bug Fixes
+
+* input border in switch_project_window ([7b87b78](https://github.com/mauroreisvieira/github-sublime-theme/commit/7b87b78419002adb79e9b727b687a65bf2ff38e0))
+
+
+### Features
+
+* added icon for untracked files in sidebar ([66f959d](https://github.com/mauroreisvieira/github-sublime-theme/commit/66f959db948b5a2ac7e858bfeb0fe229452afd1b))
+
+
+
 # [2.1.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.6.0...v2.1.0) (2021-05-04)
 
 
