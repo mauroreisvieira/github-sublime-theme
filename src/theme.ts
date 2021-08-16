@@ -818,7 +818,6 @@ export const rules = [
         'font.face': 'var(fontFace)',
         'font.size': 'var(fontSizeSm)',
         'font.italic': true,
-        'font.bold': true,
         fg: 'var(autoCompleteForeground)',
         match_fg: 'var(autoCompleteMatchForeground)',
         selected_fg: 'var(autoCompleteSelectedForeground)',
