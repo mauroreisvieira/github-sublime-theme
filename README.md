@@ -26,13 +26,13 @@
 
 **Manually:**
 
-1. Download latest release and unzip. it into your Packages folder.
+1. Download the latest release and unzip.
 2. Go to `Sublime Text → Preferences → Browse Packages`.
-3. Move folder to inside and rename the folder to `GitHub Theme`.
+3. Move folder inside and rename the folder to `GitHub Theme`.
 
 ## Activate the Theme
 
-**You can active this theme from:**
+**You can activate this theme from:**
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
 2. Typing `UI: Select Theme` next find for `GitHub Dark/Dimmed/Light` and press `ENTER`
@@ -40,7 +40,7 @@
 
 ## Recommended Settings
 
-To enjoy a better experience of using the GitHub Theme in your Sublime Text, please check the following settings.
+To enjoy a better experience using this theme in Sublime Text, please check the following settings.
 
 ```json
 {
