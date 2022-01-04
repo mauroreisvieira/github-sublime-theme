@@ -211,19 +211,23 @@
         },
         {
             "scope": "markup.deleted,meta.diff.header.from-file,punctuation.definition.deleted",
+            "background": "#FFEBE9",
             "foreground": "#82071e"
         },
         {
             "scope": "markup.inserted,meta.diff.header.to-file,punctuation.definition.inserted",
+            "background": "#dafbe1",
             "foreground": "#116329"
         },
         {
             "scope": "markup.changed,punctuation.definition.changed",
+            "background": "#ffd8b5",
             "foreground": "#953800"
         },
         {
             "scope": "markup.ignored,markup.untracked",
-            "foreground": "#eaeef2"
+            "foreground": "#eaeef2",
+            "background": "#0550ae"
         },
         {
             "scope": "meta.diff.range",

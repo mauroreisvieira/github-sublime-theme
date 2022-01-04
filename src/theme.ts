@@ -126,6 +126,7 @@ export function variables(theme: Primer): ThemeVariables {
             dark: '#484F5888',
             dimmed: '#484F5888',
         }),
+
         vcsAnnotationBorder: color.border.default,
         vcsUntracked: color.success.fg,
         vcsModified: color.accent.fg,

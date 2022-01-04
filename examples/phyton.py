@@ -68,8 +68,6 @@ class Fractions:
         self.nom = None
         self.denom = None
 
-
-
 my_frac1 = Fractions(20, 30)
 my_frac2 = Fractions(5, 173)
 

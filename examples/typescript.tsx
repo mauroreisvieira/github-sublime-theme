@@ -1,10 +1,14 @@
 import { useState } from 'react';
 
-export function Counter({ name }) {
-    const [count, setCount] = useState(0);
+interface CounterProps {
+    name: string;
+}
 
-    function onClick() {
-        setCount(count => count + 1);
+export function Counter({ name }: CounterProps) {
+    const [count, setCount] = useState<number>(0);
+
+    function onClick(): void {
+        setCount(count + 1);
     }
 
     return (

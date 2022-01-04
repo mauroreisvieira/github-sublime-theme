@@ -88,9 +88,17 @@ export function ui(theme: Primer): UI {
         gutter: 'var(background)',
         gutter_foreground: color.codemirror.linenumberText,
         gutter_foreground_highlight: color.fg.default,
-        find_highlight: themes({ light: "#ffdf5d66", dark: "#ffd33d22", dimmed: "#ffd33d22" }),
+        find_highlight: themes({
+            light: '#ffdf5d66',
+            dark: '#ffd33d22',
+            dimmed: '#ffd33d22',
+        }),
         find_highlight_foreground: color.fg.default,
-        highlight: themes({ light: "#34d05800", dark: "#17E5E600", dimmed: "#17E5E600" }),
+        highlight: themes({
+            light: '#34d05800',
+            dark: '#17E5E600',
+            dimmed: '#17E5E600',
+        }),
         guide: color.border.muted,
         stack_guide: color.scale.gray[8],
         active_guide: color.scale.gray[7],
@@ -491,6 +499,11 @@ export function rules(theme: Primer): Rules[] {
                 'punctuation.definition.deleted',
             ],
             settings: {
+                background: themes({
+                    light: scale.red[0],
+                    dark: scale.red[9],
+                    dimmed: scale.red[9],
+                }),
                 foreground: themes({
                     light: scale.red[7],
                     dark: scale.red[2],
@@ -505,6 +518,11 @@ export function rules(theme: Primer): Rules[] {
                 'punctuation.definition.inserted',
             ],
             settings: {
+                background: themes({
+                    light: scale.green[0],
+                    dark: scale.green[9],
+                    dimmed: scale.green[9],
+                }),
                 foreground: themes({
                     light: scale.green[6],
                     dark: scale.green[1],
@@ -515,6 +533,11 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['markup.changed', 'punctuation.definition.changed'],
             settings: {
+                background: themes({
+                    light: scale.orange[1],
+                    dark: scale.orange[8],
+                    dimmed: scale.orange[8],
+                }),
                 foreground: themes({
                     light: scale.orange[6],
                     dark: scale.orange[2],
@@ -529,6 +552,11 @@ export function rules(theme: Primer): Rules[] {
                     light: scale.gray[1],
                     dark: scale.gray[8],
                     dimmed: scale.gray[8],
+                }),
+                background: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
                 }),
             },
         },
