@@ -58,7 +58,7 @@ export function variables(theme: Primer): ThemeVariables {
         tabBorder: color.border.default,
         tabActiveForeground: color.fg.default,
         tabActiveBackground: color.canvas.default,
-        tabSelectedBorderBorder: 'var(accent)',
+        tabSelectedBorderBorder: color.primer.border.active,
         tabButtonForeground: color.fg.default,
 
         gridBorder: color.border.default,

@@ -26,7 +26,7 @@
         "tabBorder": "#30363d",
         "tabActiveForeground": "#c9d1d9",
         "tabActiveBackground": "#0d1117",
-        "tabSelectedBorderBorder": "var(accent)",
+        "tabSelectedBorderBorder": "#F78166",
         "tabButtonForeground": "#c9d1d9",
         "gridBorder": "#30363d",
         "overlayBorder": "#161b22",
