@@ -14,17 +14,17 @@ export function variables(theme: Primer): ThemeVariables {
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
     return {
-        accent: color.underlinenav.borderActive,
+        accent: color.primer.border.active,
         background: 'var(--background)',
-        foreground: color.text.primary,
+        foreground: color.fg.default,
         fontSizeSm: 11,
         fontSizeMd: 12,
         fontSizeLg: 14,
         fontSizeHuge: 24,
         fontFace: 'system',
 
-        titleBarBackground: color.bg.canvas,
-        titleBarForeground: color.text.secondary,
+        titleBarBackground: color.canvas.default,
+        titleBarForeground: color.fg.muted,
 
         tooltipBackground: themes({
             light: scale.blue[6],
@@ -37,15 +37,15 @@ export function variables(theme: Primer): ThemeVariables {
             dimmed: scale.blue[7],
         }),
 
-        sidebarBackground: color.bg.canvasInset,
-        sidebarBorder: color.border.primary,
-        sidebarHeadingForeground: color.text.primary,
+        sidebarBackground: color.canvas.inset,
+        sidebarBorder: color.border.default,
+        sidebarHeadingForeground: color.fg.default,
 
-        sidebarLabelForeground: color.text.primary,
-        sidebarLabelHoverForeground: color.text.primary,
-        sidebarLabelSelectedForeground: color.text.primary,
+        sidebarLabelForeground: color.fg.default,
+        sidebarLabelHoverForeground: color.fg.default,
+        sidebarLabelSelectedForeground: color.fg.default,
 
-        sidebarFolderForeground: color.text.secondary,
+        sidebarFolderForeground: color.fg.muted,
         sidebarFolderExpandedForeground: 'var(accent)',
 
         treeActiveSelectionBackground: themes({
@@ -54,24 +54,24 @@ export function variables(theme: Primer): ThemeVariables {
             dimmed: scale.gray[7],
         }),
 
-        tabInactiveBackground: color.bg.canvasInset,
-        tabBorder: color.border.primary,
-        tabActiveForeground: color.text.primary,
-        tabActiveBackground: color.bg.canvas,
+        tabInactiveBackground: color.canvas.inset,
+        tabBorder: color.border.default,
+        tabActiveForeground: color.fg.default,
+        tabActiveBackground: color.canvas.default,
         tabSelectedBorderBorder: 'var(accent)',
-        tabButtonForeground: color.text.primary,
+        tabButtonForeground: color.fg.default,
 
-        gridBorder: color.border.primary,
-        overlayBorder: color.border.overlay,
+        gridBorder: color.border.default,
+        overlayBorder: color.canvas.overlay,
 
-        panelControlBackground: color.bg.canvasInset,
-        panelControlBorder: color.border.primary,
+        panelControlBackground: color.canvas.inset,
+        panelControlBorder: color.border.default,
 
-        panelRowBackground: color.bg.canvasInset,
-        panelRowForeground: color.text.primary,
-        panelRowLabelForeground: color.text.tertiary,
-        panelRowSelectedBackground: color.bg.overlay,
-        panelRowSelectedForeground: color.text.primary,
+        panelRowBackground: color.canvas.inset,
+        panelRowForeground: color.fg.default,
+        panelRowLabelForeground: color.fg.default,
+        panelRowSelectedBackground: color.neutral.muted,
+        panelRowSelectedForeground: color.fg.default,
         panelRowMatchForeground: themes({
             light: scale.blue[5],
             dark: scale.blue[4],
@@ -82,33 +82,32 @@ export function variables(theme: Primer): ThemeVariables {
             dark: scale.blue[4],
             dimmed: scale.blue[4],
         }),
-        panelRowLinkForeground: color.text.link,
-
-        autoCompleteBackground: color.bg.canvasInset,
-        autoCompleteForeground: color.text.primary,
-        autoCompleteSelectedBackground: color.text.tertiary,
-        autoCompleteSelectedForeground: color.bg.canvasInset,
+        panelRowLinkForeground: color.accent.fg,
+        autoCompleteBackground: color.canvas.inset,
+        autoCompleteForeground: color.fg.default,
+        autoCompleteSelectedBackground: color.fg.default,
+        autoCompleteSelectedForeground: color.canvas.inset,
         autoCompleteMatchForeground: 'var(accent)',
         autoCompleteSelectedMatchForeground: 'var(accent)',
 
-        inputBackground: color.input.bg,
-        inputBorder: color.input.border,
-        inputForeground: color.text.primary,
+        inputBackground: color.canvas.inset,
+        inputBorder: color.border.default,
+        inputForeground: color.fg.default,
 
-        buttonForeground: color.text.primary,
-        buttonBackground: `color(${color.text.primary} alpha(0.02))`,
-        buttonBorder: color.input.border,
-        buttonHoverBackground: `color(${color.text.primary} alpha(0.1))`,
-        buttonPressedBackground: `color(${color.text.primary} alpha(0.2))`,
-        buttonSelecteddBackground: `color(${color.text.primary} alpha(0.08))`,
+        buttonForeground: color.fg.default,
+        buttonBackground: `color(${color.fg.default} alpha(0.02))`,
+        buttonBorder: color.border.default,
+        buttonHoverBackground: `color(${color.fg.default} alpha(0.1))`,
+        buttonPressedBackground: `color(${color.fg.default} alpha(0.2))`,
+        buttonSelecteddBackground: `color(${color.fg.default} alpha(0.08))`,
 
         buttonIconForeground: 'var(foreground)',
         buttonIconSelecteddForeground: 'var(accent)',
 
-        statusBarForeground: color.text.secondary,
-        statusBarHoverForeground: color.text.primary,
-        statusBarBackground: color.bg.canvas,
-        statusBarBorder: color.border.primary,
+        statusBarForeground: color.fg.muted,
+        statusBarHoverForeground: color.fg.default,
+        statusBarBackground: color.canvas.default,
+        statusBarBorder: color.border.default,
 
         progressBarBackground: themes({
             light: scale.blue[4],
@@ -127,18 +126,14 @@ export function variables(theme: Primer): ThemeVariables {
             dimmed: '#484F5888',
         }),
 
-        vcsAnnotationBorder: color.border.primary,
-        vcsUntracked: color.diff.addition.text,
-        vcsModified: color.diff.change.text,
-        vcsDeleted: color.diff.deletion.text,
-        vcsIgnored: themes({
-            light: scale.gray[4],
-            dark: color.text.disabled,
-            dimmed: color.text.disabled,
-        }),
-        vcsUnmerged: color.text.warning,
+        vcsAnnotationBorder: color.border.default,
+        vcsUntracked: color.success.muted,
+        vcsModified: color.attention.muted,
+        vcsDeleted: color.danger.muted,
+        vcsIgnored: color.fg.subtle,
+        vcsUnmerged: color.severe.fg,
         vcsStaged: 'var(--cyanish)',
-        vcsMissing: color.text.warning,
+        vcsMissing: color.severe.fg,
     };
 }
 

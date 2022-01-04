@@ -9,10 +9,10 @@ export function colors(theme: Primer): Colors {
     const scale = color.scale;
 
     return {
-        accent: color.underlinenav.borderActive,
+        accent: color.primer.border.active,
         cursor: color.scale.blue[2],
-        foreground: color.text.primary,
-        background: color.bg.canvas,
+        foreground: color.fg.default,
+        background: color.canvas.default,
         comments: themes({
             light: scale.gray[5],
             dark: scale.gray[3],
@@ -20,9 +20,9 @@ export function colors(theme: Primer): Colors {
         }),
         deprecated: color.prettylights.syntax.invalidIllegalText,
         invalid: color.prettylights.syntax.invalidIllegalText,
-        diffAdded: color.diff.addition.border,
-        diffModified: color.diff.change.border,
-        diffDeleted: color.diff.deletion.border,
+        diffAdded: color.success.subtle,
+        diffModified: color.attention.subtle,
+        diffDeleted: color.danger.subtle,
         base: {
             black: color.ansi.black,
             blue: color.ansi.blue,
@@ -87,19 +87,19 @@ export function ui(theme: Primer): UI {
         tags_options: 'underline',
         gutter: 'var(background)',
         gutter_foreground: color.codemirror.linenumberText,
-        gutter_foreground_highlight: color.text.primary,
+        gutter_foreground_highlight: color.fg.default,
         find_highlight: themes({
             light: scale.yellow[4],
             dark: '#ffd33d44',
             dimmed: '#ffd33d44',
         }),
-        find_highlight_foreground: color.text.primary,
+        find_highlight_foreground: color.fg.default,
         highlight: themes({
             light: '#34d058',
             dark: '#17E5E6',
             dimmed: '#17E5E6',
         }),
-        guide: color.border.secondary,
+        guide: color.border.muted,
         stack_guide: color.scale.gray[8],
         active_guide: color.scale.gray[7],
         line_diff_width: '4',
@@ -178,7 +178,7 @@ export function rules(theme: Primer): Rules[] {
                 'meta.embedded.expression',
             ],
             settings: {
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
@@ -231,7 +231,7 @@ export function rules(theme: Primer): Rules[] {
                 'storage.type.java',
             ],
             settings: {
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
@@ -284,7 +284,7 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['variable.other'],
             settings: {
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
@@ -355,7 +355,7 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['string source'],
             settings: {
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
@@ -472,14 +472,14 @@ export function rules(theme: Primer): Rules[] {
             scope: ['markup.italic'],
             settings: {
                 font_style: 'italic',
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
             scope: ['markup.bold'],
             settings: {
                 font_style: 'bold',
-                foreground: color.text.primary,
+                foreground: color.fg.default,
             },
         },
         {
