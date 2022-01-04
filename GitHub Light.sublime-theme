@@ -1,7 +1,7 @@
 {
     "extends": "Adaptive.sublime-theme",
     "variables": {
-        "accent": "#FD8C73",
+        "accent": "#0969da",
         "background": "var(--background)",
         "foreground": "#24292f",
         "fontSizeSm": 11,
@@ -42,8 +42,8 @@
         "panelRowLinkForeground": "#0969da",
         "autoCompleteBackground": "#f6f8fa",
         "autoCompleteForeground": "#24292f",
-        "autoCompleteSelectedBackground": "#24292f",
-        "autoCompleteSelectedForeground": "#f6f8fa",
+        "autoCompleteSelectedBackground": "#0366d625",
+        "autoCompleteSelectedForeground": "#24292f",
         "autoCompleteMatchForeground": "var(accent)",
         "autoCompleteSelectedMatchForeground": "var(accent)",
         "inputBackground": "#f6f8fa",
@@ -54,9 +54,9 @@
         "buttonBorder": "#d0d7de",
         "buttonHoverBackground": "color(#24292f alpha(0.1))",
         "buttonPressedBackground": "color(#24292f alpha(0.2))",
-        "buttonSelecteddBackground": "color(#24292f alpha(0.08))",
+        "buttonSelectedBackground": "color(#24292f alpha(0.08))",
         "buttonIconForeground": "var(foreground)",
-        "buttonIconSelecteddForeground": "var(accent)",
+        "buttonIconSelectedForeground": "var(accent)",
         "statusBarForeground": "#57606a",
         "statusBarHoverForeground": "#24292f",
         "statusBarBackground": "#ffffff",
@@ -65,9 +65,9 @@
         "scrollBar": "#959da533",
         "scrollTrack": "#959da588",
         "vcsAnnotationBorder": "#d0d7de",
-        "vcsUntracked": "rgba(74,194,107,0.4)",
-        "vcsModified": "rgba(212,167,44,0.4)",
-        "vcsDeleted": "rgba(255,129,130,0.4)",
+        "vcsUntracked": "#1a7f37",
+        "vcsModified": "#0969da",
+        "vcsDeleted": "#cf222e",
         "vcsIgnored": "#6e7781",
         "vcsUnmerged": "#bc4c00",
         "vcsStaged": "var(--cyanish)",
@@ -1184,7 +1184,7 @@
             "attributes": [
                 "selected"
             ],
-            "layer0.tint": "var(buttonSelecteddBackground)",
+            "layer0.tint": "var(buttonSelectedBackground)",
             "layer0.opacity": 1
         },
         {
@@ -1220,7 +1220,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1233,7 +1233,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1268,7 +1268,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1281,7 +1281,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1316,7 +1316,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1329,7 +1329,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1364,7 +1364,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1377,7 +1377,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1412,7 +1412,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1425,7 +1425,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1460,7 +1460,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1473,7 +1473,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1508,7 +1508,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1521,7 +1521,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1556,7 +1556,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1569,7 +1569,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1604,7 +1604,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1617,7 +1617,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1652,7 +1652,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {
@@ -1665,7 +1665,7 @@
                     ]
                 }
             ],
-            "layer0.tint": "var(buttonIconSelecteddForeground)",
+            "layer0.tint": "var(buttonIconSelectedForeground)",
             "layer0.opacity": 1
         },
         {

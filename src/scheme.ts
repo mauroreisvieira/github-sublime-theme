@@ -10,7 +10,7 @@ export function colors(theme: Primer): Colors {
 
     return {
         accent: color.primer.border.active,
-        cursor: color.scale.blue[2],
+        cursor: color.accent.fg,
         foreground: color.fg.default,
         background: color.canvas.default,
         comments: themes({
@@ -20,9 +20,9 @@ export function colors(theme: Primer): Colors {
         }),
         deprecated: color.prettylights.syntax.invalidIllegalText,
         invalid: color.prettylights.syntax.invalidIllegalText,
-        diffAdded: color.success.subtle,
-        diffModified: color.attention.subtle,
-        diffDeleted: color.danger.subtle,
+        diffModified: color.accent.fg,
+        diffAdded: color.success.fg,
+        diffDeleted: color.danger.fg,
         base: {
             black: color.ansi.black,
             blue: color.ansi.blue,
@@ -88,17 +88,9 @@ export function ui(theme: Primer): UI {
         gutter: 'var(background)',
         gutter_foreground: color.codemirror.linenumberText,
         gutter_foreground_highlight: color.fg.default,
-        find_highlight: themes({
-            light: scale.yellow[4],
-            dark: '#ffd33d44',
-            dimmed: '#ffd33d44',
-        }),
+        find_highlight: themes({ light: "#ffdf5d66", dark: "#ffd33d22", dimmed: "#ffd33d22" }),
         find_highlight_foreground: color.fg.default,
-        highlight: themes({
-            light: '#34d058',
-            dark: '#17E5E6',
-            dimmed: '#17E5E6',
-        }),
+        highlight: themes({ light: "#34d05800", dark: "#17E5E600", dimmed: "#17E5E600" }),
         guide: color.border.muted,
         stack_guide: color.scale.gray[8],
         active_guide: color.scale.gray[7],

@@ -14,7 +14,7 @@ export function variables(theme: Primer): ThemeVariables {
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
     return {
-        accent: color.primer.border.active,
+        accent: color.accent.fg,
         background: 'var(--background)',
         foreground: color.fg.default,
         fontSizeSm: 11,
@@ -83,10 +83,11 @@ export function variables(theme: Primer): ThemeVariables {
             dimmed: scale.blue[4],
         }),
         panelRowLinkForeground: color.accent.fg,
+
         autoCompleteBackground: color.canvas.inset,
         autoCompleteForeground: color.fg.default,
-        autoCompleteSelectedBackground: color.fg.default,
-        autoCompleteSelectedForeground: color.canvas.inset,
+        autoCompleteSelectedBackground: themes({ light: "#0366d625", dark: "#3392FF44", dimmed: "#3392FF44" }),
+        autoCompleteSelectedForeground: color.fg.default,
         autoCompleteMatchForeground: 'var(accent)',
         autoCompleteSelectedMatchForeground: 'var(accent)',
 
@@ -99,10 +100,10 @@ export function variables(theme: Primer): ThemeVariables {
         buttonBorder: color.border.default,
         buttonHoverBackground: `color(${color.fg.default} alpha(0.1))`,
         buttonPressedBackground: `color(${color.fg.default} alpha(0.2))`,
-        buttonSelecteddBackground: `color(${color.fg.default} alpha(0.08))`,
+        buttonSelectedBackground: `color(${color.fg.default} alpha(0.08))`,
 
         buttonIconForeground: 'var(foreground)',
-        buttonIconSelecteddForeground: 'var(accent)',
+        buttonIconSelectedForeground: 'var(accent)',
 
         statusBarForeground: color.fg.muted,
         statusBarHoverForeground: color.fg.default,
@@ -125,11 +126,10 @@ export function variables(theme: Primer): ThemeVariables {
             dark: '#484F5888',
             dimmed: '#484F5888',
         }),
-
         vcsAnnotationBorder: color.border.default,
-        vcsUntracked: color.success.muted,
-        vcsModified: color.attention.muted,
-        vcsDeleted: color.danger.muted,
+        vcsUntracked: color.success.fg,
+        vcsModified: color.accent.fg,
+        vcsDeleted: color.danger.fg,
         vcsIgnored: color.fg.subtle,
         vcsUnmerged: color.severe.fg,
         vcsStaged: 'var(--cyanish)',
@@ -935,7 +935,7 @@ export const rules = [
     {
         class: 'icon_button_control',
         attributes: ['selected'],
-        'layer0.tint': 'var(buttonSelecteddBackground)',
+        'layer0.tint': 'var(buttonSelectedBackground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -954,13 +954,13 @@ export const rules = [
     {
         class: 'icon_regex',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_regex',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -978,13 +978,13 @@ export const rules = [
     {
         class: 'icon_case',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_case',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1002,13 +1002,13 @@ export const rules = [
     {
         class: 'icon_whole_word',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_whole_word',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1026,13 +1026,13 @@ export const rules = [
     {
         class: 'icon_wrap',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_wrap',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1050,13 +1050,13 @@ export const rules = [
     {
         class: 'icon_in_selection',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_in_selection',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1074,13 +1074,13 @@ export const rules = [
     {
         class: 'icon_highlight',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_highlight',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1098,13 +1098,13 @@ export const rules = [
     {
         class: 'icon_preserve_case',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_preserve_case',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1122,13 +1122,13 @@ export const rules = [
     {
         class: 'icon_context',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_context',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1146,13 +1146,13 @@ export const rules = [
     {
         class: 'icon_use_buffer',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_use_buffer',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
@@ -1170,13 +1170,13 @@ export const rules = [
     {
         class: 'icon_use_gitignore',
         parents: [{ class: 'icon_button_control', attributes: ['pressed'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
     {
         class: 'icon_use_gitignore',
         parents: [{ class: 'icon_button_control', attributes: ['selected'] }],
-        'layer0.tint': 'var(buttonIconSelecteddForeground)',
+        'layer0.tint': 'var(buttonIconSelectedForeground)',
         'layer0.opacity': 1.0,
     },
 
