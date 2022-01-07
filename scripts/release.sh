@@ -3,10 +3,13 @@ echo "Current version: "$(grep version package.json | sed -E 's/^.*"(4[^"]+)".*$
 echo "Enter release version: "
 read VERSION
 
-read -p "Releasing 4070-$VERSION - are you sure? (y/n)" -n 1 -r
+read -p "Releasing 4070-$VERSION - are you sure? (y/n) " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  echo "Releasing 4070-$VERSION ..."
+  echo ""
+  echo "Releasing 4070-$VERSION"
+  echo "Checking..."
+
   npm run lint
 
   npm run build
