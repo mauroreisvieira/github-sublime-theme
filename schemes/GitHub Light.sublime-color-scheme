@@ -13,14 +13,14 @@
         "diffAdded": "#1a7f37",
         "diffDeleted": "#cf222e",
         "black": "#24292f",
-        "blue": "#0969da",
-        "gray": "#6e7781",
-        "green": "#116329",
-        "purple": "#8250df",
-        "red": "#cf222e",
-        "cyan": "#1b7c83",
-        "white": "#6e7781",
-        "yellow": "#4d2d00"
+        "blue": "#54aeff",
+        "gray": "#8c959f",
+        "green": "#4ac26b",
+        "purple": "#c297ff",
+        "red": "#ff8182",
+        "cyan": "#76e3ea",
+        "white": "#d0d7de",
+        "yellow": "#d4a72c"
     },
     "globals": {
         "accent": "var(accent)",
