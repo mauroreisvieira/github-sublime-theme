@@ -50,7 +50,7 @@
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
         "gutter": "var(background)",
-        "gutter_foreground": "#768390",
+        "gutter_foreground": "color(#768390 alpha(0.3))",
         "gutter_foreground_highlight": "#adbac7",
         "find_highlight": "#ffd33d22",
         "find_highlight_foreground": "#adbac7",
@@ -73,19 +73,23 @@
             "foreground": "#6cb6ff"
         },
         {
-            "scope": "entity.name,variable.parameter.function,entity.name.function variable.other.readwrite,meta.export.default,meta.definition.variable",
+            "scope": "variable.other.readwrite,variable.parameter.function,meta.export.default,meta.definition.variable,entity.name.type,entity.name.type.module",
             "foreground": "#f69d50"
         },
         {
-            "scope": "meta.jsx.children,meta.block,meta.tag.attributes,meta.object.member,meta.embedded.expression",
-            "foreground": "#adbac7"
+            "scope": "entity.name.type.class",
+            "foreground": "#6cb6ff"
         },
         {
-            "scope": "entity.name.function,meta.function-call support.function",
+            "scope": "variable.function,entity.name.function,meta.export.default variable.other.readwrite,meta.tag.attributes variable.other.readwrite,entity.name",
             "foreground": "#dcbdfb"
         },
         {
-            "scope": "entity.name.tag,support.class.component",
+            "scope": "meta.jsx.children,meta.block,meta.object.member,meta.embedded.expression",
+            "foreground": "#adbac7"
+        },
+        {
+            "scope": "entity.name.tag",
             "foreground": "#8ddb8c"
         },
         {
@@ -117,7 +121,7 @@
             "foreground": "#f69d50"
         },
         {
-            "scope": "variable.other",
+            "scope": "variable.other,meta.import variable.other.readwrite.alias,meta.import variable.other.readwrite",
             "foreground": "#adbac7"
         },
         {
@@ -143,6 +147,7 @@
         {
             "scope": "carriage-return",
             "font_style": "italic underline",
+            "background": "#f47067",
             "foreground": "#22272e"
         },
         {
@@ -162,13 +167,8 @@
             "foreground": "#96d0ff"
         },
         {
-            "scope": "string.regexp.character-class,string.regexp source.ruby.embedded,string.regexp string.regexp.arbitrary-repitition",
+            "scope": "string.regexp.character-class,string.regexp constant.character.escape,string.regexp source.ruby.embedded,string.regexp string.regexp.arbitrary-repitition",
             "foreground": "#96d0ff"
-        },
-        {
-            "scope": "string.regexp constant.character.escape",
-            "font_style": "bold",
-            "foreground": "#8ddb8c"
         },
         {
             "scope": "support.constant",

@@ -98,7 +98,7 @@
             "foreground": "var(blue)"
         },
         {
-            "scope": "support",
+            "scope": "support, support.class.component",
             "foreground": "var(blue)"
         },
         {

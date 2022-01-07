@@ -86,7 +86,7 @@ export function ui(theme: Primer): UI {
         tags_foreground: 'var(cyan)',
         tags_options: 'underline',
         gutter: 'var(background)',
-        gutter_foreground: color.codemirror.linenumberText,
+        gutter_foreground: `color(${color.codemirror.linenumberText} alpha(0.3))`,
         gutter_foreground_highlight: color.fg.default,
         find_highlight: themes({
             light: '#ffdf5d66',
@@ -143,7 +143,7 @@ export function rules(theme: Primer): Rules[] {
                 'variable.other.constant',
                 'variable.other.object',
                 'variable.language',
-                'entity',
+                'entity'
             ],
             settings: {
                 foreground: themes({
@@ -155,11 +155,12 @@ export function rules(theme: Primer): Rules[] {
         },
         {
             scope: [
-                'entity.name',
+                'variable.other.readwrite',
                 'variable.parameter.function',
-                'entity.name.function variable.other.readwrite',
                 'meta.export.default',
                 'meta.definition.variable',
+                'entity.name.type',
+                'entity.name.type.module',
             ],
             settings: {
                 foreground: themes({
@@ -170,21 +171,22 @@ export function rules(theme: Primer): Rules[] {
             },
         },
         {
-            scope: [
-                'meta.jsx.children',
-                'meta.block',
-                'meta.tag.attributes',
-                'meta.object.member',
-                'meta.embedded.expression',
-            ],
+            scope: ['entity.name.type.class'],
             settings: {
-                foreground: color.fg.default,
+                foreground: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
+                }),
             },
         },
         {
             scope: [
+                'variable.function',
                 'entity.name.function',
-                'meta.function-call support.function',
+                'meta.export.default variable.other.readwrite',
+                'meta.tag.attributes variable.other.readwrite',
+                'entity.name',
             ],
             settings: {
                 foreground: themes({
@@ -195,7 +197,18 @@ export function rules(theme: Primer): Rules[] {
             },
         },
         {
-            scope: ['entity.name.tag', 'support.class.component'],
+            scope: [
+                'meta.jsx.children',
+                'meta.block',
+                'meta.object.member',
+                'meta.embedded.expression',
+            ],
+            settings: {
+                foreground: color.fg.default,
+            },
+        },
+        {
+            scope: ['entity.name.tag'],
             settings: {
                 foreground: themes({
                     light: scale.green[6],
@@ -282,7 +295,11 @@ export function rules(theme: Primer): Rules[] {
             },
         },
         {
-            scope: ['variable.other'],
+            scope: [
+                'variable.other',
+                'meta.import variable.other.readwrite.alias',
+                'meta.import variable.other.readwrite',
+            ],
             settings: {
                 foreground: color.fg.default,
             },
@@ -335,6 +352,11 @@ export function rules(theme: Primer): Rules[] {
             scope: ['carriage-return'],
             settings: {
                 font_style: 'italic underline',
+                background: themes({
+                    light: scale.red[5],
+                    dark: scale.red[3],
+                    dimmed: scale.red[3],
+                }),
                 foreground: themes({
                     light: scale.gray[0],
                     dark: scale.gray[9],
@@ -381,6 +403,7 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: [
                 'string.regexp.character-class',
+                'string.regexp constant.character.escape',
                 'string.regexp source.ruby.embedded',
                 'string.regexp string.regexp.arbitrary-repitition',
             ],
@@ -389,17 +412,6 @@ export function rules(theme: Primer): Rules[] {
                     light: scale.blue[8],
                     dark: scale.blue[1],
                     dimmed: scale.blue[1],
-                }),
-            },
-        },
-        {
-            scope: ['string.regexp constant.character.escape'],
-            settings: {
-                font_style: 'bold',
-                foreground: themes({
-                    light: scale.green[6],
-                    dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
             },
         },
