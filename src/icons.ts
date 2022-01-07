@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as fs from 'fs';
+import path from 'path';
+import fs from 'fs';
 import glob from 'glob';
 import svg2img from 'svg2img';
 
