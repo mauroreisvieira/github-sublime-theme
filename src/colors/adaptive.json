@@ -1,0 +1,27 @@
+{
+    "fg": {
+        "default": "var(--foreground)",
+        "muted": "var(--foreground)",
+        "subtle": "var(--foreground)"
+    },
+    "canvas": {
+        "default": "var(--background)",
+        "inset": "color(var(foreground) blend(var(background) 5%)))",
+        "overlay": "var(--background)"
+    },
+    "accent": {
+        "fg": "var(--accent)"
+    },
+    "neutral": {
+        "muted": "color(var(background) blend(var(foreground) 80%))"
+    },
+    "primer": {
+        "border": {
+            "active": "var(--accent)"
+        }
+    },
+    "border": {
+        "default": "color(var(background) blend(var(foreground) 90%))",
+        "muted": "var(--foreground)"
+    }
+}

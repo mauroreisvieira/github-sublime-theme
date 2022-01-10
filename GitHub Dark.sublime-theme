@@ -66,7 +66,7 @@
         "scrollTrack": "#484F5888",
         "vcsAnnotationBorder": "#30363d",
         "vcsUntracked": "#3fb950",
-        "vcsModified": "#58a6ff",
+        "vcsModified": "#1f6feb",
         "vcsDeleted": "#f85149",
         "vcsIgnored": "#484f58",
         "vcsUnmerged": "#db6d28",
@@ -959,7 +959,7 @@
             "layer0.opacity": 1,
             "layer0.inner_margin": [
                 2,
-                2
+                0
             ],
             "layer0.tint": "var(background)",
             "layer1.tint": "var(inputBorder)",
@@ -967,8 +967,8 @@
             "layer1.inner_margin": 1,
             "layer1.draw_center": false,
             "content_margin": [
-                4,
-                2
+                6,
+                1
             ],
             "color_scheme_tint": "var(background)"
         },
@@ -1052,7 +1052,7 @@
             ],
             "min_size": [
                 80,
-                26
+                30
             ],
             "layer0.tint": "var(buttonBackground)",
             "layer0.opacity": 1,

@@ -47,6 +47,10 @@ import { generateTheme, getTheme } from './theme';
         name: 'GitHub Dimmed',
         settings: getTheme('dimmed'),
     },
+    {
+        name: 'GitHub Adaptive',
+        settings: getTheme('adaptive'),
+    },
 ].map((theme: Theme) => {
     generateTheme({
         output: {
