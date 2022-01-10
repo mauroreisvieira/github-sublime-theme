@@ -30,11 +30,13 @@ export function variables(theme: Primer): ThemeVariables {
             light: scale.blue[6],
             dark: scale.blue[2],
             dimmed: scale.blue[2],
+            adaptive: 'var(foreground)',
         }),
         tooltipForeground: themes({
             light: scale.blue[1],
             dark: scale.blue[7],
             dimmed: scale.blue[7],
+            adaptive: 'var(background)',
         }),
 
         sidebarBackground: color.canvas.inset,
@@ -52,6 +54,7 @@ export function variables(theme: Primer): ThemeVariables {
             light: '#e2e5e9',
             dark: scale.gray[7],
             dimmed: scale.gray[7],
+            adaptive: "color(var(background) blend(var(foreground) 90%))",
         }),
 
         tabInactiveBackground: color.canvas.inset,
@@ -76,17 +79,24 @@ export function variables(theme: Primer): ThemeVariables {
             light: scale.blue[5],
             dark: scale.blue[4],
             dimmed: scale.blue[4],
+            adaptive: color.accent.fg,
         }),
         panelRowSelectedMatchForeground: themes({
             light: scale.blue[5],
             dark: scale.blue[4],
             dimmed: scale.blue[4],
+            adaptive: color.accent.fg,
         }),
         panelRowLinkForeground: color.accent.fg,
 
         autoCompleteBackground: color.canvas.inset,
         autoCompleteForeground: color.fg.default,
-        autoCompleteSelectedBackground: themes({ light: "#0366d625", dark: "#3392FF44", dimmed: "#3392FF44" }),
+        autoCompleteSelectedBackground: themes({
+            light: "#0366d625",
+            dark: "#3392FF44",
+            dimmed: "#3392FF44",
+            adaptive: "#3392FF44",
+        }),
         autoCompleteSelectedForeground: color.fg.default,
         autoCompleteMatchForeground: 'var(accent)',
         autoCompleteSelectedMatchForeground: 'var(accent)',
@@ -114,17 +124,20 @@ export function variables(theme: Primer): ThemeVariables {
             light: scale.blue[4],
             dark: scale.blue[5],
             dimmed: scale.blue[5],
+            adaptive: color.accent.fg,
         }),
 
         scrollBar: themes({
             light: '#959da533',
             dark: '#484F5833',
             dimmed: '#484F5833',
+            adaptive: '#484F5833',
         }),
         scrollTrack: themes({
             light: '#959da588',
             dark: '#484F5888',
             dimmed: '#484F5888',
+            adaptive: '#484F5888',
         }),
 
         vcsAnnotationBorder: color.border.default,
@@ -766,13 +779,13 @@ export const rules = [
     {
         class: 'text_line_control',
         'layer0.opacity': 1.0,
-        'layer0.inner_margin': [2, 2],
+        'layer0.inner_margin': [2, 0],
         'layer0.tint': 'var(background)',
         'layer1.tint': 'var(inputBorder)',
         'layer1.opacity': 1.0,
         'layer1.inner_margin': 1,
         'layer1.draw_center': false,
-        content_margin: [4, 2],
+        content_margin: [6, 1],
         color_scheme_tint: 'var(background)',
     },
 
@@ -849,7 +862,7 @@ export const rules = [
     {
         class: 'button_control',
         content_margin: [10, 10],
-        min_size: [80, 26],
+        min_size: [80, 30],
         'layer0.tint': 'var(buttonBackground)',
         'layer0.opacity': 1.0,
         'layer0.inner_margin': [5, 6],

@@ -12,6 +12,6 @@ export function getColors(theme: Primer | 'adaptive') {
     } else if (theme === 'dimmed') {
         return dimmedColors;
     } else if (theme === 'adaptive') {
-        return {...lightColors, ...adaptiveColors};
+        return {...dimmedColors, ...adaptiveColors};
     }
 }

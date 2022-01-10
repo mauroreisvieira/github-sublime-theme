@@ -6,14 +6,14 @@
     },
     "canvas": {
         "default": "var(--background)",
-        "inset": "var(--background)",
+        "inset": "color(var(foreground) blend(var(background) 5%)))",
         "overlay": "var(--background)"
     },
     "accent": {
         "fg": "var(--accent)"
     },
     "neutral": {
-        "muted": "var(--background)"
+        "muted": "color(var(background) blend(var(foreground) 80%))"
     },
     "primer": {
         "border": {
@@ -21,7 +21,7 @@
         }
     },
     "border": {
-        "default": "var(--foreground)",
+        "default": "color(var(background) blend(var(foreground) 90%))",
         "muted": "var(--foreground)"
     }
 }

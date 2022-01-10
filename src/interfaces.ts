@@ -6,6 +6,7 @@ export type Options = {
     light: string;
     dark: string;
     dimmed: string;
+    adaptive?: string;
 };
 
 export interface Scheme {
