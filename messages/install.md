@@ -14,6 +14,6 @@ Manually you can go to (**Preferences → Settings - User**) and paste the follo
 ```json
 {
     "color_scheme": "Packages/GitHub Theme/schemes/GitHub Light.sublime-color-scheme",
-    "theme": "GitHub-Theme.sublime-theme"
+    "theme": "GitHub Adaptive.sublime-theme"
 }
 ```

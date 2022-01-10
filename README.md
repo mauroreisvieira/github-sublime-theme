@@ -32,11 +32,31 @@
 
 ## Activate the Theme
 
-**You can activate this theme from:**
+**You can activate available themes from:**
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
-2. Typing `UI: Select Theme` next find for `GitHub Dark/Dimmed/Light` and press `ENTER`
-3. Typing `UI: Select Color Scheme` choose you favorite scheme and press `ENTER`
+2. Typing `UI: Select Theme` next find for your favorite theme:
+    - `GitHub Adaptive` ✨ NEW ✨
+    - `GitHub Dark`
+    - `GitHub Dimmed`
+    - `GitHub Light`
+3. Finally press `ENTER`:
+
+**You can activate available schemes from:**
+
+1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
+2. Typing `UI: Select Color Scheme` choose you favorite scheme:
+    - `GitHub Dark`
+    - `GitHub Dimmed`
+    - `GitHub Light`
+3. Finally press `ENTER`:
+
+**Additionally, there are also two older schemes.**
+
+-   `GitHub Light Legacy`
+-   `GitHub Dark Legacy`
+
+> **Note:** They might not get updated frequently and are kept for legacy reasons.
 
 ## Recommended Settings
 
