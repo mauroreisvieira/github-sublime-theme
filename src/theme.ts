@@ -8,6 +8,7 @@ import {
     Primer,
     Options,
 } from './interfaces';
+import { log } from './utils/log';
 
 export function variables(theme: Primer): ThemeVariables {
     const color = getColors(theme);
@@ -1377,8 +1378,9 @@ export function generateTheme(options: GenerateTheme) {
                     4
                 )
             );
+            log.success(output.filename, dist);
         } catch (e) {
-            console.error(e);
+            log.error(e);
         }
     });
 }
