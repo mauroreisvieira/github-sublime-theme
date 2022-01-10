@@ -143,7 +143,12 @@ export function variables(theme: Primer): ThemeVariables {
 
         vcsAnnotationBorder: color.border.default,
         vcsUntracked: color.success.fg,
-        vcsModified: color.accent.fg,
+        vcsModified: themes({
+            light: scale.blue[4],
+            dark: scale.blue[5],
+            dimmed: scale.blue[5],
+            adaptive: scale.blue[5],
+        }),
         vcsDeleted: color.danger.fg,
         vcsIgnored: color.fg.subtle,
         vcsUnmerged: color.severe.fg,
