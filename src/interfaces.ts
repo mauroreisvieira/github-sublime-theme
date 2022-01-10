@@ -1,6 +1,6 @@
 import { SchemeSetting } from '@meetio/scheme-generator';
 
-export type Primer = 'light' | 'dark' | 'dimmed';
+export type Primer = 'light' | 'dark' | 'dimmed' | 'adaptive';
 
 export type Options = {
     light: string;

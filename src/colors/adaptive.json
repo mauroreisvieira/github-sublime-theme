@@ -1,0 +1,27 @@
+{
+    "fg": {
+        "default": "var(--foreground)",
+        "muted": "var(--foreground)",
+        "subtle": "var(--foreground)"
+    },
+    "canvas": {
+        "default": "var(--background)",
+        "inset": "var(--background)",
+        "overlay": "var(--background)"
+    },
+    "accent": {
+        "fg": "var(--accent)"
+    },
+    "neutral": {
+        "muted": "var(--background)"
+    },
+    "primer": {
+        "border": {
+            "active": "var(--accent)"
+        }
+    },
+    "border": {
+        "default": "var(--foreground)",
+        "muted": "var(--foreground)"
+    }
+}
