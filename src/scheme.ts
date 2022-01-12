@@ -95,9 +95,9 @@ export function ui(theme: Primer): UI {
         }),
         find_highlight_foreground: color.fg.default,
         highlight: themes({
-            light: '#34d05800',
-            dark: '#17E5E600',
-            dimmed: '#17E5E600',
+            light: '#34d05890', // original: #34d05840
+            dark: '#17E5E680', // original: #17E5E650
+            dimmed: '#17E5E680', // original: #17E5E650
         }),
         guide: color.border.muted,
         stack_guide: color.scale.gray[8],

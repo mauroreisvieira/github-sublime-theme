@@ -54,7 +54,7 @@
         "gutter_foreground_highlight": "#24292f",
         "find_highlight": "#ffdf5d66",
         "find_highlight_foreground": "#24292f",
-        "highlight": "#34d05800",
+        "highlight": "#34d05890",
         "guide": "hsla(210,18%,87%,1)",
         "stack_guide": "#32383f",
         "active_guide": "#424a53",
