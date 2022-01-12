@@ -1,3 +1,9 @@
+## [2.4.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.4.0...v2.4.1) (2022-01-12)
+
+### Bug Fixes
+
+-   `highlight` border color transparency closes [#16](https://github.com/mauroreisvieira/github-sublime-theme/issues/16) ([0248602](https://github.com/mauroreisvieira/github-sublime-theme/commit/02486022b48d6b35feb1eaefe4c7bf930241afcf))
+
 # [2.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.3.1...v2.4.0) (2022-01-11)
 
 # [2.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.3.0...v2.3.1) (2022-01-07)
