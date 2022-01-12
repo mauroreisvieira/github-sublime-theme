@@ -1,28 +1,28 @@
-## [2.4.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.4.0...v2.4.1) (2022-01-12)
+# [4070-2.4.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.0...4070-2.4.1) (2022-01-12)
 
 ### Bug Fixes
 
 -   `highlight` border color transparency closes [#16](https://github.com/mauroreisvieira/github-sublime-theme/issues/16) ([0248602](https://github.com/mauroreisvieira/github-sublime-theme/commit/02486022b48d6b35feb1eaefe4c7bf930241afcf))
 
-# [2.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.3.1...v2.4.0) (2022-01-11)
+# [4070-2.4.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.3.1...4070-2.4.0) (2022-01-11)
 
-# [2.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.3.0...v2.3.1) (2022-01-07)
+# [4070-2.3.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.3.0...4070-2.3.1) (2022-01-07)
 
-# [2.3.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.2.0...v2.3.0) (2022-01-07)
+# [4070-2.3.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.2.0...4070-2.3.0) (2022-01-07)
 
-# [2.2.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.1.1...v2.2.0) (2021-09-03)
+# [4070-2.2.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.1.1...4070-2.2.0) (2021-09-03)
 
-# [2.1.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.1.0...v2.1.1) (2021-08-16)
+# [4070-2.1.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.1.0...4070-2.1.1) (2021-08-16)
 
-# [2.1.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.0.2...v2.1.0) (2021-05-04)
+# [4070-2.1.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.0.2...4070-2.1.0) (2021-05-04)
 
-# [2.0.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.0.1...v2.0.2) (2021-04-26)
+# [4070-2.0.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.0.1...4070-2.0.2) (2021-04-26)
 
-# [2.0.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/v2.0.0...v2.0.1) (2021-04-26)
+# [4070-2.0.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.0.0...4070-2.0.1) (2021-04-26)
 
-# [2.0.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.8.0...v2.0.0) (2021-04-22)
+# [4070-2.0.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.8.0...4070-2.0.0) (2021-04-22)
 
-# [1.8.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/v1.7.0...v1.8.0) (2020-12-15)
+# [4070-1.8.0](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-1.7.0...v1.8.0) (2020-12-15)
 
 ### Bug Fixes
 
