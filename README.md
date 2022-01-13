@@ -36,7 +36,7 @@
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
 2. Typing `UI: Select Theme` next find for your favorite theme:
-    - `GitHub Adaptive` ✨ NEW ✨
+    - `GitHub Adaptive` 🆕
     - `GitHub Dark`
     - `GitHub Dimmed`
     - `GitHub Light`
