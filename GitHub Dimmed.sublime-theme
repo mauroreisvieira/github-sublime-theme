@@ -31,6 +31,7 @@
         "gridBorder": "#444c56",
         "overlayBorder": "#2d333b",
         "panelControlBackground": "#1c2128",
+        "panelControlForeground": "#adbac7",
         "panelControlBorder": "#444c56",
         "panelRowBackground": "#1c2128",
         "panelRowForeground": "#adbac7",
@@ -771,9 +772,6 @@
             "class": "label_control",
             "parents": [
                 {
-                    "class": "window"
-                },
-                {
                     "class": "status_button",
                     "attributes": [
                         "hover"
@@ -803,6 +801,17 @@
             "class": "dialog",
             "layer0.tint": "var(panelControlBackground)",
             "layer0.opacity": 1
+        },
+        {
+            "class": "label_control",
+            "parents": [
+                {
+                    "class": "dialog"
+                }
+            ],
+            "fg": "var(panelControlForeground)",
+            "font.face": "var(fontFace)",
+            "font.size": "var(fontSizeMd)"
         },
         {
             "class": "mini_quick_panel_row",

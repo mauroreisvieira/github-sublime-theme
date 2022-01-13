@@ -69,6 +69,7 @@ export function variables(theme: Primer): ThemeVariables {
         overlayBorder: color.canvas.overlay,
 
         panelControlBackground: color.canvas.inset,
+        panelControlForeground: color.fg.default,
         panelControlBorder: color.border.default,
 
         panelRowBackground: color.canvas.inset,
@@ -634,7 +635,6 @@ export const rules = [
     {
         class: 'label_control',
         parents: [
-            { class: 'window' },
             { class: 'status_button', attributes: ['hover'] },
         ],
         fg: 'var(statusBarHoverForeground)',
@@ -662,6 +662,17 @@ export const rules = [
         class: 'dialog',
         'layer0.tint': 'var(panelControlBackground)',
         'layer0.opacity': 1.0,
+    },
+    {
+        "class": "label_control",
+        "parents": [
+            {
+                "class": "dialog"
+            }
+        ],
+        "fg": "var(panelControlForeground)",
+        "font.face": "var(fontFace)",
+        "font.size": "var(fontSizeMd)"
     },
 
     // QUICK PANEL
