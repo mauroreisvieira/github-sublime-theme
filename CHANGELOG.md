@@ -1,4 +1,10 @@
-# [4070-2.4.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/4060-2.4.1...v2.4.2) (2022-01-13)
+# [4070-2.4.3](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.2...4070-2.4.3) (2022-01-13)
+
+### Bug Fixes
+
+-   sidebar color of `vcsIgnored`
+
+# [4070-2.4.2](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.1...4070-2.4.2) (2022-01-13)
 
 # [4070-2.4.1](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.0...4070-2.4.1) (2022-01-12)
 
