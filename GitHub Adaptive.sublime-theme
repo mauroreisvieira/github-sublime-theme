@@ -69,7 +69,7 @@
         "vcsUntracked": "#57ab5a",
         "vcsModified": "#316dca",
         "vcsDeleted": "#e5534b",
-        "vcsIgnored": "var(--foreground)",
+        "vcsIgnored": "color(var(foreground) blend(var(background) 50%)))",
         "vcsUnmerged": "#cc6b2c",
         "vcsStaged": "var(--cyanish)",
         "vcsMissing": "#cc6b2c"
