@@ -28,7 +28,7 @@ then
   npm version --no-git-tag-version --no-commit-hooks --new-version $VERSION
 
   # CHANGELOG
-  npm run changelog
+  # npm run changelog
 
   cecho "YELLOW" "Please check git history and the CHANGELOG and press ENTER"
   read OKAY
