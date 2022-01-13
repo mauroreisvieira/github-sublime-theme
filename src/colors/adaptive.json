@@ -2,7 +2,7 @@
     "fg": {
         "default": "var(--foreground)",
         "muted": "var(--foreground)",
-        "subtle": "var(--foreground)"
+        "subtle": "color(var(foreground) blend(var(background) 50%)))"
     },
     "canvas": {
         "default": "var(--background)",

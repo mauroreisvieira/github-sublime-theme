@@ -55,7 +55,7 @@ export function variables(theme: Primer): ThemeVariables {
             light: '#e2e5e9',
             dark: scale.gray[7],
             dimmed: scale.gray[7],
-            adaptive: "color(var(background) blend(var(foreground) 90%))",
+            adaptive: 'color(var(background) blend(var(foreground) 90%))',
         }),
 
         tabInactiveBackground: color.canvas.inset,
@@ -94,10 +94,10 @@ export function variables(theme: Primer): ThemeVariables {
         autoCompleteBackground: color.canvas.inset,
         autoCompleteForeground: color.fg.default,
         autoCompleteSelectedBackground: themes({
-            light: "#0366d625",
-            dark: "#3392FF44",
-            dimmed: "#3392FF44",
-            adaptive: "#3392FF44",
+            light: '#0366d625',
+            dark: '#3392FF44',
+            dimmed: '#3392FF44',
+            adaptive: '#3392FF44',
         }),
         autoCompleteSelectedForeground: color.fg.default,
         autoCompleteMatchForeground: 'var(accent)',
@@ -350,8 +350,37 @@ export const rules = [
     },
 
     {
+        class: 'tab_control',
+        settings: ['!show_tab_close_buttons'],
+    },
+    {
         class: 'tab_close_button',
+        settings: ['show_tab_close_buttons'],
+        content_margin: [8, 8],
+        'layer0.texture': 'GitHub Theme/textures/actions/close.png',
         'layer0.tint': 'var(tabActiveForeground)',
+        'layer0.inner_margin': [4, 4],
+    },
+    {
+        class: 'tab_close_button',
+        attributes: ['!hover'],
+        parents: [{ class: 'tab_control', attributes: ['dirty'] }],
+        'layer0.texture': 'GitHub Theme/textures/tab/dirty_dot.png',
+    },
+    {
+        class: 'tab_close_button',
+        parents: [{ class: 'tab_control', attributes: ['added'] }],
+        'layer0.tint': 'var(vcsUntracked)',
+    },
+    {
+        class: 'tab_close_button',
+        parents: [{ class: 'tab_control', attributes: ['modified'] }],
+        'layer0.tint': 'var(vcsModified)',
+    },
+    {
+        class: 'tab_close_button',
+        parents: [{ class: 'tab_control', attributes: ['deleted'] }],
+        'layer0.tint': 'var(vcsDeleted)',
     },
 
     // GRID
@@ -634,9 +663,7 @@ export const rules = [
     },
     {
         class: 'label_control',
-        parents: [
-            { class: 'status_button', attributes: ['hover'] },
-        ],
+        parents: [{ class: 'status_button', attributes: ['hover'] }],
         fg: 'var(statusBarHoverForeground)',
     },
     {
@@ -664,15 +691,15 @@ export const rules = [
         'layer0.opacity': 1.0,
     },
     {
-        "class": "label_control",
-        "parents": [
+        class: 'label_control',
+        parents: [
             {
-                "class": "dialog"
-            }
+                class: 'dialog',
+            },
         ],
-        "fg": "var(panelControlForeground)",
-        "font.face": "var(fontFace)",
-        "font.size": "var(fontSizeMd)"
+        fg: 'var(panelControlForeground)',
+        'font.face': 'var(fontFace)',
+        'font.size': 'var(fontSizeMd)',
     },
 
     // QUICK PANEL
@@ -909,14 +936,31 @@ export const rules = [
         content_margin: [8, 8],
     },
     {
+        "class": "close_button",
+        "attributes": ["hover"],
+        "layer0.opacity": "var(sidebar_button_hover_opacity)"
+    },
+    {
+        "class": "close_button",
+        "attributes": ["!hover", "dirty"],
+        'layer0.texture': 'GitHub Theme/textures/tab/dirty_dot.png',
+        'layer0.tint': 'var(foreground)',
+        'layer0.inner_margin': [4, 4],
+    },
+    {
         class: 'close_button',
-        parents: [
-            {
-                class: 'tree_row',
-                attributes: ['hover'],
-            },
-        ],
-        'layer0.opacity': 1,
+        attributes: ['added'],
+        'layer0.tint': 'var(vcsUntracked)',
+    },
+    {
+        class: 'close_button',
+        attributes: ['modified'],
+        'layer0.tint': 'var(vcsModified)',
+    },
+    {
+        class: 'close_button',
+        attributes: ['deleted'],
+        'layer0.tint': 'var(vcsDeleted)',
     },
 
     // ICON BUTTON GROUP
