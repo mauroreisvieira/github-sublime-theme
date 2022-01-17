@@ -1,3 +1,9 @@
+# [4070-2.4.4](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.3...4070-2.4.4) (2022-01-17)
+
+### Bug Fixes
+
+-   removed unused variable and apply color in Close button ([83cc71f](https://github.com/mauroreisvieira/github-sublime-theme/commit/83cc71f659024350b189b456a1cc0379b18b7cac))
+
 # [4070-2.4.3](https://github.com/mauroreisvieira/github-sublime-theme/compare/4070-2.4.2...4070-2.4.3) (2022-01-13)
 
 ### Bug Fixes
