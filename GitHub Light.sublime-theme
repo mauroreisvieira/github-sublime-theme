@@ -349,6 +349,13 @@
         {
             "class": "tab_close_button",
             "attributes": [
+                "hover"
+            ],
+            "layer0.tint": "var(accent)"
+        },
+        {
+            "class": "tab_close_button",
+            "attributes": [
                 "!hover"
             ],
             "parents": [
@@ -1160,7 +1167,6 @@
         {
             "class": "close_button",
             "layer0.texture": "GitHub Theme/textures/actions/close.png",
-            "layer0.tint": "var(accent)",
             "layer0.opacity": 1,
             "layer0.inner_margin": [
                 3,
@@ -1176,7 +1182,7 @@
             "attributes": [
                 "hover"
             ],
-            "layer0.opacity": "var(sidebar_button_hover_opacity)"
+            "layer0.tint": "var(accent)"
         },
         {
             "class": "close_button",

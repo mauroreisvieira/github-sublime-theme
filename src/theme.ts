@@ -362,6 +362,11 @@ export const rules = [
         'layer0.inner_margin': [4, 4],
     },
     {
+        "class": "tab_close_button",
+        "attributes": ["hover"],
+        'layer0.tint': 'var(accent)',
+    },
+    {
         class: 'tab_close_button',
         attributes: ['!hover'],
         parents: [{ class: 'tab_control', attributes: ['dirty'] }],
@@ -930,7 +935,6 @@ export const rules = [
     {
         class: 'close_button',
         'layer0.texture': 'GitHub Theme/textures/actions/close.png',
-        'layer0.tint': 'var(accent)',
         'layer0.opacity': 1,
         'layer0.inner_margin': [3, 3],
         content_margin: [8, 8],
@@ -938,7 +942,7 @@ export const rules = [
     {
         "class": "close_button",
         "attributes": ["hover"],
-        "layer0.opacity": "var(sidebar_button_hover_opacity)"
+        'layer0.tint': 'var(accent)',
     },
     {
         "class": "close_button",
