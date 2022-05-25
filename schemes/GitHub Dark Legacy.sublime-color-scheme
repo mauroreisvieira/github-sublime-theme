@@ -231,6 +231,16 @@
         {
             "scope": "string.quoted.single,string.quoted.double",
             "foreground": "var(palenight)"
+        },
+        {
+            "name": "YAML - Key",
+            "scope": "entity.name.tag.yaml",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "YAML - String",
+            "scope": "source.yaml string.unquoted",
+            "foreground": "var(blue)"
         }
     ]
 }
