@@ -684,6 +684,28 @@ export function rules(theme: Primer): Rules[] {
                 background: 'color(var(diffAdded) alpha(0.20))',
             },
         },
+        {
+            name: 'YAML - Key',
+            scope: ['entity.name.tag.yaml'],
+            settings: {
+                foreground: themes({
+                    light: scale.green[6],
+                    dark: scale.green[1],
+                    dimmed: scale.green[1],
+                }),
+            },
+        },
+        {
+            name: 'YAML - String',
+            scope: ['source.yaml string.unquoted'],
+            settings: {
+                foreground: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
+                }),
+            },
+        },
     ];
 }
 

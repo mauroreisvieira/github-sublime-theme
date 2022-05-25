@@ -69,7 +69,7 @@
         "vcsUntracked": "#3fb950",
         "vcsModified": "#1f6feb",
         "vcsDeleted": "#f85149",
-        "vcsIgnored": "#484f58",
+        "vcsIgnored": "#6e7681",
         "vcsUnmerged": "#db6d28",
         "vcsStaged": "var(--cyanish)",
         "vcsMissing": "#db6d28"

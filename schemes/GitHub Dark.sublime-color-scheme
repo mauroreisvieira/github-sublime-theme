@@ -279,6 +279,16 @@
             "name": "DIFF - Inserted Char",
             "scope": "diff.inserted.char",
             "background": "color(var(diffAdded) alpha(0.20))"
+        },
+        {
+            "name": "YAML - Key",
+            "scope": "entity.name.tag.yaml",
+            "foreground": "#7ee787"
+        },
+        {
+            "name": "YAML - String",
+            "scope": "source.yaml string.unquoted",
+            "foreground": "#79c0ff"
         }
     ]
 }
