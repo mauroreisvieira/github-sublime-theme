@@ -2,7 +2,7 @@
     "name": "GitHub Dimmed",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "accent": "#EC775C",
+        "accent": "#ec775c",
         "cursor": "#539bf5",
         "foreground": "#adbac7",
         "background": "#22272e",
@@ -211,7 +211,7 @@
         },
         {
             "scope": "markup.deleted,meta.diff.header.from-file,punctuation.definition.deleted",
-            "background": "#5D0F12",
+            "background": "#5d0f12",
             "foreground": "#ff938a"
         },
         {

@@ -2,7 +2,7 @@
     "name": "GitHub Dark",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "accent": "#F78166",
+        "accent": "#f78166",
         "cursor": "#58a6ff",
         "foreground": "#c9d1d9",
         "background": "#0d1117",

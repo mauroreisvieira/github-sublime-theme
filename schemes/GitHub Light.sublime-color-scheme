@@ -2,7 +2,7 @@
     "name": "GitHub Light",
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
-        "accent": "#FD8C73",
+        "accent": "#fd8c73",
         "cursor": "#0969da",
         "foreground": "#24292f",
         "background": "#ffffff",
@@ -211,7 +211,7 @@
         },
         {
             "scope": "markup.deleted,meta.diff.header.from-file,punctuation.definition.deleted",
-            "background": "#FFEBE9",
+            "background": "#ffebe9",
             "foreground": "#82071e"
         },
         {
