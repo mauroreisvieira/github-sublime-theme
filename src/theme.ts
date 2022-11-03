@@ -729,6 +729,15 @@ export const rules = [
         class: 'quick_panel',
         parents: [
             {
+                class: 'overlay_control kind_info',
+            },
+        ],
+        row_padding: [0, 0, 0, 0],
+    },
+    {
+        class: 'quick_panel',
+        parents: [
+            {
                 class: 'overlay_control goto_symbol',
             },
         ],
