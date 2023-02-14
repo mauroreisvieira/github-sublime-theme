@@ -289,6 +289,70 @@
             "name": "YAML - String",
             "scope": "source.yaml string.unquoted",
             "foreground": "#0550ae"
+        },
+        {
+            "name": "Better Find Buffer - Total Files Count",
+            "scope": "variable.total_files_count.find-in-files",
+            "foreground": "#0550ae",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - Query Files Count",
+            "scope": "string.query.find-in-files",
+            "foreground": "#116329",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - Match Count",
+            "scope": "variable.matched_count.find-in-files",
+            "foreground": "#116329",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - Match Files Count",
+            "scope": "variable.matched_files_count.find-in-files",
+            "foreground": "#0550ae",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - No Match",
+            "scope": "variable.no_matches.find-in-files",
+            "foreground": "#cf222e",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - Line Number",
+            "scope": "constant.numeric.line-number.find-in-files",
+            "foreground": "color(var(blue) alpha(0.2))"
+        },
+        {
+            "name": "Better Find Buffer - Match",
+            "scope": "match.find-in-files",
+            "background": "color(var(blue) alpha(0.2))"
+        },
+        {
+            "name": "Better Find Buffer - Line Number Match",
+            "scope": "constant.numeric.line-number.match.find-in-files",
+            "foreground": "var(accent)",
+            "background": "color(var(blue) alpha(0.1))"
+        },
+        {
+            "name": "Better Find Buffer - Punctuation Line Number Match",
+            "scope": "punctuation.line-number.match.find-in-files",
+            "foreground": "color(var(blue) alpha(0.1))",
+            "background": "color(var(blue) alpha(0.1))"
+        },
+        {
+            "name": "Better Find Buffer - File name",
+            "scope": "entity.name.filename.find-in-files",
+            "foreground": "#ffffff",
+            "background": "#0550ae",
+            "font_style": "bold"
+        },
+        {
+            "name": "Better Find Buffer - Footer",
+            "scope": "footer.find-in-files",
+            "background": "var(background)"
         }
     ]
 }

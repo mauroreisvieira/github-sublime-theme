@@ -143,7 +143,7 @@ export function rules(theme: Primer): Rules[] {
                 'variable.other.constant',
                 'variable.other.object',
                 'variable.language',
-                'entity'
+                'entity',
             ],
             settings: {
                 foreground: themes({
@@ -704,6 +704,116 @@ export function rules(theme: Primer): Rules[] {
                     dark: scale.blue[2],
                     dimmed: scale.blue[2],
                 }),
+            },
+        },
+        {
+            name: 'Better Find Buffer - Total Files Count',
+            scope: ['variable.total_files_count.find-in-files'],
+            settings: {
+                foreground: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Query Files Count',
+            scope: ['string.query.find-in-files'],
+            settings: {
+                foreground: themes({
+                    light: scale.green[6],
+                    dark: scale.green[1],
+                    dimmed: scale.green[1],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Match Count',
+            scope: ['variable.matched_count.find-in-files'],
+            settings: {
+                foreground: themes({
+                    light: scale.green[6],
+                    dark: scale.green[1],
+                    dimmed: scale.green[1],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Match Files Count',
+            scope: ['variable.matched_files_count.find-in-files'],
+            settings: {
+                foreground: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - No Match',
+            scope: ['variable.no_matches.find-in-files'],
+            settings: {
+                foreground: themes({
+                    light: scale.red[5],
+                    dark: scale.red[3],
+                    dimmed: scale.red[3],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Line Number',
+            scope: ['constant.numeric.line-number.find-in-files'],
+            settings: {
+                foreground: 'color(var(blue) alpha(0.2))',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Match',
+            scope: ['match.find-in-files'],
+            settings: {
+                background: 'color(var(blue) alpha(0.2))',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Line Number Match',
+            scope: ['constant.numeric.line-number.match.find-in-files'],
+            settings: {
+                foreground: 'var(accent)',
+                background: 'color(var(blue) alpha(0.1))',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Punctuation Line Number Match',
+            scope: ['punctuation.line-number.match.find-in-files'],
+            settings: {
+                foreground: 'color(var(blue) alpha(0.1))',
+                background: 'color(var(blue) alpha(0.1))',
+            },
+        },
+        {
+            name: 'Better Find Buffer - File name',
+            scope: ['entity.name.filename.find-in-files'],
+            settings: {
+                foreground: scale.white,
+                background: themes({
+                    light: scale.blue[6],
+                    dark: scale.blue[2],
+                    dimmed: scale.blue[2],
+                }),
+                font_style: 'bold',
+            },
+        },
+        {
+            name: 'Better Find Buffer - Footer',
+            scope: ['footer.find-in-files'],
+            settings: {
+                background: 'var(background)',
             },
         },
     ];
