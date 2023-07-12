@@ -4,14 +4,14 @@
     "variables": {
         "accent": "#fd8c73",
         "cursor": "#0969da",
-        "foreground": "#24292f",
+        "foreground": "#1f2328",
         "background": "#ffffff",
         "comments": "#6e7781",
         "deprecated": "#f6f8fa",
         "invalid": "#f6f8fa",
         "diffModified": "#0969da",
         "diffAdded": "#1a7f37",
-        "diffDeleted": "#cf222e",
+        "diffDeleted": "#d1242f",
         "black": "#24292f",
         "blue": "#54aeff",
         "gray": "#8c959f",
@@ -50,10 +50,10 @@
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
         "gutter": "var(background)",
-        "gutter_foreground": "color(#57606a alpha(0.3))",
-        "gutter_foreground_highlight": "#24292f",
+        "gutter_foreground": "color(#656d76 alpha(0.3))",
+        "gutter_foreground_highlight": "#1f2328",
         "find_highlight": "#ffdf5d66",
-        "find_highlight_foreground": "#24292f",
+        "find_highlight_foreground": "#1f2328",
         "highlight": "#34d05890",
         "guide": "hsla(210,18%,87%,1)",
         "stack_guide": "#32383f",
@@ -86,7 +86,7 @@
         },
         {
             "scope": "meta.jsx.children,meta.block,meta.object.member,meta.embedded.expression",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "entity.name.tag",
@@ -102,7 +102,7 @@
         },
         {
             "scope": "storage.modifier.package,storage.modifier.import,storage.type.java",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "string,punctuation.definition.string,string punctuation.section.embedded source",
@@ -122,7 +122,7 @@
         },
         {
             "scope": "variable.other,meta.import variable.other.readwrite.alias,meta.import variable.other.readwrite",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "invalid.broken",
@@ -156,7 +156,7 @@
         },
         {
             "scope": "string source",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "string variable",
@@ -198,12 +198,12 @@
         {
             "scope": "markup.italic",
             "font_style": "italic",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "markup.bold",
             "font_style": "bold",
-            "foreground": "#24292f"
+            "foreground": "#1f2328"
         },
         {
             "scope": "markup.raw",

@@ -3,13 +3,13 @@
     "author": "Mauro Reis Vieira <mauroreisvieira@gmail.com>",
     "variables": {
         "accent": "#f78166",
-        "cursor": "#58a6ff",
-        "foreground": "#c9d1d9",
+        "cursor": "#2f81f7",
+        "foreground": "#e6edf3",
         "background": "#0d1117",
         "comments": "#8b949e",
         "deprecated": "#f0f6fc",
         "invalid": "#f0f6fc",
-        "diffModified": "#58a6ff",
+        "diffModified": "#2f81f7",
         "diffAdded": "#3fb950",
         "diffDeleted": "#f85149",
         "black": "#0d1117",
@@ -50,10 +50,10 @@
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
         "gutter": "var(background)",
-        "gutter_foreground": "color(#8b949e alpha(0.3))",
-        "gutter_foreground_highlight": "#c9d1d9",
+        "gutter_foreground": "color(#7d8590 alpha(0.3))",
+        "gutter_foreground_highlight": "#e6edf3",
         "find_highlight": "#ffd33d22",
-        "find_highlight_foreground": "#c9d1d9",
+        "find_highlight_foreground": "#e6edf3",
         "highlight": "#17E5E680",
         "guide": "#21262d",
         "stack_guide": "#161b22",
@@ -86,7 +86,7 @@
         },
         {
             "scope": "meta.jsx.children,meta.block,meta.object.member,meta.embedded.expression",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "entity.name.tag",
@@ -102,7 +102,7 @@
         },
         {
             "scope": "storage.modifier.package,storage.modifier.import,storage.type.java",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "string,punctuation.definition.string,string punctuation.section.embedded source",
@@ -122,7 +122,7 @@
         },
         {
             "scope": "variable.other,meta.import variable.other.readwrite.alias,meta.import variable.other.readwrite",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "invalid.broken",
@@ -156,7 +156,7 @@
         },
         {
             "scope": "string source",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "string variable",
@@ -198,12 +198,12 @@
         {
             "scope": "markup.italic",
             "font_style": "italic",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "markup.bold",
             "font_style": "bold",
-            "foreground": "#c9d1d9"
+            "foreground": "#e6edf3"
         },
         {
             "scope": "markup.raw",
