@@ -813,18 +813,36 @@
             "layer0.tint": "var(statusBarBackground)",
             "layer1.opacity": 1,
             "layer1.tint": "var(statusBarBorder)",
-            "layer1.inner_margin": [
-                0,
-                1,
-                0,
-                1
-            ],
             "layer1.draw_center": false,
             "content_margin": [
                 8,
+                3,
                 0,
+                3
+            ]
+        },
+        {
+            "class": "status_bar",
+            "settings": [
+                "sidebar_on_right"
+            ],
+            "content_margin": [
+                0,
+                3,
                 8,
-                0
+                3
+            ]
+        },
+        {
+            "class": "status_bar",
+            "settings": [
+                "!show_sidebar_button"
+            ],
+            "content_margin": [
+                0,
+                3,
+                0,
+                3
             ]
         },
         {
