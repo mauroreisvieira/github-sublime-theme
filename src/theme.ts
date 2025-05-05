@@ -40,6 +40,9 @@ export function variables(theme: Primer): ThemeVariables {
             adaptive: 'var(background)',
         }),
 
+        sidebarLabelFontSize: 13,
+        sidebarLabelPadding: [16, 6],
+
         sidebarBackground: color.canvas.inset,
         sidebarBorder: color.border.default,
         sidebarHeadingForeground: color.fg.default,
@@ -58,6 +61,7 @@ export function variables(theme: Primer): ThemeVariables {
             adaptive: 'color(var(background) blend(var(foreground) 90%))',
         }),
 
+        tabLabelFontSize: 12,
         tabInactiveBackground: color.canvas.inset,
         tabBorder: color.border.default,
         tabActiveForeground: color.fg.default,
@@ -345,8 +349,9 @@ export const rules = [
     {
         class: 'tab_label',
         'font.face': 'var(fontFace)',
-        'font.size': 'var(fontSizeSm)',
+        'font.size': 'var(tabLabelFontSize)',
         fg: 'var(tabActiveForeground)',
+        'font.bold': 'var(tabBold)',
     },
 
     {
@@ -362,8 +367,8 @@ export const rules = [
         'layer0.inner_margin': [4, 4],
     },
     {
-        "class": "tab_close_button",
-        "attributes": ["hover"],
+        class: 'tab_close_button',
+        attributes: ['hover'],
         'layer0.tint': 'var(accent)',
     },
     {
@@ -414,7 +419,7 @@ export const rules = [
     },
     {
         class: 'sidebar_tree',
-        row_padding: [14, 3],
+        row_padding: 'var(sidebarLabelPadding)',
         indent: 20,
         indent_offset: 14,
         indent_top_level: false,
@@ -423,6 +428,8 @@ export const rules = [
     },
     {
         class: 'sidebar_label',
+        'font.size': 'var(sidebarLabelFontSize)',
+        'font.face': 'var(fontFace)',
         fg: 'var(sidebarLabelForeground)',
     },
     {
@@ -645,10 +652,11 @@ export const rules = [
         class: 'status_bar',
         'layer0.opacity': 1.0,
         'layer0.tint': 'var(statusBarBackground)',
-        'layer1.inner_margin': [0, 1, 0, 0],
         'layer1.opacity': 1.0,
         'layer1.tint': 'var(statusBarBorder)',
-        content_margin: [8, 5, 0, 3],
+        'layer1.inner_margin': [0, 1, 0, 1],
+        'layer1.draw_center': false,
+        content_margin: [8, 0, 8, 0],
     },
     {
         class: 'status_bar',
@@ -949,13 +957,13 @@ export const rules = [
         content_margin: [8, 8],
     },
     {
-        "class": "close_button",
-        "attributes": ["hover"],
+        class: 'close_button',
+        attributes: ['hover'],
         'layer0.tint': 'var(accent)',
     },
     {
-        "class": "close_button",
-        "attributes": ["!hover", "dirty"],
+        class: 'close_button',
+        attributes: ['!hover', 'dirty'],
         'layer0.texture': 'GitHub Theme/textures/tab/dirty_dot.png',
         'layer0.tint': 'var(foreground)',
         'layer0.inner_margin': [4, 4],
@@ -1377,7 +1385,9 @@ export const rules = [
     {
         class: 'sidebar_button_control',
         settings: ['show_sidebar_button'],
+        'layer0.texture': 'GitHub Theme/textures/tree/sidebar-button.png',
         'layer0.tint': 'var(statusBarForeground)',
+        content_margin: 6,
         'layer0.opacity': 1.0,
     },
     {
@@ -1393,6 +1403,11 @@ export const rules = [
         attributes: ['hover'],
         'layer0.tint': 'var(statusBarHoverForeground)',
         'layer0.opacity': 1.0,
+    },
+    {
+        class: 'sidebar_button_control',
+        settings: ['sidebar_on_right'],
+        'layer0.texture': 'GitHub Theme/textures/tree/sidebar-button-right.png',
     },
     {
         class: 'status_button',

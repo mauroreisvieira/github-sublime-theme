@@ -12,6 +12,12 @@
         "diffModified": "#539bf5",
         "diffAdded": "#57ab5a",
         "diffDeleted": "#e5534b",
+        "--redish": "#f47067",
+        "--yellowish": "#c69026",
+        "--greenish": "#57ab5a",
+        "--cyanish": "#76e3ea",
+        "--bluish": "#539bf5",
+        "--purplish": "#b083f0",
         "black": "#22272e",
         "blue": "#539bf5",
         "gray": "#636e7b",
@@ -353,6 +359,11 @@
             "name": "Better Find Buffer - Footer",
             "scope": "footer.find-in-files",
             "background": "var(background)"
+        },
+        {
+            "name": "Accent color for code action annotations",
+            "scope": "markup.accent.codeaction.lsp",
+            "foreground": "var(background)"
         }
     ]
 }

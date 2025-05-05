@@ -1,7 +1,7 @@
 export { generateScheme } from '@meetio/scheme-generator';
-import { Colors, Rules, UI } from '@meetio/scheme-generator';
 import { getColors } from './colors';
 import { Options, Primer } from './interfaces';
+import type { Colors, Rules, UI } from '@meetio/scheme-generator/dist/types';
 
 export function colors(theme: Primer): Colors {
     const color = getColors(theme);
@@ -814,6 +814,13 @@ export function rules(theme: Primer): Rules[] {
             scope: ['footer.find-in-files'],
             settings: {
                 background: 'var(background)',
+            },
+        },
+        {
+            name: 'Accent color for code action annotations',
+            scope: ['markup.accent.codeaction.lsp'],
+            settings: {
+                foreground: 'var(background)',
             },
         },
     ];

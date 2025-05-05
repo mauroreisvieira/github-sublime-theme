@@ -1,0 +1,4 @@
+<svg viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14,2l-12,0c-0.549,0 -1,0.451 -1,1l0,10c0,0.549 0.451,1 1,1l12,0c0.549,0 1,-0.451 1,-1l0,-10c0,-0.549 -0.451,-1 -1,-1Zm-12,-1c-1.097,0 -2,0.903 -2,2l0,10c0,1.097 0.903,2 2,2l12,0c1.097,0 2,-0.903 2,-2l0,-10c0,-1.097 -0.903,-2 -2,-2l-12,0Z" style="fill:#fff;"/>
+  <rect fill-rule="evenodd" x="11" y="2" width="1" height="12" style="fill:#fff;"/>
+</svg>

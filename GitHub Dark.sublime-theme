@@ -13,6 +13,11 @@
         "titleBarForeground": "#7d8590",
         "tooltipBackground": "#79c0ff",
         "tooltipForeground": "#0d419d",
+        "sidebarLabelFontSize": 13,
+        "sidebarLabelPadding": [
+            16,
+            6
+        ],
         "sidebarBackground": "#010409",
         "sidebarBorder": "#30363d",
         "sidebarHeadingForeground": "#e6edf3",
@@ -22,6 +27,7 @@
         "sidebarFolderForeground": "#7d8590",
         "sidebarFolderExpandedForeground": "var(accent)",
         "treeActiveSelectionBackground": "#21262d",
+        "tabLabelFontSize": 12,
         "tabInactiveBackground": "#010409",
         "tabBorder": "#30363d",
         "tabActiveForeground": "#e6edf3",
@@ -321,8 +327,9 @@
         {
             "class": "tab_label",
             "font.face": "var(fontFace)",
-            "font.size": "var(fontSizeSm)",
-            "fg": "var(tabActiveForeground)"
+            "font.size": "var(tabLabelFontSize)",
+            "fg": "var(tabActiveForeground)",
+            "font.bold": "var(tabBold)"
         },
         {
             "class": "tab_control",
@@ -437,10 +444,7 @@
         },
         {
             "class": "sidebar_tree",
-            "row_padding": [
-                14,
-                3
-            ],
+            "row_padding": "var(sidebarLabelPadding)",
             "indent": 20,
             "indent_offset": 14,
             "indent_top_level": false,
@@ -449,6 +453,8 @@
         },
         {
             "class": "sidebar_label",
+            "font.size": "var(sidebarLabelFontSize)",
+            "font.face": "var(fontFace)",
             "fg": "var(sidebarLabelForeground)"
         },
         {
@@ -805,19 +811,20 @@
             "class": "status_bar",
             "layer0.opacity": 1,
             "layer0.tint": "var(statusBarBackground)",
+            "layer1.opacity": 1,
+            "layer1.tint": "var(statusBarBorder)",
             "layer1.inner_margin": [
                 0,
                 1,
                 0,
-                0
+                1
             ],
-            "layer1.opacity": 1,
-            "layer1.tint": "var(statusBarBorder)",
+            "layer1.draw_center": false,
             "content_margin": [
                 8,
-                5,
                 0,
-                3
+                8,
+                0
             ]
         },
         {
@@ -1994,7 +2001,9 @@
             "settings": [
                 "show_sidebar_button"
             ],
+            "layer0.texture": "GitHub Theme/textures/tree/sidebar-button.png",
             "layer0.tint": "var(statusBarForeground)",
+            "content_margin": 6,
             "layer0.opacity": 1
         },
         {
@@ -2016,6 +2025,13 @@
             ],
             "layer0.tint": "var(statusBarHoverForeground)",
             "layer0.opacity": 1
+        },
+        {
+            "class": "sidebar_button_control",
+            "settings": [
+                "sidebar_on_right"
+            ],
+            "layer0.texture": "GitHub Theme/textures/tree/sidebar-button-right.png"
         },
         {
             "class": "status_button",

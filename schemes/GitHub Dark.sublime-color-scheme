@@ -12,6 +12,12 @@
         "diffModified": "#2f81f7",
         "diffAdded": "#3fb950",
         "diffDeleted": "#f85149",
+        "--redish": "#ff7b72",
+        "--yellowish": "#d29922",
+        "--greenish": "#3fb950",
+        "--cyanish": "#76e3ea",
+        "--bluish": "#58a6ff",
+        "--purplish": "#bc8cff",
         "black": "#0d1117",
         "blue": "#58a6ff",
         "gray": "#6e7681",
@@ -50,7 +56,7 @@
         "tags_foreground": "var(cyan)",
         "tags_options": "underline",
         "gutter": "var(background)",
-        "gutter_foreground": "color(#7d8590 alpha(0.3))",
+        "gutter_foreground": "color(#848d97 alpha(0.3))",
         "gutter_foreground_highlight": "#e6edf3",
         "find_highlight": "#ffd33d22",
         "find_highlight_foreground": "#e6edf3",
@@ -353,6 +359,11 @@
             "name": "Better Find Buffer - Footer",
             "scope": "footer.find-in-files",
             "background": "var(background)"
+        },
+        {
+            "name": "Accent color for code action annotations",
+            "scope": "markup.accent.codeaction.lsp",
+            "foreground": "var(background)"
         }
     ]
 }
