@@ -1,6 +1,6 @@
 {
     "name": "github-sublime-theme",
-    "version": "2.8.0",
+    "version": "2.7.0",
     "description": "GitHub theme for Sublime Text",
     "repository": {
         "type": "git",
@@ -17,7 +17,6 @@
         "icons": "ts-node src/icons.ts",
         "prettier": "prettier --write \"src/*.ts?(x)\"",
         "lint": "eslint src/*.ts",
-        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s 0",
         "release": "bash scripts/release.sh",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -37,7 +36,6 @@
         "@types/node": "^20.4.1",
         "@typescript-eslint/eslint-plugin": "6.0.0",
         "@typescript-eslint/parser": "6.0.0",
-        "conventional-changelog-cli": "^5.0.0",
         "eslint": "8.44.0",
         "husky": "^8.0.3",
         "picocolors": "^1.0.0",
