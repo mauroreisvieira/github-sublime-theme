@@ -157,7 +157,7 @@ export function variables(theme: Primer): ThemeVariables {
         vcsDeleted: color.danger.fg,
         vcsIgnored: color.fg.subtle,
         vcsUnmerged: color.severe.fg,
-        vcsStaged: 'var(--cyanish)',
+        vcsStaged: color.attention.muted,
         vcsMissing: color.severe.fg,
     };
 }
