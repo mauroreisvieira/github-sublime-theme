@@ -27,6 +27,7 @@
         "sidebarFolderForeground": "#7d8590",
         "sidebarFolderExpandedForeground": "var(accent)",
         "treeActiveSelectionBackground": "#21262d",
+        "tabBold": false,
         "tabLabelFontSize": 12,
         "tabInactiveBackground": "#010409",
         "tabBorder": "#30363d",
@@ -77,7 +78,7 @@
         "vcsDeleted": "#f85149",
         "vcsIgnored": "#6e7681",
         "vcsUnmerged": "#db6d28",
-        "vcsStaged": "var(--cyanish)",
+        "vcsStaged": "#9e6a03",
         "vcsMissing": "#db6d28"
     },
     "rules": [

@@ -27,6 +27,7 @@
         "sidebarFolderForeground": "var(--foreground)",
         "sidebarFolderExpandedForeground": "var(accent)",
         "treeActiveSelectionBackground": "color(var(background) blend(var(foreground) 90%))",
+        "tabBold": false,
         "tabLabelFontSize": 12,
         "tabInactiveBackground": "color(var(foreground) blend(var(background) 5%)))",
         "tabBorder": "color(var(background) blend(var(foreground) 90%))",
@@ -77,7 +78,7 @@
         "vcsDeleted": "#e5534b",
         "vcsIgnored": "color(var(foreground) blend(var(background) 50%)))",
         "vcsUnmerged": "#cc6b2c",
-        "vcsStaged": "var(--cyanish)",
+        "vcsStaged": "#966600",
         "vcsMissing": "#cc6b2c"
     },
     "rules": [

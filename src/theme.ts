@@ -61,6 +61,7 @@ export function variables(theme: Primer): ThemeVariables {
             adaptive: 'color(var(background) blend(var(foreground) 90%))',
         }),
 
+        tabBold: false,
         tabLabelFontSize: 12,
         tabInactiveBackground: color.canvas.inset,
         tabBorder: color.border.default,
@@ -157,10 +158,11 @@ export function variables(theme: Primer): ThemeVariables {
         vcsDeleted: color.danger.fg,
         vcsIgnored: color.fg.subtle,
         vcsUnmerged: color.severe.fg,
-        vcsStaged: color.attention.muted,
+        vcsStaged: color.attention.emphasis,
         vcsMissing: color.severe.fg,
     };
 }
+
 
 export const rules = [
     // TITLE BAR
