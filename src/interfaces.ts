@@ -1,13 +1,16 @@
-import { SchemeSetting } from '@meetio/scheme-generator';
+import { SchemeSetting } from '@meetio/scheme-generator/dist/types';
 
-export type Primer = 'light' | 'dark' | 'dimmed' | 'adaptive';
+export type Primer =
+    | 'dark'
+    | 'dark_high_contrast'
+    | 'dark_colorblind'
+    | 'light'
+    | 'light_high_contrast'
+    | 'light_colorblind'
+    | 'dimmed'
+    | 'adaptive';
 
-export type Options = {
-    light: string;
-    dark: string;
-    dimmed: string;
-    adaptive?: string;
-};
+export type Options = Partial<Record<Primer, string>>;
 
 export interface Scheme {
     name: string;

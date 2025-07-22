@@ -74,7 +74,7 @@
         "scrollTrack": "#484F5888",
         "vcsAnnotationBorder": "color(var(background) blend(var(foreground) 90%))",
         "vcsUntracked": "#57ab5a",
-        "vcsModified": "#316dca",
+        "vcsModified": "#c69026",
         "vcsDeleted": "#e5534b",
         "vcsIgnored": "color(var(foreground) blend(var(background) 50%)))",
         "vcsUnmerged": "#cc6b2c",

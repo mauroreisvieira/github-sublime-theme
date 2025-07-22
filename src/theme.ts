@@ -14,6 +14,28 @@ export function variables(theme: Primer): ThemeVariables {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
+
+    const buildThemeVariants = ({
+        light,
+        dark,
+        adaptive,
+    }: {
+        light: string;
+        dark: string;
+        adaptive: string;
+    }) => {
+        return themes({
+            light: light,
+            light_high_contrast: light,
+            light_colorblind: light,
+            dark: dark,
+            dark_high_contrast: dark,
+            dark_colorblind: dark,
+            dimmed: dark,
+            adaptive: adaptive,
+        });
+    };
+
     return {
         accent: color.accent.fg,
         background: 'var(--background)',
@@ -27,16 +49,14 @@ export function variables(theme: Primer): ThemeVariables {
         titleBarBackground: color.canvas.default,
         titleBarForeground: color.fg.muted,
 
-        tooltipBackground: themes({
+        tooltipBackground: buildThemeVariants({
             light: scale.blue[6],
             dark: scale.blue[2],
-            dimmed: scale.blue[2],
             adaptive: 'var(foreground)',
         }),
-        tooltipForeground: themes({
+        tooltipForeground: buildThemeVariants({
             light: scale.blue[1],
             dark: scale.blue[7],
-            dimmed: scale.blue[7],
             adaptive: 'var(background)',
         }),
 
@@ -149,12 +169,7 @@ export function variables(theme: Primer): ThemeVariables {
 
         vcsAnnotationBorder: color.border.default,
         vcsUntracked: color.success.fg,
-        vcsModified: themes({
-            light: scale.blue[4],
-            dark: scale.blue[5],
-            dimmed: scale.blue[5],
-            adaptive: scale.blue[5],
-        }),
+        vcsModified: color.attention.fg,
         vcsDeleted: color.danger.fg,
         vcsIgnored: color.fg.subtle,
         vcsUnmerged: color.severe.fg,
@@ -162,7 +177,6 @@ export function variables(theme: Primer): ThemeVariables {
         vcsMissing: color.severe.fg,
     };
 }
-
 
 export const rules = [
     // TITLE BAR

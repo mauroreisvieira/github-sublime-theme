@@ -1,6 +1,8 @@
-import { Scheme, Theme } from './interfaces';
-import { generateScheme, getScheme } from './scheme';
+import { getScheme } from './scheme';
 import { generateTheme, getTheme } from './theme';
+import { generateScheme } from '@meetio/scheme-generator';
+// Types
+import { Scheme, Theme } from './interfaces';
 
 [
     {
@@ -9,9 +11,29 @@ import { generateTheme, getTheme } from './theme';
         variables: getScheme('dark'),
     },
     {
+        name: 'GitHub Dark High Contrast',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dark_high_contrast'),
+    },
+    {
+        name: 'GitHub Dark Colorblind',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dark_colorblind'),
+    },
+    {
         name: 'GitHub Light',
         author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
         variables: getScheme('light'),
+    },
+    {
+        name: 'GitHub Light High Contrast',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('light_high_contrast'),
+    },
+    {
+        name: 'GitHub Light Colorblind',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('light_colorblind'),
     },
     {
         name: 'GitHub Dimmed',
@@ -40,7 +62,23 @@ import { generateTheme, getTheme } from './theme';
         settings: getTheme('dark'),
     },
     {
+        name: 'GitHub Dark High Contrast',
+        settings: getTheme('dark_high_contrast'),
+    },
+    {
+        name: 'GitHub Dark Colorblind',
+        settings: getTheme('dark_colorblind'),
+    },
+    {
         name: 'GitHub Light',
+        settings: getTheme('light'),
+    },
+    {
+        name: 'GitHub Light High Contrast',
+        settings: getTheme('light_high_contrast'),
+    },
+    {
+        name: 'GitHub Light Colorblind',
         settings: getTheme('light'),
     },
     {

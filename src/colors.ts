@@ -1,10 +1,15 @@
-import darkColors from '@primer/primitives/dist/json/colors/dark.json';
-import dimmedColors from '@primer/primitives/dist/json/colors/dark_dimmed.json';
 import lightColors from '@primer/primitives/dist/json/colors/light.json';
+import lightHighContrastColors from '@primer/primitives/dist/json/colors/light_high_contrast.json';
+import lightColorblindColors from '@primer/primitives/dist/json/colors/light_colorblind.json';
+import darkColors from '@primer/primitives/dist/json/colors/dark.json';
+import darkHighContrastColors from '@primer/primitives/dist/json/colors/dark_high_contrast.json';
+import darkColorblindColors from '@primer/primitives/dist/json/colors/dark_colorblind.json';
+import dimmedColors from '@primer/primitives/dist/json/colors/dark_dimmed.json';
 import adaptiveColors from './colors/adaptive.json';
+// Types
 import { Primer } from './interfaces';
 
-export function getColors(theme: Primer | 'adaptive') {
+export function getColors(theme: Primer | 'adaptive'): typeof lightColors {
     switch (theme) {
         case 'light':
             // Temp override until Primitives are updated
@@ -15,7 +20,10 @@ export function getColors(theme: Primer | 'adaptive') {
             lightColors.fg.muted = '#656d76';
 
             return lightColors;
-
+        case 'light_high_contrast':
+            return lightHighContrastColors;
+        case 'light_colorblind':
+            return lightColorblindColors;
         case 'dark':
             // Temp override until Primitives are updated
             darkColors.fg.default = '#e6edf3';
@@ -27,11 +35,14 @@ export function getColors(theme: Primer | 'adaptive') {
             darkColors.sponsors.subtle = 'rgba(219, 97, 162, 0.1)';
 
             return darkColors;
-
+        case 'dark_high_contrast':
+            return darkHighContrastColors;
+        case 'dark_colorblind':
+            return darkColorblindColors;
         case 'dimmed':
             return dimmedColors;
         case 'adaptive':
-            return { ...dimmedColors, ...adaptiveColors };
+            return { ...dimmedColors, ...adaptiveColors } as typeof lightColors;
         default:
             throw new Error(`Colors are missing for value: ${theme}`);
     }

@@ -1,12 +1,14 @@
-export { generateScheme } from '@meetio/scheme-generator';
+import chroma from 'chroma-js';
 import { getColors } from './colors';
-import { Options, Primer } from './interfaces';
+// Types
+import type { Options, Primer } from './interfaces';
 import type { Colors, Rules, UI } from '@meetio/scheme-generator/dist/types';
 
-export function colors(theme: Primer): Colors {
+export function setColors(theme: Primer): Colors {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
-    const scale = color.scale;
+
+    const scale = color.scale; // Usage: scale.blue[6]
 
     return {
         accent: color.primer.border.active,
@@ -15,7 +17,11 @@ export function colors(theme: Primer): Colors {
         background: color.canvas.default,
         comments: themes({
             light: scale.gray[5],
+            light_high_contrast: scale.gray[5],
+            light_colorblind: scale.gray[5],
             dark: scale.gray[3],
+            dark_high_contrast: scale.gray[3],
+            dark_colorblind: scale.gray[3],
             dimmed: scale.gray[3],
         }),
         deprecated: color.prettylights.syntax.invalidIllegalText,
@@ -37,25 +43,33 @@ export function colors(theme: Primer): Colors {
     };
 }
 
-export function ui(theme: Primer): UI {
+export function setUi(theme: Primer): UI {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
+
+    const buildSchemeVariants = ({ light, dark }: { light: string; dark: string }) => {
+        return themes({
+            light: light,
+            light_high_contrast: light,
+            light_colorblind: light,
+            dark: dark,
+            dark_high_contrast: dark,
+            dark_colorblind: dark,
+            dimmed: dark,
+        });
+    };
+
+    const alpha = (color, alpha) => {
+        return chroma(color).alpha(alpha).hex();
+    };
 
     return {
         accent: 'var(accent)',
         background: 'var(background)',
         foreground: 'var(foreground)',
-        caret: themes({
-            light: scale.blue[7],
-            dark: scale.blue[2],
-            dimmed: scale.blue[2],
-        }),
-        block_caret: themes({
-            light: scale.blue[7],
-            dark: scale.blue[2],
-            dimmed: scale.blue[2],
-        }),
+        caret: color.accent.fg,
+        block_caret: color.accent.fg,
         bracket_contents_foreground: 'var(yellow)',
         bracket_contents_options: 'underline',
         brackets_foreground: 'var(cyan)',
@@ -70,14 +84,17 @@ export function ui(theme: Primer): UI {
         line_highlight: color.codemirror.activelineBg,
         misspelling: 'var(blue)',
         selection: themes({
-            light: '#0366d625',
-            dark: '#3392FF44',
-            dimmed: '#3392FF44',
+            light: alpha(color.accent.fg, 0.2),
+            light_colorblind: alpha(color.accent.fg, 0.2),
+            dark: alpha(color.accent.fg, 0.2),
+            dark_colorblind: alpha(color.accent.fg, 0.2),
+            dimmed: alpha(color.accent.fg, 0.2),
+            light_high_contrast: color.neutral.emphasisPlus,
+            dark_high_contrast: color.neutral.emphasisPlus,
         }),
-        selection_border: themes({
-            light: '#34d05800',
-            dark: '#17E5E600',
-            dimmed: '#17E5E600',
+        selection_border: buildSchemeVariants({
+            light: alpha(scale.green[3], 0.25),
+            dark: alpha(scale.green[3], 0.25),
         }),
         selection_corner_radius: 'cut',
         selection_corner_style: 'square',
@@ -116,10 +133,22 @@ export function ui(theme: Primer): UI {
     };
 }
 
-export function rules(theme: Primer): Rules[] {
+export function setRules(theme: Primer): Rules[] {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
+
+    const buildSchemeVariants = ({ light, dark }: { light: string; dark: string }) => {
+        return themes({
+            light: light,
+            light_high_contrast: light,
+            light_colorblind: light,
+            dark: dark,
+            dark_high_contrast: dark,
+            dark_colorblind: dark,
+            dimmed: dark,
+        });
+    };
 
     return [
         {
@@ -189,10 +218,9 @@ export function rules(theme: Primer): Rules[] {
                 'entity.name',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.purple[5],
                     dark: scale.purple[2],
-                    dimmed: scale.purple[2],
                 }),
             },
         },
@@ -210,20 +238,18 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['entity.name.tag'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
             },
         },
         {
             scope: ['keyword'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[5],
                     dark: scale.red[3],
-                    dimmed: scale.red[3],
                 }),
             },
         },
@@ -254,20 +280,18 @@ export function rules(theme: Primer): Rules[] {
                 'string punctuation.section.embedded source',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[8],
                     dark: scale.blue[1],
-                    dimmed: scale.blue[1],
                 }),
             },
         },
         {
             scope: ['support'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -277,20 +301,18 @@ export function rules(theme: Primer): Rules[] {
                 'meta.mapping.key string.quoted.double',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['variable'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.orange[6],
                     dark: scale.orange[2],
-                    dimmed: scale.orange[2],
                 }),
             },
         },
@@ -308,10 +330,9 @@ export function rules(theme: Primer): Rules[] {
             scope: ['invalid.broken'],
             settings: {
                 font_style: 'italic',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -319,10 +340,9 @@ export function rules(theme: Primer): Rules[] {
             scope: ['invalid.deprecated'],
             settings: {
                 font_style: 'italic',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -330,10 +350,9 @@ export function rules(theme: Primer): Rules[] {
             scope: ['invalid.illegal'],
             settings: {
                 font_style: 'italic',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -341,10 +360,9 @@ export function rules(theme: Primer): Rules[] {
             scope: ['invalid.unimplemented'],
             settings: {
                 font_style: 'italic',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -352,25 +370,22 @@ export function rules(theme: Primer): Rules[] {
             scope: ['carriage-return'],
             settings: {
                 font_style: 'italic underline',
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.red[5],
                     dark: scale.red[3],
-                    dimmed: scale.red[3],
                 }),
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.gray[0],
                     dark: scale.gray[9],
-                    dimmed: scale.gray[9],
                 }),
             },
         },
         {
             scope: ['message.error'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -383,20 +398,18 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['string variable'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['source.regexp', 'string.regexp'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[8],
                     dark: scale.blue[1],
-                    dimmed: scale.blue[1],
                 }),
             },
         },
@@ -408,40 +421,36 @@ export function rules(theme: Primer): Rules[] {
                 'string.regexp string.regexp.arbitrary-repitition',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[8],
                     dark: scale.blue[1],
-                    dimmed: scale.blue[1],
                 }),
             },
         },
         {
             scope: ['support.constant'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['support.variable'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['meta.module-reference'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -452,10 +461,9 @@ export function rules(theme: Primer): Rules[] {
                 'markup.list.unnumbered.bullet.markdown punctuation.definition.list_item.markdown',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.orange[6],
                     dark: scale.orange[2],
-                    dimmed: scale.orange[2],
                 }),
             },
         },
@@ -463,20 +471,18 @@ export function rules(theme: Primer): Rules[] {
             scope: ['markup.heading', 'markup.heading entity.name'],
             settings: {
                 font_style: 'bold',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['markup.quote'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
             },
         },
@@ -497,10 +503,9 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['markup.raw'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -511,15 +516,13 @@ export function rules(theme: Primer): Rules[] {
                 'punctuation.definition.deleted',
             ],
             settings: {
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.red[0],
                     dark: scale.red[9],
-                    dimmed: scale.red[9],
                 }),
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -530,55 +533,48 @@ export function rules(theme: Primer): Rules[] {
                 'punctuation.definition.inserted',
             ],
             settings: {
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.green[0],
                     dark: scale.green[9],
-                    dimmed: scale.green[9],
                 }),
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
             },
         },
         {
             scope: ['markup.changed', 'punctuation.definition.changed'],
             settings: {
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.orange[1],
                     dark: scale.orange[8],
-                    dimmed: scale.orange[8],
                 }),
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.orange[6],
                     dark: scale.orange[2],
-                    dimmed: scale.orange[2],
                 }),
             },
         },
         {
             scope: ['markup.ignored', 'markup.untracked'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.gray[1],
                     dark: scale.gray[8],
-                    dimmed: scale.gray[8],
                 }),
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['meta.diff.range'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.purple[5],
                     dark: scale.purple[2],
-                    dimmed: scale.purple[2],
                 }),
                 font_style: 'bold',
             },
@@ -586,10 +582,9 @@ export function rules(theme: Primer): Rules[] {
         {
             scope: ['meta.diff.header'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -597,20 +592,18 @@ export function rules(theme: Primer): Rules[] {
             scope: ['meta.separator'],
             settings: {
                 font_style: 'bold',
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
         {
             scope: ['meta.output'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -624,20 +617,18 @@ export function rules(theme: Primer): Rules[] {
                 'brackethighlighter.quote',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.gray[6],
                     dark: scale.gray[3],
-                    dimmed: scale.gray[3],
                 }),
             },
         },
         {
             scope: ['brackethighlighter.unmatched'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[7],
                     dark: scale.red[2],
-                    dimmed: scale.red[2],
                 }),
             },
         },
@@ -648,10 +639,9 @@ export function rules(theme: Primer): Rules[] {
                 'markup.underline.link',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[8],
                     dark: scale.blue[1],
-                    dimmed: scale.blue[1],
                 }),
                 font_style: 'underline',
             },
@@ -688,10 +678,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'YAML - Key',
             scope: ['entity.name.tag.yaml'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
             },
         },
@@ -699,10 +688,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'YAML - String',
             scope: ['source.yaml string.unquoted'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -710,10 +698,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'Better Find Buffer - Total Files Count',
             scope: ['variable.total_files_count.find-in-files'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
                 font_style: 'bold',
             },
@@ -722,10 +709,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'Better Find Buffer - Query Files Count',
             scope: ['string.query.find-in-files'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
                 font_style: 'bold',
             },
@@ -734,10 +720,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'Better Find Buffer - Match Count',
             scope: ['variable.matched_count.find-in-files'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.green[6],
                     dark: scale.green[1],
-                    dimmed: scale.green[1],
                 }),
                 font_style: 'bold',
             },
@@ -746,10 +731,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'Better Find Buffer - Match Files Count',
             scope: ['variable.matched_files_count.find-in-files'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
                 font_style: 'bold',
             },
@@ -758,10 +742,9 @@ export function rules(theme: Primer): Rules[] {
             name: 'Better Find Buffer - No Match',
             scope: ['variable.no_matches.find-in-files'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[5],
                     dark: scale.red[3],
-                    dimmed: scale.red[3],
                 }),
                 font_style: 'bold',
             },
@@ -801,10 +784,9 @@ export function rules(theme: Primer): Rules[] {
             scope: ['entity.name.filename.find-in-files'],
             settings: {
                 foreground: scale.white,
-                background: themes({
+                background: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
                 font_style: 'bold',
             },
@@ -828,8 +810,8 @@ export function rules(theme: Primer): Rules[] {
 
 export function getScheme(theme: Primer) {
     return {
-        colors: colors(theme),
-        ui: ui(theme),
-        rules: rules(theme),
+        colors: setColors(theme),
+        ui: setUi(theme),
+        rules: setRules(theme),
     };
 }
