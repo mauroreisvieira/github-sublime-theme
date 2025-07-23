@@ -9,8 +9,8 @@
         "comments": "#bdc4cc",
         "deprecated": "#ffffff",
         "invalid": "#ffffff",
-        "diffModified": "#71b7ff",
-        "diffAdded": "#26cd4d",
+        "diffModified": "#e09b13",
+        "diffAdded": "#09b43a",
         "diffDeleted": "#ff6a69",
         "--redish": "#ff9492",
         "--yellowish": "#f0b72f",
@@ -70,13 +70,16 @@
             "font_style": "italic"
         },
         {
-            "scope": "constant,entity.name.constant,variable.other.constant,variable.other.object,variable.language,entity"
+            "scope": "constant,entity.name.constant,variable.other.constant,variable.other.object,variable.language,entity",
+            "foreground": "#91cbff"
         },
         {
-            "scope": "variable.other.readwrite,variable.parameter.function,meta.export.default,meta.definition.variable,entity.name.type,entity.name.type.module"
+            "scope": "variable.other.readwrite,variable.parameter.function,meta.export.default,meta.definition.variable,entity.name.type,entity.name.type.module",
+            "foreground": "#ffb757"
         },
         {
-            "scope": "entity.name.type.class"
+            "scope": "entity.name.type.class",
+            "foreground": "#91cbff"
         },
         {
             "scope": "variable.function,entity.name.function,meta.export.default variable.other.readwrite,meta.tag.attributes variable.other.readwrite,entity.name",
@@ -95,7 +98,8 @@
             "foreground": "#ff9492"
         },
         {
-            "scope": "storage,storage.type"
+            "scope": "storage,storage.type",
+            "foreground": "#ff9492"
         },
         {
             "scope": "storage.modifier.package,storage.modifier.import,storage.type.java",

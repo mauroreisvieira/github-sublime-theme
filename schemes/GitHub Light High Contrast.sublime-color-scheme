@@ -9,9 +9,9 @@
         "comments": "#66707b",
         "deprecated": "#ffffff",
         "invalid": "#ffffff",
-        "diffModified": "#0349b4",
-        "diffAdded": "#055d20",
-        "diffDeleted": "#a0111f",
+        "diffModified": "#b58407",
+        "diffAdded": "#26a148",
+        "diffDeleted": "#ee5a5d",
         "--redish": "#ee5a5d",
         "--yellowish": "#b58407",
         "--greenish": "#26a148",
@@ -70,13 +70,16 @@
             "font_style": "italic"
         },
         {
-            "scope": "constant,entity.name.constant,variable.other.constant,variable.other.object,variable.language,entity"
+            "scope": "constant,entity.name.constant,variable.other.constant,variable.other.object,variable.language,entity",
+            "foreground": "#023b95"
         },
         {
-            "scope": "variable.other.readwrite,variable.parameter.function,meta.export.default,meta.definition.variable,entity.name.type,entity.name.type.module"
+            "scope": "variable.other.readwrite,variable.parameter.function,meta.export.default,meta.definition.variable,entity.name.type,entity.name.type.module",
+            "foreground": "#702c00"
         },
         {
-            "scope": "entity.name.type.class"
+            "scope": "entity.name.type.class",
+            "foreground": "#023b95"
         },
         {
             "scope": "variable.function,entity.name.function,meta.export.default variable.other.readwrite,meta.tag.attributes variable.other.readwrite,entity.name",
@@ -95,7 +98,8 @@
             "foreground": "#a0111f"
         },
         {
-            "scope": "storage,storage.type"
+            "scope": "storage,storage.type",
+            "foreground": "#a0111f"
         },
         {
             "scope": "storage.modifier.package,storage.modifier.import,storage.type.java",

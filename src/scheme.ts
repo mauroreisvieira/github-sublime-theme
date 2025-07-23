@@ -26,9 +26,9 @@ export function setColors(theme: Primer): Colors {
         }),
         deprecated: color.prettylights.syntax.invalidIllegalText,
         invalid: color.prettylights.syntax.invalidIllegalText,
-        diffModified: color.accent.fg,
-        diffAdded: color.success.fg,
-        diffDeleted: color.danger.fg,
+        diffModified: color.attention.muted,
+        diffAdded: color.success.muted,
+        diffDeleted: color.danger.muted,
         base: {
             black: color.checks.ansi.black,
             blue: color.checks.ansi.blue,
@@ -48,7 +48,13 @@ export function setUi(theme: Primer): UI {
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
 
-    const buildSchemeVariants = ({ light, dark }: { light: string; dark: string }) => {
+    const buildSchemeVariants = ({
+        light,
+        dark,
+    }: {
+        light: string;
+        dark: string;
+    }) => {
         return themes({
             light: light,
             light_high_contrast: light,
@@ -138,7 +144,13 @@ export function setRules(theme: Primer): Rules[] {
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
 
-    const buildSchemeVariants = ({ light, dark }: { light: string; dark: string }) => {
+    const buildSchemeVariants = ({
+        light,
+        dark,
+    }: {
+        light: string;
+        dark: string;
+    }) => {
         return themes({
             light: light,
             light_high_contrast: light,
@@ -175,10 +187,9 @@ export function setRules(theme: Primer): Rules[] {
                 'entity',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -192,20 +203,18 @@ export function setRules(theme: Primer): Rules[] {
                 'entity.name.type.module',
             ],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.orange[6],
                     dark: scale.orange[2],
-                    dimmed: scale.orange[2],
                 }),
             },
         },
         {
             scope: ['entity.name.type.class'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.blue[6],
                     dark: scale.blue[2],
-                    dimmed: scale.blue[2],
                 }),
             },
         },
@@ -256,10 +265,9 @@ export function setRules(theme: Primer): Rules[] {
         {
             scope: ['storage', 'storage.type'],
             settings: {
-                foreground: themes({
+                foreground: buildSchemeVariants({
                     light: scale.red[5],
                     dark: scale.red[3],
-                    dimmed: scale.red[3],
                 }),
             },
         },

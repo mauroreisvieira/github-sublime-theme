@@ -11,6 +11,8 @@
         "fontFace": "system",
         "titleBarBackground": "#0a0c10",
         "titleBarForeground": "#f0f3f6",
+        "tooltipBackground": "#91cbff",
+        "tooltipForeground": "#2672f3",
         "sidebarLabelFontSize": 13,
         "sidebarLabelPadding": [
             16,
@@ -24,6 +26,7 @@
         "sidebarLabelSelectedForeground": "#f0f3f6",
         "sidebarFolderForeground": "#f0f3f6",
         "sidebarFolderExpandedForeground": "var(accent)",
+        "treeActiveSelectionBackground": "#272b33",
         "tabBold": false,
         "tabLabelFontSize": 12,
         "tabInactiveBackground": "#010409",
@@ -34,6 +37,7 @@
         "tabButtonForeground": "#f0f3f6",
         "gridBorder": "#7a828e",
         "overlayBorder": "#272b33",
+        "overlayControlBorder": "#7a828e",
         "panelControlBackground": "#010409",
         "panelControlForeground": "#f0f3f6",
         "panelControlBorder": "#7a828e",
@@ -42,9 +46,12 @@
         "panelRowLabelForeground": "#f0f3f6",
         "panelRowSelectedBackground": "rgba(158,167,179,0.4)",
         "panelRowSelectedForeground": "#f0f3f6",
+        "panelRowMatchForeground": "#409eff",
+        "panelRowSelectedMatchForeground": "#409eff",
         "panelRowLinkForeground": "#71b7ff",
         "autoCompleteBackground": "#010409",
         "autoCompleteForeground": "#f0f3f6",
+        "autoCompleteSelectedBackground": "#3392FF44",
         "autoCompleteSelectedForeground": "#f0f3f6",
         "autoCompleteMatchForeground": "var(accent)",
         "autoCompleteSelectedMatchForeground": "var(accent)",
@@ -63,6 +70,9 @@
         "statusBarHoverForeground": "#f0f3f6",
         "statusBarBackground": "#0a0c10",
         "statusBarBorder": "#7a828e",
+        "progressBarBackground": "#409eff",
+        "scrollBar": "#484F5833",
+        "scrollTrack": "#484F5888",
         "vcsAnnotationBorder": "#7a828e",
         "vcsUntracked": "#26cd4d",
         "vcsModified": "#f0b72f",
@@ -246,17 +256,12 @@
             "layer1.inner_margin": [
                 0,
                 1,
-                1,
+                0,
                 1
             ],
             "layer1.tint": "var(tabBorder)",
             "layer1.opacity": 1,
-            "content_margin": [
-                0,
-                0,
-                8,
-                0
-            ],
+            "content_margin": 0,
             "connector_height": 0,
             "tint_index": 0,
             "tab_overlap": 0,
@@ -293,7 +298,11 @@
                 1
             ],
             "layer3.opacity": 1,
-            "tint_modifier": "var(tabInactiveBackground)"
+            "tint_modifier": "var(tabInactiveBackground)",
+            "content_margin": [
+                20,
+                0
+            ]
         },
         {
             "class": "tab_control",
@@ -326,7 +335,36 @@
         {
             "class": "tab_control",
             "settings": [
+                "!show_tab_close_buttons_on_left"
+            ],
+            "content_margin": [
+                20,
+                4,
+                10,
+                4
+            ]
+        },
+        {
+            "class": "tab_control",
+            "close_button_side": "left",
+            "settings": [
+                "show_tab_close_buttons_on_left"
+            ],
+            "content_margin": [
+                10,
+                4,
+                20,
+                4
+            ]
+        },
+        {
+            "class": "tab_control",
+            "settings": [
                 "!show_tab_close_buttons"
+            ],
+            "content_margin": [
+                20,
+                4
             ]
         },
         {
@@ -414,7 +452,7 @@
             "layer0.tint": "var(sidebarBackground)",
             "layer1.opacity": 1,
             "layer1.inner_margin": [
-                0,
+                1,
                 1,
                 1,
                 0
@@ -422,9 +460,9 @@
             "layer1.draw_center": false,
             "layer1.tint": "var(sidebarBorder)",
             "content_margin": [
-                0,
+                1,
                 6,
-                0,
+                1,
                 0
             ]
         },
@@ -803,15 +841,16 @@
             "class": "status_bar",
             "layer0.opacity": 1,
             "layer0.tint": "var(statusBarBackground)",
-            "layer1.opacity": 1,
-            "layer1.tint": "var(statusBarBorder)",
-            "layer1.draw_center": false,
             "content_margin": [
                 8,
                 3,
-                0,
+                8,
                 3
-            ]
+            ],
+            "layer1.draw_center": false,
+            "layer1.inner_margin": 1,
+            "layer1.tint": "var(statusBarBorder)",
+            "layer1.opacity": 1
         },
         {
             "class": "status_bar",
@@ -852,6 +891,15 @@
             "layer1.opacity": 1
         },
         {
+            "class": "status_container",
+            "content_margin": [
+                8,
+                0,
+                0,
+                0
+            ]
+        },
+        {
             "class": "label_control",
             "parents": [
                 {
@@ -888,7 +936,16 @@
             "class": "overlay_control",
             "layer0.tint": "var(overlayBorder)",
             "layer0.opacity": 1,
-            "content_margin": 1
+            "content_margin": 1,
+            "layer1.opacity": 1,
+            "layer1.inner_margin": [
+                1,
+                0,
+                1,
+                1
+            ],
+            "layer1.draw_center": false,
+            "layer1.tint": "var(overlayControlBorder)"
         },
         {
             "class": "dialog",
@@ -1037,12 +1094,7 @@
             "layer0.tint": "var(panelControlBackground)",
             "layer0.opacity": 1,
             "layer1.draw_center": false,
-            "layer1.inner_margin": [
-                0,
-                1,
-                0,
-                1
-            ],
+            "layer1.inner_margin": 1,
             "layer1.tint": "var(panelControlBorder)",
             "layer1.opacity": 1,
             "content_margin": [
@@ -1074,7 +1126,7 @@
             "class": "text_line_control",
             "layer0.opacity": 1,
             "layer0.inner_margin": [
-                2,
+                12,
                 0
             ],
             "layer0.tint": "var(background)",
@@ -1083,8 +1135,8 @@
             "layer1.inner_margin": 1,
             "layer1.draw_center": false,
             "content_margin": [
-                6,
-                1
+                8,
+                6
             ],
             "color_scheme_tint": "var(background)"
         },

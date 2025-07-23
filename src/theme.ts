@@ -74,10 +74,9 @@ export function variables(theme: Primer): ThemeVariables {
         sidebarFolderForeground: color.fg.muted,
         sidebarFolderExpandedForeground: 'var(accent)',
 
-        treeActiveSelectionBackground: themes({
+        treeActiveSelectionBackground: buildThemeVariants({
             light: '#e2e5e9',
             dark: scale.gray[7],
-            dimmed: scale.gray[7],
             adaptive: 'color(var(background) blend(var(foreground) 90%))',
         }),
 
@@ -92,6 +91,7 @@ export function variables(theme: Primer): ThemeVariables {
 
         gridBorder: color.border.default,
         overlayBorder: color.canvas.overlay,
+        overlayControlBorder: color.border.default,
 
         panelControlBackground: color.canvas.inset,
         panelControlForeground: color.fg.default,
@@ -102,26 +102,23 @@ export function variables(theme: Primer): ThemeVariables {
         panelRowLabelForeground: color.fg.default,
         panelRowSelectedBackground: color.neutral.muted,
         panelRowSelectedForeground: color.fg.default,
-        panelRowMatchForeground: themes({
+        panelRowMatchForeground: buildThemeVariants({
             light: scale.blue[5],
             dark: scale.blue[4],
-            dimmed: scale.blue[4],
             adaptive: color.accent.fg,
         }),
-        panelRowSelectedMatchForeground: themes({
+        panelRowSelectedMatchForeground: buildThemeVariants({
             light: scale.blue[5],
             dark: scale.blue[4],
-            dimmed: scale.blue[4],
             adaptive: color.accent.fg,
         }),
         panelRowLinkForeground: color.accent.fg,
 
         autoCompleteBackground: color.canvas.inset,
         autoCompleteForeground: color.fg.default,
-        autoCompleteSelectedBackground: themes({
+        autoCompleteSelectedBackground: buildThemeVariants({
             light: '#0366d625',
             dark: '#3392FF44',
-            dimmed: '#3392FF44',
             adaptive: '#3392FF44',
         }),
         autoCompleteSelectedForeground: color.fg.default,
@@ -147,23 +144,20 @@ export function variables(theme: Primer): ThemeVariables {
         statusBarBackground: color.canvas.default,
         statusBarBorder: color.border.default,
 
-        progressBarBackground: themes({
+        progressBarBackground: buildThemeVariants({
             light: scale.blue[4],
             dark: scale.blue[5],
-            dimmed: scale.blue[5],
             adaptive: color.accent.fg,
         }),
 
-        scrollBar: themes({
+        scrollBar: buildThemeVariants({
             light: '#959da533',
             dark: '#484F5833',
-            dimmed: '#484F5833',
             adaptive: '#484F5833',
         }),
-        scrollTrack: themes({
+        scrollTrack: buildThemeVariants({
             light: '#959da588',
             dark: '#484F5888',
-            dimmed: '#484F5888',
             adaptive: '#484F5888',
         }),
 
@@ -314,11 +308,11 @@ export const rules = [
         'layer0.opacity': 1.0,
 
         'layer1.draw_center': false,
-        'layer1.inner_margin': [0, 1, 1, 1],
+        'layer1.inner_margin': [0, 1, 0, 1],
         'layer1.tint': 'var(tabBorder)',
         'layer1.opacity': 1.0,
 
-        content_margin: [0, 0, 8, 0],
+        content_margin: 0,
         connector_height: 0,
         tint_index: 0,
         tab_overlap: 0,
@@ -349,6 +343,7 @@ export const rules = [
         'layer3.inner_margin': [0, 0, 1, 1],
         'layer3.opacity': 1,
         tint_modifier: 'var(tabInactiveBackground)',
+        content_margin: [20, 0],
     },
     {
         class: 'tab_control',
@@ -372,8 +367,23 @@ export const rules = [
 
     {
         class: 'tab_control',
-        settings: ['!show_tab_close_buttons'],
+        settings: ['!show_tab_close_buttons_on_left'],
+        content_margin: [20, 4, 10, 4],
     },
+
+    {
+        class: 'tab_control',
+        close_button_side: 'left',
+        settings: ['show_tab_close_buttons_on_left'],
+        content_margin: [10, 4, 20, 4],
+    },
+
+    {
+        class: 'tab_control',
+        settings: ['!show_tab_close_buttons'],
+        content_margin: [20, 4],
+    },
+
     {
         class: 'tab_close_button',
         settings: ['show_tab_close_buttons'],
@@ -422,10 +432,10 @@ export const rules = [
         'layer0.opacity': 1.0,
         'layer0.tint': 'var(sidebarBackground)',
         'layer1.opacity': 1.0,
-        'layer1.inner_margin': [0, 1, 1, 0],
+        'layer1.inner_margin': [1, 1, 1, 0],
         'layer1.draw_center': false,
         'layer1.tint': 'var(sidebarBorder)',
-        content_margin: [0, 6, 0, 0],
+        content_margin: [1, 6, 1, 0],
     },
     {
         class: 'sidebar_heading',
@@ -668,10 +678,11 @@ export const rules = [
         class: 'status_bar',
         'layer0.opacity': 1.0,
         'layer0.tint': 'var(statusBarBackground)',
-        'layer1.opacity': 1.0,
-        'layer1.tint': 'var(statusBarBorder)',
+        content_margin: [8, 3, 8, 3],
         'layer1.draw_center': false,
-        content_margin: [8, 3, 0, 3],
+        'layer1.inner_margin': 1,
+        'layer1.tint': 'var(statusBarBorder)',
+        'layer1.opacity': 1.0,
     },
     {
         class: 'status_bar',
@@ -692,6 +703,10 @@ export const rules = [
         class: 'status_bar',
         attributes: ['!panel_visible'],
         'layer1.opacity': 1.0,
+    },
+    {
+        class: 'status_container',
+        content_margin: [8, 0, 0, 0],
     },
     {
         class: 'label_control',
@@ -720,6 +735,10 @@ export const rules = [
         'layer0.tint': 'var(overlayBorder)',
         'layer0.opacity': 1.0,
         content_margin: 1,
+        'layer1.opacity': 1.0,
+        'layer1.inner_margin': [1, 0, 1, 1],
+        'layer1.draw_center': false,
+        'layer1.tint': 'var(overlayControlBorder)',
     },
 
     // DIALOG
@@ -844,7 +863,7 @@ export const rules = [
         'layer0.tint': 'var(panelControlBackground)',
         'layer0.opacity': 1.0,
         'layer1.draw_center': false,
-        'layer1.inner_margin': [0, 1, 0, 1],
+        'layer1.inner_margin': 1,
         'layer1.tint': 'var(panelControlBorder)',
         'layer1.opacity': 1.0,
         content_margin: [12, 12],
@@ -870,13 +889,13 @@ export const rules = [
     {
         class: 'text_line_control',
         'layer0.opacity': 1.0,
-        'layer0.inner_margin': [2, 0],
+        'layer0.inner_margin': [12, 0],
         'layer0.tint': 'var(background)',
         'layer1.tint': 'var(inputBorder)',
         'layer1.opacity': 1.0,
         'layer1.inner_margin': 1,
         'layer1.draw_center': false,
-        content_margin: [6, 1],
+        content_margin: [8, 6],
         color_scheme_tint: 'var(background)',
     },
 
