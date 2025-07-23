@@ -36,10 +36,14 @@
 
 1. Command Palette `Tools → Command Palette` or `CMD/CTRL` + `SHIFT` + `P`
 2. Typing `UI: Select Theme` next find for your favorite theme:
-    - `GitHub Adaptive` 🆕
+    - `GitHub Adaptive`
     - `GitHub Dark`
     - `GitHub Dimmed`
     - `GitHub Light`
+    - `GitHub Dark High Colorblind` 🆕
+    - `GitHub Dark High Contrast` 🆕
+    - `GitHub Light High Colorblind` 🆕
+    - `GitHub Light High Contrast` 🆕
 3. Finally press `ENTER`:
 
 **You can activate available schemes from:**
@@ -49,12 +53,16 @@
     - `GitHub Dark`
     - `GitHub Dimmed`
     - `GitHub Light`
+    - `GitHub Dark High Colorblind` 🆕
+    - `GitHub Dark High Contrast` 🆕
+    - `GitHub Light High Colorblind` 🆕
+    - `GitHub Light High Contrast` 🆕
 3. Finally press `ENTER`:
 
 **Additionally, there are also two older schemes.**
 
--   `GitHub Light Legacy`
--   `GitHub Dark Legacy`
+- `GitHub Light Legacy`
+- `GitHub Dark Legacy`
 
 > **Note:** They might not get updated frequently and are kept for legacy reasons.
 
