@@ -63,6 +63,7 @@ const themes: GenerateTheme[] = [
             extension: '.hidden-theme',
         },
         settings: {
+            extends: 'Adaptive.sublime-theme',
             rules: getRules(),
         },
     },

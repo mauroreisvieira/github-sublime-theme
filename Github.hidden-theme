@@ -1,4 +1,5 @@
 {
+    "extends": "Adaptive.sublime-theme",
     "rules": [
         {
             "class": "title_bar",
@@ -270,6 +271,16 @@
             "content_margin": [
                 10,
                 4,
+                20,
+                4
+            ]
+        },
+        {
+            "class": "tab_control",
+            "settings": [
+                "!show_tab_close_buttons"
+            ],
+            "content_margin": [
                 20,
                 4
             ]
@@ -1029,10 +1040,7 @@
         {
             "class": "text_line_control",
             "layer0.opacity": 1,
-            "layer0.inner_margin": [
-                12,
-                0
-            ],
+            "layer0.inner_margin": 1,
             "layer0.tint": "var(background)",
             "layer1.tint": "var(inputBorder)",
             "layer1.opacity": 1,
@@ -1040,7 +1048,7 @@
             "layer1.draw_center": false,
             "content_margin": [
                 8,
-                6
+                12
             ],
             "color_scheme_tint": "var(background)"
         },
