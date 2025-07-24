@@ -1015,10 +1015,7 @@
             "layer1.inner_margin": 1,
             "layer1.tint": "var(panelControlBorder)",
             "layer1.opacity": 1,
-            "content_margin": [
-                12,
-                12
-            ]
+            "content_margin": 1
         },
         {
             "class": "panel_control",
@@ -1043,10 +1040,7 @@
         {
             "class": "text_line_control",
             "layer0.opacity": 1,
-            "layer0.inner_margin": [
-                12,
-                0
-            ],
+            "layer0.inner_margin": 1,
             "layer0.tint": "var(background)",
             "layer1.tint": "var(inputBorder)",
             "layer1.opacity": 1,
@@ -1054,7 +1048,7 @@
             "layer1.draw_center": false,
             "content_margin": [
                 8,
-                6
+                12
             ],
             "color_scheme_tint": "var(background)"
         },

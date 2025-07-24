@@ -30,13 +30,8 @@ export interface ThemeVariables {
 
 export interface ThemeSetting {
     extends?: string;
-    variables: ThemeVariables;
+    variables?: ThemeVariables;
     rules?: any;
-}
-
-export interface Theme {
-    name: string;
-    settings: ThemeSetting;
 }
 
 export interface GenerateTheme {

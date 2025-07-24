@@ -1,7 +1,7 @@
 import chroma from 'chroma-js';
 import { getColors } from './colors';
 // Types
-import type { Options, Primer } from './interfaces';
+import type { Options, Primer, Scheme } from './interfaces';
 import type { Colors, Rules, UI } from '@meetio/scheme-generator/dist/types';
 
 export function setColors(theme: Primer): Colors {
@@ -823,3 +823,41 @@ export function getScheme(theme: Primer) {
         rules: setRules(theme),
     };
 }
+
+export const schemes: Scheme[] = [
+    {
+        name: 'GitHub Dark',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dark'),
+    },
+    {
+        name: 'GitHub Dark High Contrast',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dark_high_contrast'),
+    },
+    {
+        name: 'GitHub Dark Colorblind',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dark_colorblind'),
+    },
+    {
+        name: 'GitHub Light',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('light'),
+    },
+    {
+        name: 'GitHub Light High Contrast',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('light_high_contrast'),
+    },
+    {
+        name: 'GitHub Light Colorblind',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('light_colorblind'),
+    },
+    {
+        name: 'GitHub Dimmed',
+        author: 'Mauro Reis Vieira <mauroreisvieira@gmail.com>',
+        variables: getScheme('dimmed'),
+    },
+];
