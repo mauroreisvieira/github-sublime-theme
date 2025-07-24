@@ -10,7 +10,7 @@ import type {
     Options,
 } from './interfaces';
 
-export function getVariables(theme: Primer): ThemeVariables {
+export function setVariables(theme: Primer): ThemeVariables {
     const color = getColors(theme);
     const themes = (options: Options) => options[theme];
     const scale = color.scale;
@@ -1526,6 +1526,99 @@ export function getRules() {
         },
     ];
 }
+
+export const themes: GenerateTheme[] = [
+    {
+        output: {
+            filename: 'GitHub Adaptive',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('adaptive'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub',
+            extension: '.hidden-theme',
+        },
+        settings: {
+            extends: 'Adaptive.sublime-theme',
+            rules: getRules(),
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('dark'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark High Contrast',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('dark_high_contrast'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark Colorblind',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('dark_colorblind'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('light'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light High Contrast',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('light_high_contrast'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light Colorblind',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('light_colorblind'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dimmed',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: setVariables('dimmed'),
+            rules: [],
+        },
+    },
+];
 
 export function generateTheme(options: GenerateTheme) {
     const { settings, output } = options;
