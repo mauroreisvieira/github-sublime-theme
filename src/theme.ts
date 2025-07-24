@@ -623,6 +623,7 @@ export function getRules() {
                 },
             ],
             'layer0.opacity': 0,
+            "layer0.tint": "var(sidebarBackground)"
         },
         {
             class: 'scroll_bar_control',
