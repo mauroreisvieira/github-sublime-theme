@@ -1,5 +1,4 @@
 {
-    "extends": "Adaptive.sublime-theme",
     "rules": [
         {
             "class": "title_bar",
@@ -271,16 +270,6 @@
             "content_margin": [
                 10,
                 4,
-                20,
-                4
-            ]
-        },
-        {
-            "class": "tab_control",
-            "settings": [
-                "!show_tab_close_buttons"
-            ],
-            "content_margin": [
                 20,
                 4
             ]
@@ -1015,10 +1004,7 @@
             "layer1.inner_margin": 1,
             "layer1.tint": "var(panelControlBorder)",
             "layer1.opacity": 1,
-            "content_margin": [
-                12,
-                12
-            ]
+            "content_margin": 1
         },
         {
             "class": "panel_control",

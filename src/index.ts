@@ -1,8 +1,8 @@
 import { getScheme } from './scheme';
-import { generateTheme, getTheme } from './theme';
+import { generateTheme, getRules, getVariables } from './theme';
 import { generateScheme } from '@meetio/scheme-generator';
 // Types
-import { Scheme, Theme } from './interfaces';
+import type { GenerateTheme, Scheme } from './interfaces';
 
 [
     {
@@ -56,44 +56,109 @@ import { Scheme, Theme } from './interfaces';
     });
 });
 
-[
+const themes: GenerateTheme[] = [
     {
-        name: 'GitHub Dark',
-        settings: getTheme('dark'),
-    },
-    {
-        name: 'GitHub Dark High Contrast',
-        settings: getTheme('dark_high_contrast'),
-    },
-    {
-        name: 'GitHub Dark Colorblind',
-        settings: getTheme('dark_colorblind'),
-    },
-    {
-        name: 'GitHub Light',
-        settings: getTheme('light'),
-    },
-    {
-        name: 'GitHub Light High Contrast',
-        settings: getTheme('light_high_contrast'),
-    },
-    {
-        name: 'GitHub Light Colorblind',
-        settings: getTheme('light'),
-    },
-    {
-        name: 'GitHub Dimmed',
-        settings: getTheme('dimmed'),
-    },
-    {
-        name: 'GitHub Adaptive',
-        settings: getTheme('adaptive'),
-    },
-].map((theme: Theme) => {
-    generateTheme({
         output: {
-            filename: theme.name,
+            filename: 'GitHub',
+            extension: '.hidden-theme',
         },
-        settings: theme.settings,
+        settings: {
+            rules: getRules(),
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('dark'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark High Contrast',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('dark_high_contrast'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dark Colorblind',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('dark_colorblind'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('light'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light High Contrast',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('light_high_contrast'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Light Colorblind',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('light_colorblind'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Dimmed',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('dimmed'),
+            rules: [],
+        },
+    },
+    {
+        output: {
+            filename: 'GitHub Adaptive',
+            extension: '.sublime-theme',
+        },
+        settings: {
+            extends: 'Github.hidden-theme',
+            variables: getVariables('adaptive'),
+            rules: [],
+        },
+    },
+];
+
+themes.map(({ output, settings }) => {
+    generateTheme({
+        output,
+        settings,
     });
 });
