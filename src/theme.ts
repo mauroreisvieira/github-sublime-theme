@@ -894,13 +894,13 @@ export function getRules() {
             class: 'text_line_control',
             'layer0.opacity': 1.0,
             'layer0.inner_margin': 1,
-            'layer0.tint': 'var(background)',
+            'layer0.tint': 'var(inputBackground)',
             'layer1.tint': 'var(inputBorder)',
             'layer1.opacity': 1.0,
             'layer1.inner_margin': 1,
             'layer1.draw_center': false,
             content_margin: [8, 12],
-            color_scheme_tint: 'var(background)',
+            color_scheme_tint: 'var(inputBackground)',
         },
 
         // DROPDOWN
