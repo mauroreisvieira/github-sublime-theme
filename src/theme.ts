@@ -100,7 +100,11 @@ export function setVariables(theme: Primer): ThemeVariables {
         panelRowBackground: color.canvas.inset,
         panelRowForeground: color.fg.default,
         panelRowLabelForeground: color.fg.default,
-        panelRowSelectedBackground: color.neutral.muted,
+        panelRowSelectedBackground: buildThemeVariants({
+            light: '#e2e5e9',
+            dark: scale.gray[7],
+            adaptive: 'color(var(background) blend(var(foreground) 90%))',
+        }),,
         panelRowSelectedForeground: color.fg.default,
         panelRowMatchForeground: buildThemeVariants({
             light: scale.blue[5],

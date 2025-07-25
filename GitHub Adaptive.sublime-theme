@@ -44,7 +44,7 @@
         "panelRowBackground": "color(var(foreground) blend(var(background) 5%)))",
         "panelRowForeground": "var(--foreground)",
         "panelRowLabelForeground": "var(--foreground)",
-        "panelRowSelectedBackground": "color(var(background) blend(var(foreground) 80%))",
+        "panelRowSelectedBackground": "color(var(background) blend(var(foreground) 90%))",
         "panelRowSelectedForeground": "var(--foreground)",
         "panelRowMatchForeground": "var(--accent)",
         "panelRowSelectedMatchForeground": "var(--accent)",

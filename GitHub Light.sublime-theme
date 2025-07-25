@@ -44,7 +44,7 @@
         "panelRowBackground": "#f6f8fa",
         "panelRowForeground": "#1f2328",
         "panelRowLabelForeground": "#1f2328",
-        "panelRowSelectedBackground": "rgba(175,184,193,0.2)",
+        "panelRowSelectedBackground": "#e2e5e9",
         "panelRowSelectedForeground": "#1f2328",
         "panelRowMatchForeground": "#0969da",
         "panelRowSelectedMatchForeground": "#0969da",
