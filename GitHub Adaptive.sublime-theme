@@ -29,6 +29,7 @@
         "treeActiveSelectionBackground": "color(var(background) blend(var(foreground) 90%))",
         "tabBold": false,
         "tabLabelFontSize": 12,
+        "tabInactiveForeground": "var(--foreground)",
         "tabInactiveBackground": "color(var(foreground) blend(var(background) 5%)))",
         "tabBorder": "color(var(background) blend(var(foreground) 90%))",
         "tabActiveForeground": "var(--foreground)",
