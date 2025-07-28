@@ -241,14 +241,26 @@
                 0
             ],
             "layer3.tint": "var(tabSelectedBorderBorder)",
-            "tint_modifier": "var(tabActiveBackground)"
+            "tint_modifier": "transparent"
         },
         {
             "class": "tab_label",
             "font.face": "var(fontFace)",
             "font.size": "var(tabLabelFontSize)",
-            "fg": "var(tabActiveForeground)",
-            "font.bold": "var(tabBold)"
+            "font.bold": "var(tabBold)",
+            "fg": "var(tabInactiveForeground)"
+        },
+        {
+            "class": "tab_label",
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "fg": "var(tabActiveForeground)"
         },
         {
             "class": "tab_control",
@@ -295,11 +307,26 @@
                 8
             ],
             "layer0.texture": "GitHub Theme/textures/actions/close.png",
-            "layer0.tint": "var(tabActiveForeground)",
+            "layer0.tint": "var(tabInactiveForeground)",
             "layer0.inner_margin": [
                 4,
                 4
             ]
+        },
+        {
+            "class": "tab_close_button",
+            "settings": [
+                "show_tab_close_buttons"
+            ],
+            "parents": [
+                {
+                    "class": "tab_control",
+                    "attributes": [
+                        "selected"
+                    ]
+                }
+            ],
+            "layer0.tint": "var(tabActiveForeground)"
         },
         {
             "class": "tab_close_button",

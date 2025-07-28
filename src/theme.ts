@@ -82,10 +82,11 @@ export function setVariables(theme: Primer): ThemeVariables {
 
         tabBold: false,
         tabLabelFontSize: 12,
+        tabInactiveForeground: color.fg.default,
         tabInactiveBackground: color.canvas.inset,
         tabBorder: color.border.default,
-        tabActiveForeground: color.fg.default,
-        tabActiveBackground: color.canvas.default,
+        tabActiveForeground: 'var(--foreground)',
+        tabActiveBackground: 'var(--background)',
         tabSelectedBorderBorder: color.primer.border.active,
         tabButtonForeground: color.fg.default,
 
@@ -104,7 +105,7 @@ export function setVariables(theme: Primer): ThemeVariables {
             light: '#e2e5e9',
             dark: scale.gray[7],
             adaptive: 'color(var(background) blend(var(foreground) 90%))',
-        }),,
+        }),
         panelRowSelectedForeground: color.fg.default,
         panelRowMatchForeground: buildThemeVariants({
             light: scale.blue[5],
@@ -359,15 +360,20 @@ export function getRules() {
 
             'layer3.inner_margin': [0, 1, 0, 0],
             'layer3.tint': 'var(tabSelectedBorderBorder)',
-            tint_modifier: 'var(tabActiveBackground)',
+            tint_modifier: 'transparent',
         },
 
         {
             class: 'tab_label',
             'font.face': 'var(fontFace)',
             'font.size': 'var(tabLabelFontSize)',
-            fg: 'var(tabActiveForeground)',
             'font.bold': 'var(tabBold)',
+            fg: 'var(tabInactiveForeground)',
+        },
+        {
+            class: "tab_label",
+            parents: [{ class: 'tab_control', attributes: ['selected'] }],
+            fg: 'var(tabActiveForeground)',
         },
 
         {
@@ -392,8 +398,14 @@ export function getRules() {
             settings: ['show_tab_close_buttons'],
             content_margin: [8, 8],
             'layer0.texture': 'GitHub Theme/textures/actions/close.png',
-            'layer0.tint': 'var(tabActiveForeground)',
+            'layer0.tint': 'var(tabInactiveForeground)',
             'layer0.inner_margin': [4, 4],
+        },
+        {
+            class: 'tab_close_button',
+            settings: ['show_tab_close_buttons'],
+            parents: [{ class: 'tab_control', attributes: ['selected'] }],
+            'layer0.tint': 'var(tabActiveForeground)',
         },
         {
             class: 'tab_close_button',
