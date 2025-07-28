@@ -441,6 +441,11 @@ export function getRules() {
             content_margin: [1, 6, 1, 0],
         },
         {
+            class: 'sidebar_container',
+            settings: ['sidebar_on_right'],
+            'layer1.inner_margin': [1, 1, 0, 0]
+        },
+        {
             class: 'sidebar_heading',
             fg: 'var(sidebarHeadingForeground)',
             'font.size': 'var(fontSizeSm)',
