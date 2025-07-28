@@ -438,7 +438,7 @@ export function getRules() {
         {
             class: 'grid_layout_control',
             border_color: 'var(gridBorder)',
-            border_size: 2,
+            border_size: 1,
         },
 
         // SIDEBAR LABEL
