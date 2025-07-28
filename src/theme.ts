@@ -447,10 +447,15 @@ export function getRules() {
             'layer0.opacity': 1.0,
             'layer0.tint': 'var(sidebarBackground)',
             'layer1.opacity': 1.0,
-            'layer1.inner_margin': [1, 1, 1, 0],
+            'layer1.inner_margin': [0, 1, 1, 0],
             'layer1.draw_center': false,
             'layer1.tint': 'var(sidebarBorder)',
             content_margin: [1, 6, 1, 0],
+        },
+        {
+            class: 'sidebar_container',
+            settings: ['sidebar_on_right'],
+            'layer1.inner_margin': [1, 1, 0, 0]
         },
         {
             class: 'sidebar_heading',
