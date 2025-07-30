@@ -888,7 +888,7 @@ export function getRules() {
             'layer0.tint': 'var(panelControlBackground)',
             'layer0.opacity': 1.0,
             'layer1.draw_center': false,
-            'layer1.inner_margin': 1,
+            'layer1.inner_margin': [0, 1, 0, 1],
             'layer1.tint': 'var(panelControlBorder)',
             'layer1.opacity': 1.0,
             content_margin: 1,
