@@ -705,7 +705,7 @@ export function getRules() {
             'layer0.tint': 'var(statusBarBackground)',
             content_margin: [8, 3, 8, 3],
             'layer1.draw_center': false,
-            'layer1.inner_margin': 1,
+            'layer1.inner_margin': [0, 1, 0, 0],
             'layer1.tint': 'var(statusBarBorder)',
             'layer1.opacity': 1.0,
         },
