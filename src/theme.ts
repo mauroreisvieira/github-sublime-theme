@@ -920,7 +920,7 @@ export function getRules() {
             'layer1.opacity': 1.0,
             'layer1.inner_margin': 1,
             'layer1.draw_center': false,
-            content_margin: [8, 12],
+            content_margin: [8, 10],
             color_scheme_tint: 'var(inputBackground)',
         },
 
