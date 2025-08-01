@@ -605,27 +605,12 @@ export function getRules() {
         },
         {
             class: 'scroll_bar_control',
-            settings: ['!overlay_scroll_bars'],
-            'layer0.opacity': 1,
-        },
-        {
-            class: 'scroll_bar_control',
             parents: [
                 {
-                    class: 'popup_control auto_complete_popup',
+                    class: 'auto_complete_popup',
                 },
             ],
-            tint_modifier: [0, 0, 0, 0.05],
-        },
-        {
-            class: 'scroll_bar_control',
-            parents: [
-                {
-                    class: 'switch_project_window',
-                },
-            ],
-            'layer0.tint': [235, 237, 239],
-            tint_index: -1,
+            tint_modifier: 'var(autoCompleteBackground)',
         },
         {
             class: 'scroll_bar_control',
@@ -634,17 +619,7 @@ export function getRules() {
                     class: 'sidebar_container',
                 },
             ],
-            'layer0.opacity': 0,
-        },
-        {
-            class: 'scroll_corner_control',
-            parents: [
-                {
-                    class: 'sidebar_container',
-                },
-            ],
-            'layer0.opacity': 0,
-            "layer0.tint": "var(sidebarBackground)"
+            tint_modifier: 'var(sidebarBackground)',
         },
         {
             class: 'scroll_bar_control',
@@ -653,9 +628,60 @@ export function getRules() {
                     class: 'overlay_control',
                 },
             ],
-            'layer0.opacity': 0,
-            content_margin: [4, 0, 0, 0],
+            tint_modifier: 'var(panelControlBackground)',
         },
+        {
+            class: 'scroll_bar_control',
+            parents: [
+                {
+                    class: 'switch_project_window',
+                },
+            ],
+            tint_modifier: 'var(panelControlBackground)',
+        },
+
+        {
+            class: 'scroll_corner_control',
+            tint_index: 0,
+            'layer0.opacity': 1,
+        },
+        {
+            class: 'scroll_corner_control',
+            parents: [
+                {
+                    class: 'auto_complete_popup',
+                },
+            ],
+            tint_modifier: 'var(autoCompleteBackground)',
+        },
+        {
+            class: 'scroll_corner_control',
+            parents: [
+                {
+                    class: 'sidebar_container',
+                },
+            ],
+            tint_modifier: 'var(sidebarBackground)',
+        },
+        {
+            class: 'scroll_corner_control',
+            parents: [
+                {
+                    class: 'overlay_control',
+                },
+            ],
+            tint_modifier: 'var(panelControlBackground)',
+        },
+        {
+            class: 'scroll_corner_control',
+            parents: [
+                {
+                    class: 'switch_project_window',
+                },
+            ],
+            tint_modifier: 'var(panelControlBackground)',
+        },
+
         {
             class: 'scroll_track_control',
             'layer0.tint': 'var(scrollBar)',
@@ -668,11 +694,7 @@ export function getRules() {
             'layer0.tint': 'var(scrollTrack)',
             'layer0.opacity': 1,
         },
-        {
-            class: 'scroll_corner_control',
-            'layer0.opacity': 1,
-            tint_index: 0,
-        },
+
         {
             class: 'scroll_track_control',
             attributes: ['horizontal'],
@@ -684,6 +706,7 @@ export function getRules() {
             attributes: ['horizontal'],
             'layer0.tint': 'var(scrollTrack)',
         },
+
         {
             class: 'progress_bar_control',
             'layer0.tint': ['background', 0.94],
