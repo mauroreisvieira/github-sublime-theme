@@ -952,14 +952,25 @@ export function getRules() {
 
         // AUTO COMPLETE
         {
-            class: 'auto_complete_info',
-            spacing: 8,
+            class: 'auto_complete_popup',
+            content_margin: 1,
+            'layer0.tint': 'var(panelControlBorder)',
         },
         {
             class: 'auto_complete',
             row_padding: 0,
-            tint_index: 0,
-            tint_modifier: 'var(autoCompleteBackground)',
+            tint_index: -1,
+            'layer0.tint': 'var(autoCompleteBackground)',
+            'layer0.opacity': 1.0,
+        },
+        {
+            class: 'table_row',
+            'layer0.tint': 'var(autoCompleteSelectedBackground)',
+            'layer0.opacity': 0,
+        },
+        {
+            class: 'table_row',
+            attributes: ['selected'],
             'layer0.opacity': 1.0,
         },
         {
@@ -974,6 +985,22 @@ export function getRules() {
             fg_blend: true,
         },
         {
+            class: 'auto_complete_hint',
+            opacity: 0.7,
+            'font.italic': true,
+        },
+
+        {
+            class: 'auto_complete_detail_pane',
+            tint_index: -1,
+            'layer0.tint': 'var(autoCompleteBackground)',
+            'layer0.opacity': 1.0,
+        },
+        {
+            class: 'auto_complete_info',
+            spacing: 8,
+        },
+        {
             class: 'auto_complete_kind_name_label',
             'font.italic': true,
             border_color: 'color(var(accent) a(0.8))',
@@ -982,20 +1009,17 @@ export function getRules() {
             class: 'auto_complete_description_label',
             'font.italic': true,
         },
+
+        // KIND INFO
         {
-            class: 'auto_complete_hint',
-            opacity: 0.7,
-            'font.italic': true,
-        },
-        {
-            class: 'table_row',
-            'layer0.tint': 'var(autoCompleteSelectedBackground)',
+            class: 'kind_container',
             'layer0.opacity': 0,
+            'layer1.opacity': 0,
         },
         {
-            class: 'table_row',
-            attributes: ['selected'],
-            'layer0.opacity': 1.0,
+            class: 'kind_label',
+            'font.bold': false,
+            'font.italic': false,
         },
 
         // BUTTON CONTROL
