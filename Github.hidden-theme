@@ -1113,7 +1113,7 @@
             "layer1.draw_center": false,
             "content_margin": [
                 8,
-                12
+                10
             ],
             "color_scheme_tint": "var(inputBackground)"
         },
