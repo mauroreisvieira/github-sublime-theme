@@ -321,7 +321,7 @@ export function getRules() {
             content_margin: 0,
             connector_height: 0,
             tint_index: 0,
-            tab_overlap: 0,
+            tab_overlap: 1,
             tab_width: 80,
             tab_height: 40,
             mouse_wheel_switch: false,
@@ -340,7 +340,7 @@ export function getRules() {
             'layer2.draw_center': false,
             'layer2.texture': '',
             'layer2.tint': 'var(tabBorder)',
-            'layer2.inner_margin': [0, 1, 1, 1],
+            'layer2.inner_margin': [1, 1, 1, 1],
             'layer2.opacity': 1,
 
             'layer3.draw_center': false,
@@ -356,13 +356,18 @@ export function getRules() {
             attributes: ['selected'],
             'layer1.tint': 'var(tabActiveBackground)',
 
-            'layer2.inner_margin': [0, 1, 1, 0],
+            'layer2.inner_margin': [1, 1, 1, 0],
 
             'layer3.inner_margin': [0, 1, 0, 0],
             'layer3.tint': 'var(tabSelectedBorderBorder)',
             tint_modifier: 'transparent',
         },
-
+        {
+            class: 'tab_control',
+            attributes: ['left'],
+            settings: ['hide_tab_scrolling_buttons'],
+            'layer2.inner_margin': [0, 1, 1, 0],
+        },
         {
             class: 'tab_label',
             'font.face': 'var(fontFace)',
