@@ -47,7 +47,7 @@
         "line_diff_modified": "var(diffModified)",
         "line_highlight": "rgba(158,167,179,0.1)",
         "misspelling": "var(blue)",
-        "selection": "#ffffff",
+        "selection": "#ffffff33",
         "selection_border": "#26cd4d40",
         "selection_corner_radius": "cut",
         "selection_corner_style": "square",

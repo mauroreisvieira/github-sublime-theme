@@ -95,8 +95,8 @@ export function setUi(theme: Primer): UI {
             dark: alpha(color.accent.fg, 0.2),
             dark_colorblind: alpha(color.accent.fg, 0.2),
             dimmed: alpha(color.accent.fg, 0.2),
-            light_high_contrast: color.neutral.emphasisPlus,
-            dark_high_contrast: color.neutral.emphasisPlus,
+            light_high_contrast: alpha(color.neutral.emphasisPlus, 0.2),
+            dark_high_contrast: alpha(color.neutral.emphasisPlus, 0.2),
         }),
         selection_border: buildSchemeVariants({
             light: alpha(scale.green[3], 0.25),
